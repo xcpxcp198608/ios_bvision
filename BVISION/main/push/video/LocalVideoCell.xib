@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="LocalVideoCell" id="ury-ar-EBz" customClass="LocalVideoCell" customModule="BVISION" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hold_bvision" translatesAutoresizingMaskIntoConstraints="NO" id="x4c-3k-zZf">
+                    <rect key="frame" x="8" y="8" width="320" height="210"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-UG-pJx">
+                    <rect key="frame" x="8" y="218" width="320" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bue-1i-smi">
+                    <rect key="frame" x="276" y="16" width="43.5" height="21"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50888270550000003" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="tZq-Xp-FtY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4yF-t2-vhy" firstAttribute="trailing" secondItem="x4c-3k-zZf" secondAttribute="trailing" constant="8" id="VXq-ej-4Mb"/>
+                <constraint firstItem="4yF-t2-vhy" firstAttribute="trailing" secondItem="bue-1i-smi" secondAttribute="trailing" constant="16" id="X8i-R1-Kvt"/>
+                <constraint firstItem="x4c-3k-zZf" firstAttribute="leading" secondItem="4yF-t2-vhy" secondAttribute="leading" constant="8" id="ZA9-4b-WPt"/>
+                <constraint firstItem="x4c-3k-zZf" firstAttribute="top" secondItem="4yF-t2-vhy" secondAttribute="top" constant="8" id="bBN-Su-Cww"/>
+                <constraint firstItem="4yF-t2-vhy" firstAttribute="bottom" secondItem="x4c-3k-zZf" secondAttribute="bottom" constant="38" id="ePc-cx-hZw"/>
+                <constraint firstItem="4yF-t2-vhy" firstAttribute="bottom" secondItem="BBy-UG-pJx" secondAttribute="bottom" constant="8" id="euq-c3-1Mz"/>
+                <constraint firstItem="BBy-UG-pJx" firstAttribute="top" secondItem="x4c-3k-zZf" secondAttribute="bottom" id="fQA-7C-fJM"/>
+                <constraint firstItem="bue-1i-smi" firstAttribute="top" secondItem="4yF-t2-vhy" secondAttribute="top" constant="16" id="myp-oI-J56"/>
+                <constraint firstItem="4yF-t2-vhy" firstAttribute="trailing" secondItem="BBy-UG-pJx" secondAttribute="trailing" constant="8" id="n5f-Z0-kUh"/>
+                <constraint firstItem="BBy-UG-pJx" firstAttribute="leading" secondItem="4yF-t2-vhy" secondAttribute="leading" constant="8" id="xIH-c8-SrH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="4yF-t2-vhy"/>
+            <connections>
+                <outlet property="ivThumbnail" destination="x4c-3k-zZf" id="87P-AK-cEK"/>
+                <outlet property="lDuration" destination="bue-1i-smi" id="mps-le-eGx"/>
+                <outlet property="lName" destination="BBy-UG-pJx" id="ZFI-QQ-o9i"/>
+            </connections>
+            <point key="canvasLocation" x="-76" y="72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hold_bvision" width="320" height="180"/>
+    </resources>
+</document>

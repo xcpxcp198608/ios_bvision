@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan View Controller-->
+        <scene sceneID="nLi-9w-4cL">
+            <objects>
+                <viewController storyboardIdentifier="ScanViewController" id="Cxh-bl-eFe" customClass="ScanViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hv-Ub-AYm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9c-Zs-Hcd">
+                                <rect key="frame" x="16" y="25" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="WxN-qC-Brg"/>
+                                    <constraint firstAttribute="height" constant="30" id="jlo-0b-FGh"/>
+                                </constraints>
+                                <state key="normal" image="back_30">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hero_dismissViewController" destination="Cxh-bl-eFe" eventType="touchUpInside" id="6JY-Fh-CTc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIk-27-2RC">
+                                <rect key="frame" x="329" y="25" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6SE-Vi-dQn"/>
+                                    <constraint firstAttribute="height" constant="30" id="c2T-kJ-59r"/>
+                                </constraints>
+                                <state key="normal" image="qrcode_30"/>
+                                <connections>
+                                    <action selector="generateQRCode" destination="Cxh-bl-eFe" eventType="touchUpInside" id="gX7-ee-TFL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_frame180" translatesAutoresizingMaskIntoConstraints="NO" id="l8u-DX-eZJ">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Kol-ij-6zd"/>
+                                    <constraint firstAttribute="width" constant="240" id="fgn-AS-2ri"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p9c-Zs-Hcd" firstAttribute="top" secondItem="uBs-sm-CKw" secondAttribute="top" constant="5" id="9nN-5p-oyV"/>
+                            <constraint firstItem="l8u-DX-eZJ" firstAttribute="centerY" secondItem="2hv-Ub-AYm" secondAttribute="centerY" id="CjJ-Os-YwB"/>
+                            <constraint firstItem="KIk-27-2RC" firstAttribute="top" secondItem="uBs-sm-CKw" secondAttribute="top" constant="5" id="cRk-bb-RYM"/>
+                            <constraint firstItem="l8u-DX-eZJ" firstAttribute="centerX" secondItem="2hv-Ub-AYm" secondAttribute="centerX" id="fim-gb-4In"/>
+                            <constraint firstItem="uBs-sm-CKw" firstAttribute="trailing" secondItem="KIk-27-2RC" secondAttribute="trailing" constant="16" id="kxn-nH-EXC"/>
+                            <constraint firstItem="p9c-Zs-Hcd" firstAttribute="leading" secondItem="uBs-sm-CKw" secondAttribute="leading" constant="16" id="nNF-D9-0Sa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uBs-sm-CKw"/>
+                    </view>
+                    <connections>
+                        <outlet property="ivScan" destination="l8u-DX-eZJ" id="wmR-Mf-1g6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrj-6O-TsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="-171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_30" width="30" height="30"/>
+        <image name="qrcode_30" width="30" height="30"/>
+        <image name="scan_frame180" width="180" height="180"/>
+    </resources>
+</document>

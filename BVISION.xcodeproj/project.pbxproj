@@ -7,14 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B9AE08B02AB24568230BA2 /* Pods_BVISION.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26735945DEB81483A94D9869 /* Pods_BVISION.framework */; };
+		CD432BE620882DF400AF73B8 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BE520882DF400AF73B8 /* RecordViewController.swift */; };
+		CD432BE82088607600AF73B8 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BE72088607600AF73B8 /* RecordVideoViewController.swift */; };
+		CD432BEA2088608600AF73B8 /* SystemVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BE92088608600AF73B8 /* SystemVideoViewController.swift */; };
+		CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BEB2088619600AF73B8 /* LocalPushViewController.swift */; };
+		CD432BEF208861F700AF73B8 /* LocalVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD432BED208861F600AF73B8 /* LocalVideoCell.xib */; };
+		CD432BF0208861F700AF73B8 /* LocalVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BEE208861F700AF73B8 /* LocalVideoCell.swift */; };
+		CD432BFA2088827C00AF73B8 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432BF92088827B00AF73B8 /* IJKMediaFramework.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		CD432BFC208883F100AF73B8 /* IJKPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BFB208883F100AF73B8 /* IJKPlayViewController.swift */; };
+		CD432BFE2088868E00AF73B8 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432BFD2088868D00AF73B8 /* libbz2.tbd */; };
+		CD432BFF208886AB00AF73B8 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9E5208738C1004A7FAB /* CoreAudio.framework */; };
+		CD432C00208886AB00AF73B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9E4208738C0004A7FAB /* CoreGraphics.framework */; };
+		CD432C01208886AB00AF73B8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9E6208738C1004A7FAB /* CoreMedia.framework */; };
+		CD432C02208886AB00AF73B8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9E7208738C1004A7FAB /* CoreVideo.framework */; };
+		CD432C03208886CC00AF73B8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9FD20873EAF004A7FAB /* AudioToolbox.framework */; };
+		CD432C04208886CC00AF73B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CAA082087414C004A7FAB /* AVFoundation.framework */; };
+		CD432C05208886CC00AF73B8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9FA20873EAE004A7FAB /* MediaPlayer.framework */; };
+		CD432C06208886CC00AF73B8 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CAA0220874095004A7FAB /* VideoToolbox.framework */; };
+		CD432C07208886F400AF73B8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CAA0320874096004A7FAB /* OpenGLES.framework */; };
+		CD432C08208886F400AF73B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CAA0420874096004A7FAB /* QuartzCore.framework */; };
+		CD432C0B208886F500AF73B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C09208886F400AF73B8 /* UIKit.framework */; };
+		CD432C0C208886F500AF73B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */; };
+		CD432C10208895DC00AF73B8 /* PLPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432C0F208895DC00AF73B8 /* PLPlayerViewController.swift */; };
+		CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */; };
+		CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */; };
+		CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7CA9B82086EC1D004A7FAB /* MyCell.xib */; };
+		CD7CA9BB2086ED1A004A7FAB /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9BA2086ED1A004A7FAB /* MyCell.swift */; };
+		CD7CA9BD2086F452004A7FAB /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9BC2086F452004A7FAB /* MyTableViewController.swift */; };
+		CD7CA9C02086F9A5004A7FAB /* MyCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7CA9BF2086F9A5004A7FAB /* MyCollection.storyboard */; };
+		CD7CA9C32086F9D2004A7FAB /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9C22086F9D2004A7FAB /* MessageViewController.swift */; };
+		CD7CA9C52086F9DF004A7FAB /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9C42086F9DF004A7FAB /* UpdateViewController.swift */; };
+		CD7CA9C72086F9EA004A7FAB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9C62086F9EA004A7FAB /* HistoryViewController.swift */; };
+		CD7CA9C92086F9F9004A7FAB /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9C82086F9F9004A7FAB /* FeedbackViewController.swift */; };
+		CD7CA9CB2086FA03004A7FAB /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9CA2086FA03004A7FAB /* HelpViewController.swift */; };
+		CD7CA9CD2086FA10004A7FAB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9CC2086FA10004A7FAB /* SettingsViewController.swift */; };
+		CD7CA9CF2086FA1E004A7FAB /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9CE2086FA1E004A7FAB /* VIPViewController.swift */; };
+		CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9D02086FA2C004A7FAB /* BvisionCoinViewController.swift */; };
+		CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9D22086FA39004A7FAB /* MallViewController.swift */; };
+		CD7CA9D620872AA8004A7FAB /* VIPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9D520872AA8004A7FAB /* VIPPageViewController.swift */; };
+		CD7CA9D820872AFE004A7FAB /* LDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9D720872AFE004A7FAB /* LDViewController.swift */; };
+		CD7CA9DA20872B16004A7FAB /* NetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9D920872B16004A7FAB /* NetViewController.swift */; };
+		CD7CA9DC20872D36004A7FAB /* ChannelToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9DB20872D36004A7FAB /* ChannelToken.swift */; };
+		CD7CA9DE20872E25004A7FAB /* VLCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9DD20872E24004A7FAB /* VLCPlayerViewController.swift */; };
+		CD7CA9F120873906004A7FAB /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9ED20873905004A7FAB /* libbz2.1.0.tbd */; };
+		CD7CA9F320873906004A7FAB /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9EF20873906004A7FAB /* libiconv.2.tbd */; };
+		CD7CA9F62087391D004A7FAB /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9F42087391C004A7FAB /* libstdc++.6.0.9.tbd */; };
+		CD7CA9F72087391D004A7FAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9F52087391C004A7FAB /* libz.tbd */; };
+		CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D29208446DF0043AA16 /* UFUtils.swift */; };
+		CDAC5D32208446E20043AA16 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2A208446DF0043AA16 /* Color.swift */; };
+		CDAC5D33208446E20043AA16 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2B208446DF0043AA16 /* TimeUtil.swift */; };
+		CDAC5D34208446E20043AA16 /* AESUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2C208446E00043AA16 /* AESUtil.swift */; };
+		CDAC5D35208446E20043AA16 /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2D208446E00043AA16 /* extentions.swift */; };
+		CDAC5D36208446E20043AA16 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2E208446E10043AA16 /* FileUtils.swift */; };
+		CDAC5D37208446E20043AA16 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2F208446E10043AA16 /* Functions.swift */; };
+		CDAC5D38208446E20043AA16 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D30208446E20043AA16 /* Constant.swift */; };
+		CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC5D3C20844FB40043AA16 /* Push.storyboard */; };
+		CDAC5D3F20844FDB0043AA16 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D3E20844FDB0043AA16 /* PushViewController.swift */; };
+		CDAC5D43208450230043AA16 /* PushVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D42208450230043AA16 /* PushVideoViewController.swift */; };
+		CDAC5D45208453060043AA16 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC5D44208453060043AA16 /* Scan.storyboard */; };
+		CDAC5D49208457460043AA16 /* LiveChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D47208457460043AA16 /* LiveChannelProvider.swift */; };
+		CDAC5D4D208457580043AA16 /* LiveChannelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D4C208457580043AA16 /* LiveChannelInfo.swift */; };
+		CDAC5D4F208481A30043AA16 /* LivePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D4E208481A30043AA16 /* LivePlayViewController.swift */; };
+		CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D50208492EA0043AA16 /* BMCustomPlayer.swift */; };
+		CDAC5D53208492F70043AA16 /* BMPlayerCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D52208492F70043AA16 /* BMPlayerCustomControlView.swift */; };
+		CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */; };
+		CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */; };
+		CDAC5D5A2084A5300043AA16 /* YTBChannelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */; };
+		CDBC64F22085885E00F9A799 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBC64EC2085885B00F9A799 /* Sign.storyboard */; };
+		CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */; };
+		CDBC64F42085885E00F9A799 /* UserSignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */; };
+		CDBC64F52085885E00F9A799 /* UserSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64EF2085885D00F9A799 /* UserSignInViewController.swift */; };
+		CDBC64F62085885E00F9A799 /* UserSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64F02085885D00F9A799 /* UserSignUpViewController.swift */; };
+		CDBC64F72085885E00F9A799 /* UserSignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64F12085885E00F9A799 /* UserSignInTableViewController.swift */; };
+		CDBC64FE20858BA500F9A799 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64FC20858BA400F9A799 /* SplashViewController.swift */; };
+		CDBC64FF20858BA500F9A799 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBC64FD20858BA500F9A799 /* Splash.storyboard */; };
+		CDBC650120858D0500F9A799 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC650020858D0500F9A799 /* UserInfo.swift */; };
+		CDBC65032085987800F9A799 /* YTBPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC65022085987800F9A799 /* YTBPlayViewController.swift */; };
+		CDBC65062085988700F9A799 /* YTBChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC65042085988600F9A799 /* YTBChannelCell.swift */; };
+		CDBC65072085988700F9A799 /* YTBChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC65052085988700F9A799 /* YTBChannelCell.xib */; };
+		CDBC6509208598A000F9A799 /* ClipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC65082085989F00F9A799 /* ClipsPageViewController.swift */; };
+		CDBC650B20859A4800F9A799 /* YTBChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC650A20859A4800F9A799 /* YTBChannelsViewController.swift */; };
+		CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC650C2085A66900F9A799 /* FollowCell.swift */; };
+		CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC650D2085A66A00F9A799 /* FollowCell.xib */; };
 		CDC1DC7220808F9800534A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC7120808F9800534A0D /* AppDelegate.swift */; };
-		CDC1DC7420808F9800534A0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC7320808F9800534A0D /* ViewController.swift */; };
 		CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DC7520808F9800534A0D /* Main.storyboard */; };
 		CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC7820808F9800534A0D /* BVISION.xcdatamodeld */; };
-		CDC1DC7C20808F9A00534A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DC7B20808F9A00534A0D /* Assets.xcassets */; };
 		CDC1DC7F20808F9A00534A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DC7D20808F9A00534A0D /* LaunchScreen.storyboard */; };
 		CDC1DC8A20808F9A00534A0D /* BVISIONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC8920808F9A00534A0D /* BVISIONTests.swift */; };
 		CDC1DC9520808F9A00534A0D /* BVISIONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC9420808F9A00534A0D /* BVISIONUITests.swift */; };
+		CDC1DCA42080915000534A0D /* LiveChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCA32080915000534A0D /* LiveChannelViewController.swift */; };
+		CDC1DCA72080917200534A0D /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCA62080917200534A0D /* BasicViewController.swift */; };
+		CDC1DCA9208091A400534A0D /* BasicTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCA8208091A400534A0D /* BasicTabBarController.swift */; };
+		CDC1DCAB208091E500534A0D /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCAA208091E500534A0D /* BasicTableViewController.swift */; };
+		CDC1DCAE2080931600534A0D /* LiveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCAD2080931600534A0D /* LiveChannelCell.xib */; };
+		CDC1DCB02080932800534A0D /* LiveChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCAF2080932800534A0D /* LiveChannelCell.swift */; };
+		CDC1DCB4208095F000534A0D /* BasicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCB3208095F000534A0D /* BasicNavigationController.swift */; };
+		CDC1DCB720809B4600534A0D /* ClipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCB620809B4600534A0D /* ClipsViewController.swift */; };
+		CDC1DCBA20809B5A00534A0D /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCB920809B5A00534A0D /* FollowViewController.swift */; };
+		CDC1DCBD20809BAA00534A0D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCBC20809BAA00534A0D /* MyViewController.swift */; };
+		CDC1DCC320809D6300534A0D /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC220809D6300534A0D /* ScanViewController.swift */; };
+		CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC520809D8400534A0D /* WebViewController.swift */; };
+		CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCC720809DA300534A0D /* Web.storyboard */; };
+		CDC1DCCA2080A6F700534A0D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC92080A6F700534A0D /* Extension.swift */; };
+		CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +131,101 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26735945DEB81483A94D9869 /* Pods_BVISION.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVISION.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4C5FF8EB4E1587CADED8D1 /* Pods-BVISION.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVISION.release.xcconfig"; path = "Pods/Target Support Files/Pods-BVISION/Pods-BVISION.release.xcconfig"; sourceTree = "<group>"; };
+		CD432BE520882DF400AF73B8 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		CD432BE72088607600AF73B8 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		CD432BE92088608600AF73B8 /* SystemVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemVideoViewController.swift; sourceTree = "<group>"; };
+		CD432BEB2088619600AF73B8 /* LocalPushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPushViewController.swift; sourceTree = "<group>"; };
+		CD432BED208861F600AF73B8 /* LocalVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalVideoCell.xib; sourceTree = "<group>"; };
+		CD432BEE208861F700AF73B8 /* LocalVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalVideoCell.swift; sourceTree = "<group>"; };
+		CD432BF22088777B00AF73B8 /* BVISION.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BVISION.entitlements; sourceTree = "<group>"; };
+		CD432BF92088827B00AF73B8 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../framework/IJKMediaFramework.framework; sourceTree = "<group>"; };
+		CD432BFB208883F100AF73B8 /* IJKPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJKPlayViewController.swift; sourceTree = "<group>"; };
+		CD432BFD2088868D00AF73B8 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		CD432C09208886F400AF73B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CD432C0F208895DC00AF73B8 /* PLPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPlayerViewController.swift; sourceTree = "<group>"; };
+		CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSYPlayerViewController.swift; sourceTree = "<group>"; };
+		CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserProvider.swift; sourceTree = "<group>"; };
+		CD7CA9B82086EC1D004A7FAB /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		CD7CA9BA2086ED1A004A7FAB /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		CD7CA9BC2086F452004A7FAB /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		CD7CA9BF2086F9A5004A7FAB /* MyCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCollection.storyboard; sourceTree = "<group>"; };
+		CD7CA9C22086F9D2004A7FAB /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		CD7CA9C42086F9DF004A7FAB /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		CD7CA9C62086F9EA004A7FAB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		CD7CA9C82086F9F9004A7FAB /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		CD7CA9CA2086FA03004A7FAB /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		CD7CA9CC2086FA10004A7FAB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CD7CA9CE2086FA1E004A7FAB /* VIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
+		CD7CA9D02086FA2C004A7FAB /* BvisionCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BvisionCoinViewController.swift; sourceTree = "<group>"; };
+		CD7CA9D22086FA39004A7FAB /* MallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallViewController.swift; sourceTree = "<group>"; };
+		CD7CA9D520872AA8004A7FAB /* VIPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPageViewController.swift; sourceTree = "<group>"; };
+		CD7CA9D720872AFE004A7FAB /* LDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDViewController.swift; sourceTree = "<group>"; };
+		CD7CA9D920872B16004A7FAB /* NetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetViewController.swift; sourceTree = "<group>"; };
+		CD7CA9DB20872D36004A7FAB /* ChannelToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelToken.swift; sourceTree = "<group>"; };
+		CD7CA9DD20872E24004A7FAB /* VLCPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLCPlayerViewController.swift; sourceTree = "<group>"; };
+		CD7CA9E020872F71004A7FAB /* BVISION-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BVISION-Bridging-Header.h"; sourceTree = "<group>"; };
+		CD7CA9E4208738C0004A7FAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CD7CA9E5208738C1004A7FAB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		CD7CA9E6208738C1004A7FAB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		CD7CA9E7208738C1004A7FAB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CD7CA9EC20873905004A7FAB /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		CD7CA9ED20873905004A7FAB /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		CD7CA9EE20873906004A7FAB /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		CD7CA9EF20873906004A7FAB /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		CD7CA9F42087391C004A7FAB /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		CD7CA9F52087391C004A7FAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CD7CA9F820873C75004A7FAB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		CD7CA9FA20873EAE004A7FAB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CD7CA9FB20873EAE004A7FAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CD7CA9FC20873EAF004A7FAB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CD7CA9FD20873EAF004A7FAB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CD7CAA0220874095004A7FAB /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		CD7CAA0320874096004A7FAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CD7CAA0420874096004A7FAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CD7CAA082087414C004A7FAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CDAC5D29208446DF0043AA16 /* UFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFUtils.swift; sourceTree = "<group>"; };
+		CDAC5D2A208446DF0043AA16 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		CDAC5D2B208446DF0043AA16 /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
+		CDAC5D2C208446E00043AA16 /* AESUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AESUtil.swift; sourceTree = "<group>"; };
+		CDAC5D2D208446E00043AA16 /* extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
+		CDAC5D2E208446E10043AA16 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		CDAC5D2F208446E10043AA16 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		CDAC5D30208446E20043AA16 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CDAC5D3C20844FB40043AA16 /* Push.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Push.storyboard; sourceTree = "<group>"; };
+		CDAC5D3E20844FDB0043AA16 /* PushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
+		CDAC5D42208450230043AA16 /* PushVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushVideoViewController.swift; sourceTree = "<group>"; };
+		CDAC5D44208453060043AA16 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
+		CDAC5D47208457460043AA16 /* LiveChannelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveChannelProvider.swift; sourceTree = "<group>"; };
+		CDAC5D4C208457580043AA16 /* LiveChannelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelInfo.swift; sourceTree = "<group>"; };
+		CDAC5D4E208481A30043AA16 /* LivePlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayViewController.swift; sourceTree = "<group>"; };
+		CDAC5D50208492EA0043AA16 /* BMCustomPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMCustomPlayer.swift; sourceTree = "<group>"; };
+		CDAC5D52208492F70043AA16 /* BMPlayerCustomControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPlayerCustomControlView.swift; sourceTree = "<group>"; };
+		CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayDetailViewController.swift; sourceTree = "<group>"; };
+		CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBChannelProvider.swift; sourceTree = "<group>"; };
+		CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBChannelInfo.swift; sourceTree = "<group>"; };
+		CDBC64EC2085885B00F9A799 /* Sign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
+		CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResetTableViewController.swift; sourceTree = "<group>"; };
+		CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignUpTableViewController.swift; sourceTree = "<group>"; };
+		CDBC64EF2085885D00F9A799 /* UserSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInViewController.swift; sourceTree = "<group>"; };
+		CDBC64F02085885D00F9A799 /* UserSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignUpViewController.swift; sourceTree = "<group>"; };
+		CDBC64F12085885E00F9A799 /* UserSignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInTableViewController.swift; sourceTree = "<group>"; };
+		CDBC64FC20858BA400F9A799 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		CDBC64FD20858BA500F9A799 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		CDBC650020858D0500F9A799 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CDBC65022085987800F9A799 /* YTBPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTBPlayViewController.swift; sourceTree = "<group>"; };
+		CDBC65042085988600F9A799 /* YTBChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTBChannelCell.swift; sourceTree = "<group>"; };
+		CDBC65052085988700F9A799 /* YTBChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTBChannelCell.xib; sourceTree = "<group>"; };
+		CDBC65082085989F00F9A799 /* ClipsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipsPageViewController.swift; sourceTree = "<group>"; };
+		CDBC650A20859A4800F9A799 /* YTBChannelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTBChannelsViewController.swift; sourceTree = "<group>"; };
+		CDBC650C2085A66900F9A799 /* FollowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowCell.swift; sourceTree = "<group>"; };
+		CDBC650D2085A66A00F9A799 /* FollowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowCell.xib; sourceTree = "<group>"; };
 		CDC1DC6E20808F9800534A0D /* BVISION.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVISION.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC1DC7120808F9800534A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDC1DC7320808F9800534A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDC1DC7620808F9800534A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDC1DC7920808F9800534A0D /* BVISION.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BVISION.xcdatamodel; sourceTree = "<group>"; };
-		CDC1DC7B20808F9A00534A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC1DC7E20808F9A00534A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDC1DC8020808F9A00534A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC1DC8520808F9A00534A0D /* BVISIONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BVISIONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +234,22 @@
 		CDC1DC9020808F9A00534A0D /* BVISIONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BVISIONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC1DC9420808F9A00534A0D /* BVISIONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVISIONUITests.swift; sourceTree = "<group>"; };
 		CDC1DC9620808F9A00534A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC1DCA32080915000534A0D /* LiveChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelViewController.swift; sourceTree = "<group>"; };
+		CDC1DCA62080917200534A0D /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		CDC1DCA8208091A400534A0D /* BasicTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabBarController.swift; sourceTree = "<group>"; };
+		CDC1DCAA208091E500534A0D /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
+		CDC1DCAD2080931600534A0D /* LiveChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveChannelCell.xib; sourceTree = "<group>"; };
+		CDC1DCAF2080932800534A0D /* LiveChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelCell.swift; sourceTree = "<group>"; };
+		CDC1DCB3208095F000534A0D /* BasicNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationController.swift; sourceTree = "<group>"; };
+		CDC1DCB620809B4600534A0D /* ClipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsViewController.swift; sourceTree = "<group>"; };
+		CDC1DCB920809B5A00534A0D /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		CDC1DCBC20809BAA00534A0D /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		CDC1DCC220809D6300534A0D /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		CDC1DCC520809D8400534A0D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CDC1DCC720809DA300534A0D /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		CDC1DCC92080A6F700534A0D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D04A521C65FCF2132E01F21D /* Pods-BVISION.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVISION.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BVISION/Pods-BVISION.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +257,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD432C0B208886F500AF73B8 /* UIKit.framework in Frameworks */,
+				CD432C0C208886F500AF73B8 /* MobileCoreServices.framework in Frameworks */,
+				CD432C07208886F400AF73B8 /* OpenGLES.framework in Frameworks */,
+				CD432C08208886F400AF73B8 /* QuartzCore.framework in Frameworks */,
+				CD432C03208886CC00AF73B8 /* AudioToolbox.framework in Frameworks */,
+				CD432C04208886CC00AF73B8 /* AVFoundation.framework in Frameworks */,
+				CD432C05208886CC00AF73B8 /* MediaPlayer.framework in Frameworks */,
+				CD432C06208886CC00AF73B8 /* VideoToolbox.framework in Frameworks */,
+				CD432BFF208886AB00AF73B8 /* CoreAudio.framework in Frameworks */,
+				CD432C00208886AB00AF73B8 /* CoreGraphics.framework in Frameworks */,
+				CD432C01208886AB00AF73B8 /* CoreMedia.framework in Frameworks */,
+				CD432C02208886AB00AF73B8 /* CoreVideo.framework in Frameworks */,
+				CD432BFE2088868E00AF73B8 /* libbz2.tbd in Frameworks */,
+				CD7CA9F62087391D004A7FAB /* libstdc++.6.0.9.tbd in Frameworks */,
+				CD7CA9F72087391D004A7FAB /* libz.tbd in Frameworks */,
+				CD7CA9F120873906004A7FAB /* libbz2.1.0.tbd in Frameworks */,
+				CD432BFA2088827C00AF73B8 /* IJKMediaFramework.framework in Frameworks */,
+				CD7CA9F320873906004A7FAB /* libiconv.2.tbd in Frameworks */,
+				00B9AE08B02AB24568230BA2 /* Pods_BVISION.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +296,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CA638E5FC68947846AF7712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D04A521C65FCF2132E01F21D /* Pods-BVISION.debug.xcconfig */,
+				BB4C5FF8EB4E1587CADED8D1 /* Pods-BVISION.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F0A74B1D23D753D0B76BDA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */,
+				CD432C09208886F400AF73B8 /* UIKit.framework */,
+				CD432BFD2088868D00AF73B8 /* libbz2.tbd */,
+				CD432BF92088827B00AF73B8 /* IJKMediaFramework.framework */,
+				CD7CAA082087414C004A7FAB /* AVFoundation.framework */,
+				CD7CAA0320874096004A7FAB /* OpenGLES.framework */,
+				CD7CAA0420874096004A7FAB /* QuartzCore.framework */,
+				CD7CAA0220874095004A7FAB /* VideoToolbox.framework */,
+				CD7CA9FC20873EAF004A7FAB /* Accelerate.framework */,
+				CD7CA9FD20873EAF004A7FAB /* AudioToolbox.framework */,
+				CD7CA9FA20873EAE004A7FAB /* MediaPlayer.framework */,
+				CD7CA9FB20873EAE004A7FAB /* WebKit.framework */,
+				CD7CA9F820873C75004A7FAB /* CoreImage.framework */,
+				CD7CA9F42087391C004A7FAB /* libstdc++.6.0.9.tbd */,
+				CD7CA9F52087391C004A7FAB /* libz.tbd */,
+				CD7CA9ED20873905004A7FAB /* libbz2.1.0.tbd */,
+				CD7CA9EC20873905004A7FAB /* libc++.1.tbd */,
+				CD7CA9EF20873906004A7FAB /* libiconv.2.tbd */,
+				CD7CA9EE20873906004A7FAB /* libz.1.tbd */,
+				CD7CA9E5208738C1004A7FAB /* CoreAudio.framework */,
+				CD7CA9E4208738C0004A7FAB /* CoreGraphics.framework */,
+				CD7CA9E6208738C1004A7FAB /* CoreMedia.framework */,
+				CD7CA9E7208738C1004A7FAB /* CoreVideo.framework */,
+				26735945DEB81483A94D9869 /* Pods_BVISION.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD7CA9BE2086F991004A7FAB /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CA9BF2086F9A5004A7FAB /* MyCollection.storyboard */,
+				CD7CA9D4208729C6004A7FAB /* vip */,
+				CD7CA9D02086FA2C004A7FAB /* BvisionCoinViewController.swift */,
+				CD7CA9D22086FA39004A7FAB /* MallViewController.swift */,
+				CD432BE520882DF400AF73B8 /* RecordViewController.swift */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		CD7CA9C12086F9A9004A7FAB /* table */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CA9C22086F9D2004A7FAB /* MessageViewController.swift */,
+				CD7CA9C42086F9DF004A7FAB /* UpdateViewController.swift */,
+				CD7CA9C62086F9EA004A7FAB /* HistoryViewController.swift */,
+				CD7CA9C82086F9F9004A7FAB /* FeedbackViewController.swift */,
+				CD7CA9CA2086FA03004A7FAB /* HelpViewController.swift */,
+				CD7CA9CC2086FA10004A7FAB /* SettingsViewController.swift */,
+			);
+			path = table;
+			sourceTree = "<group>";
+		};
+		CD7CA9D4208729C6004A7FAB /* vip */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CA9CE2086FA1E004A7FAB /* VIPViewController.swift */,
+				CD7CA9D520872AA8004A7FAB /* VIPPageViewController.swift */,
+				CD7CA9D720872AFE004A7FAB /* LDViewController.swift */,
+				CD7CA9DB20872D36004A7FAB /* ChannelToken.swift */,
+				CD7CA9D920872B16004A7FAB /* NetViewController.swift */,
+				CD7CA9DD20872E24004A7FAB /* VLCPlayerViewController.swift */,
+				CD432BFB208883F100AF73B8 /* IJKPlayViewController.swift */,
+				CD432C0F208895DC00AF73B8 /* PLPlayerViewController.swift */,
+				CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */,
+			);
+			path = vip;
+			sourceTree = "<group>";
+		};
+		CDAC5D3B20844F9D0043AA16 /* push */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D412084500B0043AA16 /* video */,
+				CDAC5D4020844FE00043AA16 /* camera */,
+				CDAC5D3C20844FB40043AA16 /* Push.storyboard */,
+			);
+			path = push;
+			sourceTree = "<group>";
+		};
+		CDAC5D4020844FE00043AA16 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D3E20844FDB0043AA16 /* PushViewController.swift */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		CDAC5D412084500B0043AA16 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D42208450230043AA16 /* PushVideoViewController.swift */,
+				CD432BE72088607600AF73B8 /* RecordVideoViewController.swift */,
+				CD432BE92088608600AF73B8 /* SystemVideoViewController.swift */,
+				CD432BEB2088619600AF73B8 /* LocalPushViewController.swift */,
+				CD432BEE208861F700AF73B8 /* LocalVideoCell.swift */,
+				CD432BED208861F600AF73B8 /* LocalVideoCell.xib */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		CDAC5D46208457020043AA16 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D4B2084574A0043AA16 /* entities */,
+				CDAC5D47208457460043AA16 /* LiveChannelProvider.swift */,
+				CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */,
+				CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CDAC5D4B2084574A0043AA16 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				CDBC650020858D0500F9A799 /* UserInfo.swift */,
+				CDAC5D4C208457580043AA16 /* LiveChannelInfo.swift */,
+				CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		CDAC5D54208493010043AA16 /* bm */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D50208492EA0043AA16 /* BMCustomPlayer.swift */,
+				CDAC5D52208492F70043AA16 /* BMPlayerCustomControlView.swift */,
+			);
+			path = bm;
+			sourceTree = "<group>";
+		};
+		CDBC64FB208588BE00F9A799 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				CDBC64FD20858BA500F9A799 /* Splash.storyboard */,
+				CDBC64FC20858BA400F9A799 /* SplashViewController.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
 		CDC1DC6520808F9800534A0D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +454,8 @@
 				CDC1DC8820808F9A00534A0D /* BVISIONTests */,
 				CDC1DC9320808F9A00534A0D /* BVISIONUITests */,
 				CDC1DC6F20808F9800534A0D /* Products */,
+				4CA638E5FC68947846AF7712 /* Pods */,
+				6F0A74B1D23D753D0B76BDA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +472,20 @@
 		CDC1DC7020808F9800534A0D /* BVISION */ = {
 			isa = PBXGroup;
 			children = (
+				CD432BF22088777B00AF73B8 /* BVISION.entitlements */,
 				CDC1DC7120808F9800534A0D /* AppDelegate.swift */,
-				CDC1DC7320808F9800534A0D /* ViewController.swift */,
-				CDC1DC7520808F9800534A0D /* Main.storyboard */,
-				CDC1DC7B20808F9A00534A0D /* Assets.xcassets */,
+				CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */,
 				CDC1DC7D20808F9A00534A0D /* LaunchScreen.storyboard */,
 				CDC1DC8020808F9A00534A0D /* Info.plist */,
 				CDC1DC7820808F9800534A0D /* BVISION.xcdatamodeld */,
+				CD7CA9E020872F71004A7FAB /* BVISION-Bridging-Header.h */,
+				CDC1DCA52080915900534A0D /* basic */,
+				CDC1DCC420809D7400534A0D /* common */,
+				CDAC5D46208457020043AA16 /* model */,
+				CDBC64FB208588BE00F9A799 /* splash */,
+				CDC1DCBE20809CE700534A0D /* sign */,
+				CDC1DCC120809D4E00534A0D /* scan */,
+				CDC1DCAC208092C800534A0D /* main */,
 			);
 			path = BVISION;
 			sourceTree = "<group>";
@@ -128,6 +508,119 @@
 			path = BVISIONUITests;
 			sourceTree = "<group>";
 		};
+		CDC1DCA22080912C00534A0D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D54208493010043AA16 /* bm */,
+				CDC1DCAF2080932800534A0D /* LiveChannelCell.swift */,
+				CDC1DCAD2080931600534A0D /* LiveChannelCell.xib */,
+				CDC1DCA32080915000534A0D /* LiveChannelViewController.swift */,
+				CDAC5D4E208481A30043AA16 /* LivePlayViewController.swift */,
+				CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		CDC1DCA52080915900534A0D /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1DCA62080917200534A0D /* BasicViewController.swift */,
+				CDC1DCA8208091A400534A0D /* BasicTabBarController.swift */,
+				CDC1DCAA208091E500534A0D /* BasicTableViewController.swift */,
+				CDC1DCB3208095F000534A0D /* BasicNavigationController.swift */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		CDC1DCAC208092C800534A0D /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1DC7520808F9800534A0D /* Main.storyboard */,
+				CDC1DCA22080912C00534A0D /* home */,
+				CDC1DCB520809B2E00534A0D /* clips */,
+				CDAC5D3B20844F9D0043AA16 /* push */,
+				CDC1DCB820809B4D00534A0D /* follow */,
+				CDC1DCBB20809B9900534A0D /* my */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		CDC1DCB520809B2E00534A0D /* clips */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1DCB620809B4600534A0D /* ClipsViewController.swift */,
+				CDBC65082085989F00F9A799 /* ClipsPageViewController.swift */,
+				CDBC650A20859A4800F9A799 /* YTBChannelsViewController.swift */,
+				CDBC65022085987800F9A799 /* YTBPlayViewController.swift */,
+				CDBC65042085988600F9A799 /* YTBChannelCell.swift */,
+				CDBC65052085988700F9A799 /* YTBChannelCell.xib */,
+			);
+			path = clips;
+			sourceTree = "<group>";
+		};
+		CDC1DCB820809B4D00534A0D /* follow */ = {
+			isa = PBXGroup;
+			children = (
+				CDBC650C2085A66900F9A799 /* FollowCell.swift */,
+				CDBC650D2085A66A00F9A799 /* FollowCell.xib */,
+				CDC1DCB920809B5A00534A0D /* FollowViewController.swift */,
+			);
+			path = follow;
+			sourceTree = "<group>";
+		};
+		CDC1DCBB20809B9900534A0D /* my */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1DCBC20809BAA00534A0D /* MyViewController.swift */,
+				CD7CA9BC2086F452004A7FAB /* MyTableViewController.swift */,
+				CD7CA9B82086EC1D004A7FAB /* MyCell.xib */,
+				CD7CA9BA2086ED1A004A7FAB /* MyCell.swift */,
+				CD7CA9C12086F9A9004A7FAB /* table */,
+				CD7CA9BE2086F991004A7FAB /* collection */,
+			);
+			path = my;
+			sourceTree = "<group>";
+		};
+		CDC1DCBE20809CE700534A0D /* sign */ = {
+			isa = PBXGroup;
+			children = (
+				CDBC64EF2085885D00F9A799 /* UserSignInViewController.swift */,
+				CDBC64F12085885E00F9A799 /* UserSignInTableViewController.swift */,
+				CDBC64F02085885D00F9A799 /* UserSignUpViewController.swift */,
+				CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */,
+				CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */,
+				CDBC64EC2085885B00F9A799 /* Sign.storyboard */,
+			);
+			path = sign;
+			sourceTree = "<group>";
+		};
+		CDC1DCC120809D4E00534A0D /* scan */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1DCC220809D6300534A0D /* ScanViewController.swift */,
+				CDAC5D44208453060043AA16 /* Scan.storyboard */,
+			);
+			path = scan;
+			sourceTree = "<group>";
+		};
+		CDC1DCC420809D7400534A0D /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5D2C208446E00043AA16 /* AESUtil.swift */,
+				CDAC5D2A208446DF0043AA16 /* Color.swift */,
+				CDAC5D30208446E20043AA16 /* Constant.swift */,
+				CDAC5D2D208446E00043AA16 /* extentions.swift */,
+				CDAC5D2E208446E10043AA16 /* FileUtils.swift */,
+				CDAC5D2F208446E10043AA16 /* Functions.swift */,
+				CDAC5D2B208446DF0043AA16 /* TimeUtil.swift */,
+				CDAC5D29208446DF0043AA16 /* UFUtils.swift */,
+				CDC1DCC520809D8400534A0D /* WebViewController.swift */,
+				CDC1DCC720809DA300534A0D /* Web.storyboard */,
+				CDC1DCC92080A6F700534A0D /* Extension.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +628,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDC1DC9920808F9A00534A0D /* Build configuration list for PBXNativeTarget "BVISION" */;
 			buildPhases = (
+				F4F2859D2689C6EFF86F61BE /* [CP] Check Pods Manifest.lock */,
 				CDC1DC6A20808F9800534A0D /* Sources */,
 				CDC1DC6B20808F9800534A0D /* Frameworks */,
 				CDC1DC6C20808F9800534A0D /* Resources */,
+				5F65A736EFE499BC9B235EAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +691,12 @@
 				TargetAttributes = {
 					CDC1DC6D20808F9800534A0D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					CDC1DC8420808F9A00534A0D = {
 						CreatedOnToolsVersion = 9.3;
@@ -233,8 +734,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC1DC7F20808F9A00534A0D /* LaunchScreen.storyboard in Resources */,
-				CDC1DC7C20808F9A00534A0D /* Assets.xcassets in Resources */,
+				CD432BEF208861F700AF73B8 /* LocalVideoCell.xib in Resources */,
+				CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */,
+				CDBC64F22085885E00F9A799 /* Sign.storyboard in Resources */,
+				CDBC65072085988700F9A799 /* YTBChannelCell.xib in Resources */,
+				CDC1DCAE2080931600534A0D /* LiveChannelCell.xib in Resources */,
+				CDAC5D45208453060043AA16 /* Scan.storyboard in Resources */,
+				CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */,
+				CDBC64FF20858BA500F9A799 /* Splash.storyboard in Resources */,
+				CD7CA9C02086F9A5004A7FAB /* MyCollection.storyboard in Resources */,
+				CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */,
+				CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
+				CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +766,163 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F65A736EFE499BC9B235EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BVISION/Pods-BVISION-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
+				"${BUILT_PRODUCTS_DIR}/BMPlayer/BMPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
+				"${BUILT_PRODUCTS_DIR}/libksygpulive/libksygpulive.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFQRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libksygpulive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BVISION/Pods-BVISION-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F2859D2689C6EFF86F61BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BVISION-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CDC1DC6A20808F9800534A0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC1DC7420808F9800534A0D /* ViewController.swift in Sources */,
+				CDAC5D4F208481A30043AA16 /* LivePlayViewController.swift in Sources */,
+				CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */,
+				CDC1DCCA2080A6F700534A0D /* Extension.swift in Sources */,
+				CD7CA9CB2086FA03004A7FAB /* HelpViewController.swift in Sources */,
+				CDBC6509208598A000F9A799 /* ClipsPageViewController.swift in Sources */,
+				CDC1DCB4208095F000534A0D /* BasicNavigationController.swift in Sources */,
+				CD7CA9BB2086ED1A004A7FAB /* MyCell.swift in Sources */,
+				CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */,
+				CDAC5D3F20844FDB0043AA16 /* PushViewController.swift in Sources */,
+				CDC1DCB02080932800534A0D /* LiveChannelCell.swift in Sources */,
+				CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */,
+				CD7CA9C32086F9D2004A7FAB /* MessageViewController.swift in Sources */,
+				CDBC64F52085885E00F9A799 /* UserSignInViewController.swift in Sources */,
+				CDBC65062085988700F9A799 /* YTBChannelCell.swift in Sources */,
+				CD7CA9C72086F9EA004A7FAB /* HistoryViewController.swift in Sources */,
+				CDAC5D49208457460043AA16 /* LiveChannelProvider.swift in Sources */,
+				CDC1DCA72080917200534A0D /* BasicViewController.swift in Sources */,
+				CDAC5D53208492F70043AA16 /* BMPlayerCustomControlView.swift in Sources */,
+				CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */,
+				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
+				CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */,
+				CD7CA9CF2086FA1E004A7FAB /* VIPViewController.swift in Sources */,
+				CD7CA9C92086F9F9004A7FAB /* FeedbackViewController.swift in Sources */,
+				CDBC650B20859A4800F9A799 /* YTBChannelsViewController.swift in Sources */,
+				CDC1DCAB208091E500534A0D /* BasicTableViewController.swift in Sources */,
+				CDAC5D34208446E20043AA16 /* AESUtil.swift in Sources */,
+				CDBC64F42085885E00F9A799 /* UserSignUpTableViewController.swift in Sources */,
+				CD7CA9DA20872B16004A7FAB /* NetViewController.swift in Sources */,
+				CDBC64F72085885E00F9A799 /* UserSignInTableViewController.swift in Sources */,
+				CDC1DCC320809D6300534A0D /* ScanViewController.swift in Sources */,
+				CDAC5D43208450230043AA16 /* PushVideoViewController.swift in Sources */,
+				CD432BF0208861F700AF73B8 /* LocalVideoCell.swift in Sources */,
+				CDC1DCA9208091A400534A0D /* BasicTabBarController.swift in Sources */,
+				CDAC5D5A2084A5300043AA16 /* YTBChannelInfo.swift in Sources */,
+				CD7CA9D620872AA8004A7FAB /* VIPPageViewController.swift in Sources */,
+				CDAC5D38208446E20043AA16 /* Constant.swift in Sources */,
+				CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */,
 				CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */,
+				CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */,
+				CD432C10208895DC00AF73B8 /* PLPlayerViewController.swift in Sources */,
+				CDC1DCBD20809BAA00534A0D /* MyViewController.swift in Sources */,
+				CDAC5D36208446E20043AA16 /* FileUtils.swift in Sources */,
+				CDAC5D35208446E20043AA16 /* extentions.swift in Sources */,
+				CDC1DCA42080915000534A0D /* LiveChannelViewController.swift in Sources */,
+				CD7CA9DE20872E25004A7FAB /* VLCPlayerViewController.swift in Sources */,
+				CDAC5D37208446E20043AA16 /* Functions.swift in Sources */,
+				CDAC5D4D208457580043AA16 /* LiveChannelInfo.swift in Sources */,
+				CDC1DCBA20809B5A00534A0D /* FollowViewController.swift in Sources */,
+				CDBC64F62085885E00F9A799 /* UserSignUpViewController.swift in Sources */,
+				CD432BE82088607600AF73B8 /* RecordVideoViewController.swift in Sources */,
+				CDAC5D33208446E20043AA16 /* TimeUtil.swift in Sources */,
+				CD7CA9BD2086F452004A7FAB /* MyTableViewController.swift in Sources */,
+				CD7CA9CD2086FA10004A7FAB /* SettingsViewController.swift in Sources */,
+				CDBC64FE20858BA500F9A799 /* SplashViewController.swift in Sources */,
+				CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */,
+				CDBC65032085987800F9A799 /* YTBPlayViewController.swift in Sources */,
+				CD432BEA2088608600AF73B8 /* SystemVideoViewController.swift in Sources */,
+				CD432BFC208883F100AF73B8 /* IJKPlayViewController.swift in Sources */,
+				CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */,
+				CDBC650120858D0500F9A799 /* UserInfo.swift in Sources */,
+				CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */,
+				CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */,
+				CD7CA9D820872AFE004A7FAB /* LDViewController.swift in Sources */,
+				CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */,
+				CDC1DCB720809B4600534A0D /* ClipsViewController.swift in Sources */,
+				CD7CA9C52086F9DF004A7FAB /* UpdateViewController.swift in Sources */,
+				CD432BE620882DF400AF73B8 /* RecordViewController.swift in Sources */,
 				CDC1DC7220808F9800534A0D /* AppDelegate.swift in Sources */,
+				CD7CA9DC20872D36004A7FAB /* ChannelToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,37 +1093,68 @@
 		};
 		CDC1DC9A20808F9A00534A0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04A521C65FCF2132E01F21D /* Pods-BVISION.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BVISION/BVISION.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Wang (XCRR5VW49B)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BVISION/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISION;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.bvision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BVISION/BVISION-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CDC1DC9B20808F9A00534A0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB4C5FF8EB4E1587CADED8D1 /* Pods-BVISION.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BVISION/BVISION.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Wang (XCRR5VW49B)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BVISION/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISION;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.bvision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BVISION/BVISION-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

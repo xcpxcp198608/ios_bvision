@@ -7,7 +7,25 @@
 		<key>BVISION.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>23</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CDC1DC6D20808F9800534A0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDC1DC8420808F9A00534A0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDC1DC8F20808F9A00534A0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

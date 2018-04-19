@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fTf-R2-3UF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SignIn-->
+        <scene sceneID="tpM-DE-2VN">
+            <objects>
+                <viewController id="mE6-Y8-hAU" customClass="UserSignInViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4a-5c-nFG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bvision2" translatesAutoresizingMaskIntoConstraints="NO" id="YLE-x4-Ylm">
+                                <rect key="frame" x="152.5" y="84" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1T0-yf-mhW"/>
+                                    <constraint firstAttribute="height" constant="70" id="GMm-8n-N1r"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKu-G3-Htr">
+                                <rect key="frame" x="0.0" y="154" width="375" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="ZOJ-LC-yvp"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Qr3-9F-tJx" kind="embed" identifier="sign_in" id="fux-0f-riZ"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hW-SG-OV5">
+                                <rect key="frame" x="16" y="324" width="343" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dfT-kb-nb7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="SignIn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="siginIn" destination="mE6-Y8-hAU" eventType="touchUpInside" id="r6U-xN-i54"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-jO-tqw">
+                                <rect key="frame" x="236" y="384" width="123" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1UT-vg-yg1"/>
+                                </constraints>
+                                <state key="normal" title="Forgot password?">
+                                    <color key="titleColor" red="0.097430117428302765" green="0.1716010570526123" blue="0.24738189578056335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sHZ-vD-PYI" kind="show" id="MSV-jr-wk7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTA-Ta-3kt">
+                                <rect key="frame" x="75" y="632" width="225" height="27"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrm-Hc-TgT">
+                                        <rect key="frame" x="165" y="0.0" width="60" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="consent">
+                                            <color key="titleColor" red="0.097430117428302765" green="0.1716010570526123" blue="0.24738189578056335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="EJL-lz-AEb" kind="show" id="sTw-L5-B2A"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="agree to the term of service " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdO-Fv-FCy">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="LWb-TP-GDu"/>
+                                    <constraint firstAttribute="width" constant="225" id="dpv-JQ-sZr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBX-bD-CZg">
+                                <rect key="frame" x="16" y="384" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l2p-qV-iKi"/>
+                                </constraints>
+                                <state key="normal" title="SignUp">
+                                    <color key="titleColor" red="0.097430117428302765" green="0.1716010570526123" blue="0.24738189578056335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYm-pj-lEF" kind="show" id="sRC-OS-NNS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wvc-hN-do8" firstAttribute="trailing" secondItem="rg7-jO-tqw" secondAttribute="trailing" constant="16" id="1Tu-9S-35F"/>
+                            <constraint firstItem="7hW-SG-OV5" firstAttribute="leading" secondItem="wvc-hN-do8" secondAttribute="leading" constant="16" id="D5d-v8-bKw"/>
+                            <constraint firstItem="jBX-bD-CZg" firstAttribute="leading" secondItem="wvc-hN-do8" secondAttribute="leading" constant="16" id="Fpa-cs-3bo"/>
+                            <constraint firstItem="wvc-hN-do8" firstAttribute="trailing" secondItem="7hW-SG-OV5" secondAttribute="trailing" constant="16" id="G8L-W1-dxO"/>
+                            <constraint firstItem="rg7-jO-tqw" firstAttribute="top" secondItem="7hW-SG-OV5" secondAttribute="bottom" constant="16" id="MfX-ve-3cy"/>
+                            <constraint firstItem="YLE-x4-Ylm" firstAttribute="top" secondItem="wvc-hN-do8" secondAttribute="top" constant="20" id="Rqu-1c-mMx"/>
+                            <constraint firstItem="pKu-G3-Htr" firstAttribute="leading" secondItem="wvc-hN-do8" secondAttribute="leading" id="Ym6-lr-LEK"/>
+                            <constraint firstItem="7hW-SG-OV5" firstAttribute="top" secondItem="pKu-G3-Htr" secondAttribute="bottom" id="a6K-oL-ROp"/>
+                            <constraint firstItem="pKu-G3-Htr" firstAttribute="trailing" secondItem="wvc-hN-do8" secondAttribute="trailing" id="csL-b9-dVc"/>
+                            <constraint firstItem="wvc-hN-do8" firstAttribute="bottom" secondItem="uTA-Ta-3kt" secondAttribute="bottom" constant="8" id="eWC-XR-cTY"/>
+                            <constraint firstItem="uTA-Ta-3kt" firstAttribute="centerX" secondItem="y4a-5c-nFG" secondAttribute="centerX" id="gj9-Lz-NhJ"/>
+                            <constraint firstItem="pKu-G3-Htr" firstAttribute="top" secondItem="YLE-x4-Ylm" secondAttribute="bottom" id="t8a-gW-WGW"/>
+                            <constraint firstItem="jBX-bD-CZg" firstAttribute="top" secondItem="7hW-SG-OV5" secondAttribute="bottom" constant="16" id="thZ-6c-Ivv"/>
+                            <constraint firstItem="YLE-x4-Ylm" firstAttribute="centerX" secondItem="y4a-5c-nFG" secondAttribute="centerX" id="wyd-bs-XCZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wvc-hN-do8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SignIn" id="Ytj-M5-Hvd">
+                        <barButtonItem key="rightBarButtonItem" title="skip" id="5rn-dr-d7W">
+                            <connections>
+                                <action selector="skip" destination="mE6-Y8-hAU" id="C6X-jy-6qj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btSignIn" destination="7hW-SG-OV5" id="MFJ-YF-TvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dra-EL-TY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.19999999999999" y="-9.4452773613193415"/>
+        </scene>
+        <!--User Sign In Table View Controller-->
+        <scene sceneID="hTI-Kw-n0l">
+            <objects>
+                <tableViewController id="Qr3-9F-tJx" customClass="UserSignInTableViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5gK-Ew-D77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="A5M-UV-ePN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="gxd-Hj-Owh">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gxd-Hj-Owh" id="Yeq-Yb-EKx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="x6t-Mi-JQd">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="username"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="6qD-Lr-cAt">
+                                        <rect key="frame" x="0.0" y="85" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6qD-Lr-cAt" id="fJU-U8-br9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FQv-5Z-7Nb">
+                                                    <rect key="frame" x="16" y="-1" width="343" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Qr3-9F-tJx" id="kyp-g0-gbX"/>
+                            <outlet property="delegate" destination="Qr3-9F-tJx" id="9b4-KN-lEg"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tfPassword" destination="FQv-5Z-7Nb" id="FdZ-Hh-utY"/>
+                        <outlet property="tfUsername" destination="x6t-Mi-JQd" id="VWb-eR-xLi"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Koj-jx-S8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="-523"/>
+        </scene>
+        <!--User Sign Up View Controller-->
+        <scene sceneID="jnV-am-KO1">
+            <objects>
+                <viewController id="UYm-pj-lEF" customClass="UserSignUpViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRd-az-PY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bvision2" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-hH-skO">
+                                <rect key="frame" x="152" y="84" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="2hi-os-t72"/>
+                                    <constraint firstAttribute="height" constant="70" id="iKE-wj-xvy"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtS-zs-dZu">
+                                <rect key="frame" x="0.0" y="154" width="375" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="zhr-LS-zhD"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="OPu-Mn-SEM" kind="embed" identifier="sign_up" id="arX-SO-eNE"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioV-mE-4AA">
+                                <rect key="frame" x="16" y="414" width="343" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wW8-Yd-5ch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="SignUp">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp" destination="UYm-pj-lEF" eventType="touchUpInside" id="7no-JZ-G1k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ioV-mE-4AA" firstAttribute="top" secondItem="mtS-zs-dZu" secondAttribute="bottom" id="6dB-tj-XQL"/>
+                            <constraint firstItem="ioV-mE-4AA" firstAttribute="leading" secondItem="btU-15-UwZ" secondAttribute="leading" constant="16" id="8LQ-I4-YqK"/>
+                            <constraint firstItem="HIz-hH-skO" firstAttribute="top" secondItem="btU-15-UwZ" secondAttribute="top" constant="20" id="Cd3-2C-rJf"/>
+                            <constraint firstItem="mtS-zs-dZu" firstAttribute="top" secondItem="HIz-hH-skO" secondAttribute="bottom" id="K1A-yi-vn4"/>
+                            <constraint firstItem="mtS-zs-dZu" firstAttribute="leading" secondItem="btU-15-UwZ" secondAttribute="leading" id="S2p-Aw-eY5"/>
+                            <constraint firstItem="HIz-hH-skO" firstAttribute="centerX" secondItem="IRd-az-PY0" secondAttribute="centerX" id="h6M-05-IUv"/>
+                            <constraint firstItem="btU-15-UwZ" firstAttribute="trailing" secondItem="ioV-mE-4AA" secondAttribute="trailing" constant="16" id="vY9-JH-1tg"/>
+                            <constraint firstItem="mtS-zs-dZu" firstAttribute="trailing" secondItem="btU-15-UwZ" secondAttribute="trailing" id="xFb-h2-4Da"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="btU-15-UwZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M7e-So-Uw8"/>
+                    <connections>
+                        <outlet property="btSignUp" destination="ioV-mE-4AA" id="VHZ-cV-tSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q70-rn-ezn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.8" y="-9.4452773613193415"/>
+        </scene>
+        <!--User Reset Table View Controller-->
+        <scene sceneID="lgB-FZ-LHj">
+            <objects>
+                <tableViewController id="sHZ-vD-PYI" customClass="UserResetTableViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Us8-L1-g8j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Reset password by email" id="dXq-Dz-cl0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="FLV-ID-jAq">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FLV-ID-jAq" id="4gO-fl-ScP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y38-sd-fGe">
+                                                    <rect key="frame" x="16" y="20" width="343" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="JVR-m9-rqY"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="username"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="y38-sd-fGe" secondAttribute="trailing" constant="16" id="AMT-nK-0az"/>
+                                                <constraint firstItem="y38-sd-fGe" firstAttribute="leading" secondItem="4gO-fl-ScP" secondAttribute="leading" constant="16" id="TIy-rK-AV8"/>
+                                                <constraint firstItem="y38-sd-fGe" firstAttribute="top" secondItem="4gO-fl-ScP" secondAttribute="top" constant="20" id="fxs-6B-LFC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="ryl-rO-QZK">
+                                        <rect key="frame" x="0.0" y="125.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ryl-rO-QZK" id="4CB-qg-NLX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-YE-DmB">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="yOv-Vd-5gJ"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go" textContentType="email"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iZr-YE-DmB" firstAttribute="leading" secondItem="4CB-qg-NLX" secondAttribute="leading" constant="16" id="1tG-ac-2zB"/>
+                                                <constraint firstAttribute="trailing" secondItem="iZr-YE-DmB" secondAttribute="trailing" constant="16" id="CnG-Iv-sJY"/>
+                                                <constraint firstItem="iZr-YE-DmB" firstAttribute="top" secondItem="4CB-qg-NLX" secondAttribute="top" id="QFp-mR-Dna"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="cNM-2e-nwK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O1l-zi-h6o">
+                                        <rect key="frame" x="0.0" y="211.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O1l-zi-h6o" id="0hR-5O-IiB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNz-1k-Kb2">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Send Reset Email">
+                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="reset" destination="sHZ-vD-PYI" eventType="touchUpInside" id="bc0-Oy-aEK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="QXO-2J-2nb">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sHZ-vD-PYI" id="OkB-vQ-beI"/>
+                            <outlet property="delegate" destination="sHZ-vD-PYI" id="Z16-1H-AlQ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="btReset" destination="pNz-1k-Kb2" id="eGd-JM-Qsz"/>
+                        <outlet property="tfEmail" destination="iZr-YE-DmB" id="oym-uy-a0u"/>
+                        <outlet property="tfUsername" destination="y38-sd-fGe" id="nxX-Pi-62d"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxU-u3-EyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="757.87106446776613"/>
+        </scene>
+        <!--User Sign Up Table View Controller-->
+        <scene sceneID="d2S-W5-IyK">
+            <objects>
+                <tableViewController id="OPu-Mn-SEM" customClass="UserSignUpTableViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="UF4-dk-xgk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="Xbl-I3-uzL">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="atN-No-Ers">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="atN-No-Ers" id="X4P-Yk-i3Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFn-Hf-SiZ">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="username"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="k0f-hb-WoS">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k0f-hb-WoS" id="Epo-J2-7Ab">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0F-L0-XF6">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="477-W7-F9n">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="477-W7-F9n" id="h9n-nd-WIp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUc-yB-9il">
+                                                    <rect key="frame" x="16" y="-1" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="next" textContentType="tel"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="p97-jh-MDH">
+                                        <rect key="frame" x="0.0" y="167" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p97-jh-MDH" id="5d2-8y-maa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JD-g2-6kq">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="OPu-Mn-SEM" id="eKt-c5-yLJ"/>
+                            <outlet property="delegate" destination="OPu-Mn-SEM" id="cyr-m6-RY8"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tfEmail" destination="g0F-L0-XF6" id="e6d-Ba-QEu"/>
+                        <outlet property="tfPassword" destination="4JD-g2-6kq" id="8fn-bu-Xaj"/>
+                        <outlet property="tfPhone" destination="yUc-yB-9il" id="4Cf-aS-jIK"/>
+                        <outlet property="tfUsername" destination="IFn-Hf-SiZ" id="XPT-VY-Vp4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCE-tc-R3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.5999999999999" y="-480.35982008995506"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ouh-wp-wIX">
+            <objects>
+                <viewController id="EJL-lz-AEb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2V1-77-GfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l0x-5X-Qut">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">BLive On Bvision TERMS OF SERVICE
+Last Updated: Nov. 1, 2017
+IMPORTANT – PLEASE READ THESE TERMS
+CAREFULLY BEFORE USING THE BLive MOBILE
+APPLICATION. BY DOWNLOADING, INSTALLING, OR
+USING THE SERVICE (AS DEFINED BELOW), YOU
+ACKNOWLEDGE THAT YOU HAVE READ THIS
+AGREEMENT, THAT YOU UNDERSTAND IT, AND THAT
+YOU AGREE TO BE BOUND BY ITS TERMS. IF YOU
+DO NOT AGREE TO THE TERMS HEREIN, PLEASE DO
+NOT USE THE SERVICE AND DELETE THE BLive
+MOBILE APPLICATION IMMEDIATELY.
+These Terms of Service (these “Terms”) are between you
+(“you”), as either an individual or as a business entity, and
+Legacy Direct LLC (“Company,” “we,” “us,” or “our”)
+governing your use of BLive mobile application (the “App”)
+made available for download by the Company, and any
+related services, aspects, functions, software platforms
+and derivatives of the BLive Service (collectively, the
+“Service").
+In consideration for your use of the Service, you agree as
+follows:
+1. General Terms &amp; Conditions
+I Changes To These Terms. You understand and
+agree that the Company may change these Terms at
+any time in its sole discretion without prior notice,
+provided that the Company will use reasonable efforts
+to provide you with prior notice of any material
+changes that may apply to you, including through the
+posting of a revised Terms of Service that you may be
+required to accept in order to continue using the
+Service. You may read a current, effective copy of
+these Terms at any time by selecting the appropriate
+link on the Service. The revised Terms will become
+effective at the time of posting. Any use of the Service
+after such date will constitute your acceptance of such
+revised Terms. If any change to these Terms is not
+acceptable to you, then your sole remedy is to stop
+accessing, browsing and otherwise using the Service.
+The terms of these Terms of Service will govern any
+updates the Company provides to you that replace
+and/or supplement any portion of the Service, unless
+such update is accompanied by a separate license or
+revised Terms, in which case the terms of that license
+or revised Terms will govern. Notwithstanding the
+preceding sentences of this Section 1.II, no revisions
+to these Terms will apply to any dispute between you
+and the Company that arose prior to the effective date
+of such revision.
+II Additional Agreements &amp; Terms. Your access to and
+use of the Service is also subject to the Company’s
+Privacy Policy, and Community Policy (collectively,
+“Additional Agreements”), including any additional
+terms which are added to such Additional Agreements
+and made available to you from time to time. The
+terms and conditions of the Additional Agreements
+can be found directly on the App and the Legacy
+Direct website, and are incorporated herein by
+reference.
+III Jurisdiction. The Service is controlled and operated
+by the Company from its offices in the State of
+California, USA. The Company makes no
+representation that materials on the Service are
+appropriate, lawful or available for use in any
+locations other than the United States of America.
+Those who choose to access or use the Service from
+locations outside the United States of America, do so
+on their own initiative and are responsible for
+compliance with local laws, if and to the extent local
+laws are applicable. Access to the Service from
+jurisdictions where the contents or practices of the
+Service are illegal, unauthorized or penalized is
+strictly prohibited.
+IV Age Eligibility. The Service is restricted for use by any
+persons under the age of 13 or for any users
+previously removed from the Service by Company.
+Before downloading, installing, or using the Service,
+you affirm that you are either eighteen (18) years of
+age or older, an emancipated minor, or possess legal
+parental or guardian consent, and are fully able and
+competent to enter into, abide by, and comply with the
+terms of this EULA. In any case, IF YOU ARE
+UNDER THIRTEEN (13) YEARS OF AGE, YOU ARE
+HEREBY EXPRESSLY PROHIBITED FROM USING
+THE SERVICE AND MUST DELETE ALL THE FILES
+IN CONNECTION THEREOF IF ALREADY
+INSTALLED.
+V Mobile Services. The Service is accessible via mobile
+phone, tablet, TV Box or other wireless device
+(collectively, “Mobile Services”). Your use of the
+Mobile Services is hereby an acknowledgement and
+acceptance of your mobile carrier’s normal
+messaging, data, and other rates and fees, which
+may apply. In addition, downloading, installing, or
+using certain Mobile Services may be prohibited or
+restricted by your mobile carrier; not all Mobile
+Services may work with all carriers or devices.
+Therefore, you are solely responsible for verifying with
+your mobile carrier as to whether the Mobile Services
+are available for your mobile device(s), and what
+restrictions or additional cost, if any, may be
+applicable to your use thereof.
+VI License. Company gives you a personal, worldwide,
+royalty-free, non-assignable and non-exclusive
+license to use the software provided to you as part of
+the Service. This license has the sole purpose of
+enabling you to use and enjoy the benefit of the
+Service as provided by Company, in the manner
+permitted by these Terms. You may not reverse
+engineer, decompile or disassemble the Service or
+attempt to gain access to the source code for the
+Service, except and only to the extent that it is
+expressly permitted by applicable law, and, to the
+extent applicable law permits contractual waiver of
+such right, you hereby waive your rights to do so.
+VII Company Trademarks; Copyrights. The Service is
+protected by trademark, copyright, and other laws of
+both the United States and foreign countries. Nothing
+in these Terms gives you a right to use BLive name or
+any of the BLive trademarks, logos, domain names,
+and other distinctive brand features or copyrighted
+material. All right, title, and interest in and to the
+Service (excluding content provided by users) are and
+will remain the exclusive property of Company and its
+licensors. Any feedback, comments, or suggestions
+you may provide regarding Company, or the Service
+is entirely voluntary and we will be free to use such
+feedback, comments or suggestions as we see fit and
+without any obligation to you.
+VIII No Transfer or Assignment. You may not transfer
+or assign the Service, these Terms, and/or any rights
+or obligations hereunder without the prior written
+consent of the Company.
+IX Termination for Breach. Your rights under these
+Terms will automatically terminate if you breach any
+of your material obligations hereunder. Upon any
+termination of these Terms, you will promptly destroy
+all copies of the Service and cease all use thereof
+after such termination.
+X Restrictions. The Service is provided “as is” without
+warranties of any kind and the Company’s liability to
+you is limited. The Service may contain links (i.e.
+spam), or users of the Service may direct you to visit
+third party websites or services that are not owned or
+controlled by Company. Company has no control
+over, and assumes no responsibility for, the content,
+privacy policies, or practices of any third party
+websites or services, and Company will not and
+cannot censor or edit the content of any such thirdparty
+site or services. The Company hereby reserves
+all rights not expressly granted to you in this Section
+1. Accordingly, nothing in these Terms or on the
+Service will be construed as granting to you, by
+implication, estoppel, or otherwise, any additional
+license rights in and to the Service or any Company
+Content (defined below) or trademarks located or
+displayed therein. By using the Service, and by
+choosing to visit any third party website or engaging
+in any action made known to you while using the
+Service, you acknowledge that you are doing so at
+your own discretion and you expressly relieve
+Company from any and all liability arising from your
+use of any third-party website or engagement of any
+third party services.
+2. BLive User Accounts
+I Account Creation. In order to access the full benefits
+of the Service, you will have to create BLive account.
+You may never use another's account without
+permission. When creating your account, you must
+provide accurate and complete information. You are
+solely responsible for the activity that occurs on your
+account, including safeguarding your password and/or
+credentials used to access the Service, as well as any
+activities that occur through your use of such
+password and credentials. You are responsible for the
+security of your account. If you suspect or know of
+any unauthorized use of your log-in credentials or any
+other breach of security with respect to your Account,
+you must notify the Company immediately at:
+support@legacy.direct. The Company will not be
+liable for any loss or damage arising from any
+unauthorized use of your password and/or credentials
+prior to you notifying the Company of such
+unauthorized use or loss thereof. Although BLive will
+not be liable for your losses caused by any
+unauthorized use of your account, you may be liable
+for the losses of BLive, or others, due to such
+unauthorized use.
+II Terms of Service; Users. All users of the Service who
+view and/or transmit User Content (defined below) are
+referred to herein collectively as “Users.”
+III Public Accounts. The Service enables Users to
+create, transmit, and view live stream audiovisual
+content (“Broadcast Content”). All User activity on the
+Service, including the broadcasting of and
+commenting on any Broadcast Content is publicly
+available on the Service. Notwithstanding the
+guidelines and restrictions set forth in our Terms of
+Service and Community Guidelines, User discretion
+on the Service is advised.
+3. User Content
+I Definitions. As used in these Terms, “User Content”
+means any content that Users upload, post, or
+transmit (collectively, “Post”) to or through the
+Service, including, without limitation, any Broadcast
+Content, comments or other text, photographs, sound
+recording, and any other works subject to protection
+under the laws of the United States of America or any
+other jurisdiction, including, but not limited to patent,
+trademark, and copyright laws, and excludes any and
+all “Company Content,” which is defined as content
+that the Company provides to Users on or through the
+Service, including without limitation, any text,
+graphics, photos, software, and interactive features,
+which may be protected by copyright or other
+intellectual property rights owned by the Company.
+II No User Content Screening. The Company offers
+Users the ability to Post User Content to, or transmit
+through, the Service. While the Company endeavors
+for all User Content to comply with its Community
+Guidelines (available for viewing on the App), you
+understand, agree and acknowledge that the
+Company does not pre-screen any User Content
+submitted or publicly Posted by any User.
+Notwithstanding the foregoing, Company reserves
+and has the right, but not the obligation, to delete,
+disallow, or temporarily block any User Content that
+(i) we consider to be in violation of these Terms, our
+Community Guidelines, or any applicable law, or (ii) in
+response to any complaint(s) from other Users, with
+or without notice and without any liability to you. The
+Company does not guarantee the accuracy, integrity,
+truthfulness, appropriateness or quality of any User
+Content, and any use or reliance by you on any User
+Content is at your own risk and Company shall not be
+held liable for any such User Content under any
+circumstances.
+III User Content Ownership; License. You are the owner
+and retain the rights to the User Contents Posted and
+displayed on and through the Service by you.
+Notwithstanding the foregoing, you hereby grant the
+Company a worldwide, unrestricted, assignable,
+sublicensable, revocable, royalty-free license
+throughout the universe to reproduce, distribute,
+publicly display, transmit, communicate to the public,
+make available, create derivative works from, and
+otherwise exploit and use (collectively, “Use”) all User
+Content you Post to or through the Service by any
+means and through any media and formats now
+known or hereafter developed, for the purposes of (i)
+advertising, marketing, and promoting the
+Company and the Service; (ii) displaying and sharing
+your User Content to other Users of the Service; and
+(iii) providing the Service as authorized by these
+Terms. If you terminate your account or remove any
+of your User Content from the Service after it has
+been Posted, then your license grant with respect to
+your User Content is perpetual and irrevocable. You
+further grant the Company a royalty-free license to
+use your user name, image, voice, and likeness to
+identify you as the source of any of your User
+Content. You must not post any User Content on or
+through the Service or transmit to the Company any
+User Content that you consider to be confidential or
+proprietary. Any User Content posted by you to or
+through the Service or transmitted to the Company
+will be considered non-confidential and nonproprietary,
+and treated as such by the Company, and
+may be used by the Company in accordance with
+these Terms without notice to you and without any
+liability to the Company. For the avoidance of doubt,
+the rights granted in the preceding sentences of this
+Section include, but are not limited to, the right to
+reproduce your User Content on a royalty-free
+basis. This means that you are granting the
+Company the right to Use your User Content without
+the obligation to pay royalties to you or any third party
+involved in the creation of User Content.
+IV User Content Reps and Warranties. By Posting User
+Content to the Service, you hereby represent and
+warrant that: (i) you own the User Content Posted by
+you on or through the Service or otherwise have the
+right to grant the license set forth in these Terms; (ii)
+the Posting and Use of your User Content on or
+through the Service does not violate the privacy
+rights, publicity rights, copyrights, contract rights,
+intellectual property rights, or any other rights of any
+person; (iii) the Posting of your User Content on the
+Service will not require us to obtain any further
+licenses from or pay any royalties, fees,
+compensation or other amounts or provide any
+attribution to any third parties; and (iv) the Posting of
+your User Content on the Service does not result in a
+breach of contract between you and a third party or
+will not be in violation of any applicable law or
+regulation.
+V Waiver of Rights to Inspect or Review User Content.
+By Posting User Content to or through the Service,
+you waive any rights to prior inspection or approval of
+any marketing or promotional materials related to
+such User Content. You also waive any and all rights
+of privacy, publicity, or any other rights of a similar
+nature in connection with your User Content, or any
+portion thereof. To the extent any moral rights are not
+transferable or assignable, you hereby waive and
+agree never to assert any and all moral rights, or to
+support, maintain or permit any action based on any
+moral rights that you may have in or with respect to
+any User Content you Post to or through the Service.
+VI User Comments. You understand that upon
+submitting or Posting your User Content on or through
+the Service, such content may be distributed, viewed
+and accessed and commented by other Users and
+the Company will not be held liable for any
+unauthorized use of User Content or comment
+thereon by any User, under any circumstance.
+VIIProhibited Content. You are prohibited from Posting,
+and agree not to Post any User Content to the
+Service considered to be “Prohibited Content” as
+determined by Company, in its sole discretion and
+which includes, without limitation:
+• Sexually Explicit Material (i.e. pornographic or
+erotic content, including icons, titles, or
+descriptions). We have a zero-tolerance policy
+against child sexual abuse imagery. If we
+become aware of any User Content containing
+any child sexual abuse imagery, we will report it
+to the appropriate authorities immediately and
+delete the submitting User Accounts;
+• Violence and Bullying (i.e. User Content shall not
+contain materials that threaten, harass or bully
+other Users or third parties, including depictions
+of violence, gratuitous or otherwise, to any
+person place or property, or inciting violence,
+including suicide);
+• Hate Speech (i.e. User Content shall not promote
+bigotry, discrimination, hatred, intolerance, or
+racism, or target against any person or groups of
+persons based on their race or ethnic origin,
+religion, disability, gender, age, nationality,
+veteran status, sexual orientation, or gender
+identity);
+• Sensitive Events (i.e. User Content which may be
+deemed as capitalizing on or lacking reasonable
+sensitivity towards a natural disaster, atrocity,
+conflict, death, or other tragic event are not
+permitted);
+• Unlawful Activity (i.e. use of the Service for any
+illegal or unlawful purpose, including, without
+limitation, stalking and sexually exploiting any
+User);
+• IP Infringement (i.e. User Content which infringes
+on any third party’s rights, including copyright,
+trademark, privacy and publicity rights).
+VIII Company Action. We reserve the right in our sole
+discretion to remove and refuse to post, or exhibit
+publically any User Content, which we determine to
+be Prohibited Content. Furthermore, Company in its
+sole discretion may, but is not obligated to, take any
+action(s) it deems necessary and/or appropriate
+against any User who Posts Prohibited Content on
+the Service, including, but not limited to, warning the
+User, suspending or terminating the User’s Account,
+removing all of the User’s User Content Posted on the
+Service and/or reporting the User to law enforcement
+authorities, either directly or indirectly. We also
+reserve the right to access, read, preserve, and
+disclose any information or take any other legal action
+that we reasonably believe is necessary to (i) satisfy
+any applicable law, regulation, legal process or
+governmental request, (ii) enforce the terms of this
+EULA, including investigation of potential violations
+hereof, (iii) detect, prevent, or otherwise address
+fraud, security or technical issues, (iv) respond to user
+support requests, or (v) protect the rights, property or
+safety of the Users and the public. Notwithstanding
+the foregoing, the Company does not disclose
+personally identifying information to third parties
+except in accordance with our Privacy Policy (as
+further described below). You acknowledge that the
+Posting of any Prohibited Content may subject you to
+third party claims and none of the rights granted to
+you in these Terms may be raised as a defense
+against any third party claims arising from your
+Posting of Prohibited Content.
+4. Privacy
+I Our Privacy Policy (can be found
+at: www.legacy.direct as well as via the Apps)
+describes in detail how we handle the information you
+provide to us when you use the Service. You
+expressly understand that through your use of the
+Service you consent to the collection and use (as set
+forth in the Privacy Policy) of such information,
+including the transfer of this information to and
+throughout the United States, and/or other countries
+for the use, storage, and processing by BLive and its
+affiliates.
+5. IP Infringement
+I Reporting Claimed Infringement. We respect the
+intellectual property rights of others, and we expect
+that our community of Users will do the same. Users
+are thus expressly forbidden from posting any User
+Content that violates someone else’s intellectual
+property rights, including, without limitation, copyright,
+and other proprietary rights. If you are a copyright
+owner or a copyright owner’s agent and believe that
+any User Content infringes upon your copyrights, you
+may submit a “Notification of Claimed Infringement”
+pursuant to the Digital Millennium Copyright Act
+("DMCA") by providing our Copyright Agent (identified
+below) with the following information in writing (see 17
+U.S.C 512(c)(3) for further detail):
+1 A physical or electronic signature of a person
+authorized to act on behalf of the owner or an
+agent of an exclusive right that is allegedly
+infringed;
+2 Identification of the copyright claimed to have
+been infringed;
+3 Identification of the material that is claimed to be
+infringing or to be the subject of infringing activity
+and that is to be removed or access to which is to
+be disabled and information reasonably sufficient
+to permit the service provider to locate the
+material, as follows:
+◦ oDisplay name (e.g. BLive)
+◦ oUsername
+◦ oBroadcast title
+◦ oDate of broadcast
+◦ Time of broadcast
+◦ oBroadcast URL (if available)
+4 Information reasonably sufficient to permit the
+service provider to contact you, such as an
+address, telephone number, and if available, an
+email address;
+5 A statement that you have a good faith belief that
+use of the material in the manner complained of
+is not authorized by the copyright owner, its
+agent, or the law,
+6 A statement, made under penalty of perjury, that
+the above information is accurate, and that you
+are the copyright owner or are authorized to act
+on behalf of the owner.
+II Designated Copyright Agent. Our designated
+Copyright Agent for notice of alleged copyright
+infringement appearing on the Service can be
+contacted at:
+◦ oVia U.S. Mail: c/o Copyright Agent –BLive–
+1221 E. Dyer Road Unit 110, Santa Ana,
+California 92705
+◦ oVia Email: myoung@mmnt.com
+III Company Action. We respect the intellectual property
+rights of others and will respond to clear notices of
+alleged infringement. You acknowledge that if you fail
+to comply with all of the foregoing requirements, your
+Notice may be invalid. We reserve the right to remove
+User Content alleged to be infringing without prior
+notice to you and at our sole discretion. In appropriate
+circumstances, such as in cases of repeat
+infringement, we also reserve the right to suspend or
+terminate the infringing User’s Account in our sole
+discretion.
+IV Repeat Infringer Policy. The Company’s intellectual
+property policy is to (i) remove or disable access to
+material that the Company believes in good faith,
+upon notice from an intellectual property owner or his
+or her agent, is infringing the intellectual property of a
+third party by being made available through the
+Service; and (ii) remove any User Content uploaded
+to the Service by “repeat infringers.” The Company
+considers a “repeat infringer” to be any User that has
+uploaded User Content to or through the Service and
+for whom the Company has received more than two
+takedown notices compliant with the provisions of 17
+U.S.C. § 512 with respect to such User Content. The
+Company has discretion, however, to terminate the
+Account of any User after receipt of a single
+notification of claimed infringement or upon the
+Company’s own determination.
+V Counter Notification. If you receive a notification from
+the Company that material made available by you on
+or through the Service has been the subject of a
+Notification of Claimed Infringement, then you will
+have the right to provide the Company with a
+“Counter Notification” which, to be effective must be
+provided, in writing, to the Company’s Designated
+Agent via one of the methods identified in Section 5.II
+above, and must include substantially the following
+information:
+1 A physical or electronic signature of a person
+authorized to act on behalf of the owner of the
+work(s) that has/have been allegedly infringed;
+2 Identification of works or materials being
+infringed, or, if multiple works are covered by a
+single notification, then a representative list of
+such works;
+3 Identification of the specific material that is
+claimed to be infringing or to be the subject of
+infringing activity and that is to be removed or
+access to which is to be disabled, and
+information reasonably sufficient to permit the
+Company to locate the material;
+4 Information reasonably sufficient to permit the
+Company to contact you, such as an address,
+telephone number, and, if available, an electronic
+mail address at which you may be contacted;
+5 A statement that you have a good faith belief that
+the use of the material in the manner complained
+of is not authorized by the copyright owner, its
+agent, or the law;
+6 A statement that the information in the notification
+is accurate, and under penalty of perjury, that you
+are authorized to act on behalf of the owner of an
+exclusive right that is allegedly infringed.
+VI We advise you to consult with a lawyer and/or see 17
+U.S.C. § 512 to confirm your obligations to provide a
+valid notice of claimed infringement
+VII Reposting of Content Subject to a Counter
+Notification. If you submit a Counter Notification to the
+Company in response to a Notification of Claimed
+Infringement, then the Company will promptly provide
+the person who provided the Notification of Claimed
+Infringement with a copy of your Counter Notification
+and inform that person that the Company will replace
+the removed User Content or cease disabling access
+to it in ten (10) business days, and the Company will
+replace the removed User Content and cease
+disabling access to it not less than ten (10), nor more
+than fourteen (14) business days following receipt of
+the Counter Notification, unless the Company’s
+Designated Agent receives notice from the party that
+submitted the Notification of Claimed Infringement
+that such person has filed an action seeking a court
+order to restrain the User from engaging in infringing
+activity relating to the material on the Company’s
+system or network.
+VIII False Notifications of Claimed Infringement or
+Counter Notifications. The Copyright Act (17 U.S.C. §
+512(f)) provides, in pertinent part: “[a]ny person who
+knowingly materially misrepresents under [Section
+512 of the Copyright Act (17 U.S.C. § 512)] (1) that
+material or activity is infringing, or (2) that material or
+activity was removed or disabled by mistake or
+misidentification, will be liable for any damages,
+including costs and attorneys’ fees, incurred by the
+alleged infringer, by any copyright owner or copyright
+owner’s authorized licensee, or by a service provider,
+who is injured by such misrepresentation, as the
+result of [the Company] relying upon such
+misrepresentation in removing or disabling access to
+the material or activity claimed to be infringing, or in
+replacing the removed material or ceasing to disable
+access to it.”
+The Company reserves the right to seek damages
+from any party that submits a Notification of Claimed
+Infringement or Counter Notification in violation of the
+law.
+6. General Use of the Service
+I The Service is constantly evolving and by your use
+you acknowledge that the Service may change from
+time to time, at the Company’s sole discretion. The
+Company may permanently or temporarily stop
+providing the Service or any features within the
+Service to you or to users generally. The Company
+also retains the right to create limits on use and
+storage at its sole discretion at any time. The
+Company may also remove or refuse to distribute any
+Content on the Service, suspend or terminate users,
+and reclaim usernames without liability to you.
+II In consideration for the Company granting you access
+to and use of the Service, you agree that the
+Company and its third-party providers and partners
+may place advertising on the Service or in connection
+with the display of User Content or information from
+the Service whether submitted by you or others. You
+also agree not to misuse the Service, as follows:
+1 You agree not to distribute in any medium any
+part of the Service or the Company Content
+without Company’s prior written authorization,
+unless Company makes available the means for
+such distribution through functionality offered by
+the Service;
+2 You agree not to alter or modify any part of the
+Service;
+3 You agree not to access the Company Content or
+the User Content through any technology or
+means other than the broadcast feeds and
+playback archives of the Service itself, or other
+explicitly authorized means Company may
+designate;
+4 You agree not to use the Service for any of the
+following commercial uses unless you obtain
+Company 's prior written approval: (a) the sale of
+or access to the Service; or (b) the sale of
+advertising, sponsorships, or promotions placed
+on or within the Service, User Content, or
+Company Content. Prohibited commercial uses
+does not include broadcasting original content on
+the App or maintaining an original broadcast feed
+on the App, to promote your business or artistic
+enterprise; or any other use that Company
+expressly authorizes in writing.
+III In your use of the Service, you will comply with all
+applicable Federal laws of the United States of
+America as well as the applicable laws of your state.
+Company hereby reserves the right to access, read,
+preserve, and disclose any information reasonably
+believed to be necessary, and to take any necessary
+to (i) satisfy any applicable law, regulation, legal
+process or governmental request, (ii) enforce these
+Terms, including investigation of potential violations
+hereof, (iii) detect, prevent, or otherwise address
+fraud, security or technical issues, (iv) respond to user
+support requests, or (v) protect the rights, property or
+safety of the Service, its users and the public.
+7. Features of the Service - Virtual Items
+I Company offers a feature allowing users to
+"purchase" (a) virtual currency, including but not
+limited to virtual coins (“Coins”) for use in the Service;
+or (b) virtual in-Service items (“Gifts”). Any Coins
+and/or Gifts that are gifted to Users (or received by
+you) within the Service are converted to Virtual
+“Diamonds” in the receiving User’s User Account.
+Virtual Coins, together with Gifts and Diamonds, are
+hereafter collectively referred to as "Virtual
+Items.” The purchase of any Virtual Items must be
+made lawfully, under legitimate means, and with
+actual currency. Notwithstanding your purchase or
+possession of such Virtual Items, you acknowledge
+and agree that you do not in fact "own" the Virtual
+Items, and the amounts of any Virtual Item do not
+refer to any credit balance of real currency or its
+equivalent. Rather, Company grants you a limited
+license to use the Service, including software
+programs that may manifest themselves as these
+items.
+II You acknowledge and agree that your distribution of
+any Virtual Items currently in your account (i.e. as a
+virtual "tip" to any other User's account) may result in
+some revenue to such recipient User, as determined
+in Company's sole discretion, and is made solely at
+your own discretion; you further understand that once
+you have confirmed a transfer of any Virtual Item to
+another user's account, the action cannot be undone
+and the Virtual Item cannot be withdrawn.
+Notwithstanding, Company makes no guarantee that
+the amount or value of the Virtual Items you may give
+a User will correlate to the revenue such User may
+receive from Company.
+III The purchase of Virtual Items is a completed
+transaction upon Company's confirmation of
+electronic payment from you via the iTunes App Store
+or Google Play. Any virtual currency balance shown in
+your User Account does not constitute a real world
+balance or reflect any stored value, but instead
+constitutes a measurement of the extent of your
+license to the Virtual Items within the Service. You will
+not be able to sell Virtual Items in exchange for virtual
+or real currency credited back to your User Account,
+nor will you be able to receive a refund (“Refund”) of
+virtual or real currency for Virtual Items (including any
+virtual currency), including if your access to the
+Service has been suspended, limited or terminated
+pursuant to these Terms.
+IV The value (i.e. the exchange rate) of the Virtual Items
+is determined by Company in its sole discretion,
+based on your country of origin, and Company further
+reserves the right to modify the purchase exchange
+rate between actual currency and Virtual Coins from
+time to time, with or without reason, in its sole
+discretion. By your use of the Service, you confirm
+your understanding of and accept the then-current
+exchange rate of any Virtual Items at the time of your
+purchase.
+V Your use of any Virtual Items purchased shall be
+solely for legitimate purposes within the Service, and
+must comply with all applicable laws at all times (i.e.
+no exchanging of Virtual Items for any activity,
+product, conduct or services deemed unauthorized by
+these Terms or our Community Policy).
+VI You understand that the purchase of Virtual Items
+requires actual money. If you disagree with any part
+of, or do not fully understand our exchange rate
+policy, please refrain from purchasing or using any
+Virtual Items in connection with the Service.
+VIIYou understand that BLive may change, modify or
+update these Terms, or the terms of sale in
+connection with the Virtual Items from time to time,
+and that such revised terms will apply to all
+subsequent purchases of any Virtual Items, and you
+agree that you will review these Terms and any terms
+regarding the sale of Virtual Items prior to making any
+purchase.
+VIII In the event your account balance is incorrect
+due to system maintenance or other technical failures
+as determined by Company in its sole discretion,
+Company agrees to make all necessary corrections
+and adjustments with respect to your account
+balance. If you have any questions, concerns or
+suggestions regarding purchases and/or payments
+regarding the Service, please contact us at
+support@legacy.direct .
+8. Confiscation of Virtual Items Due To Termination
+Or Fraud
+I IMPORTANT: The Company takes fraud extremely
+seriously. In addition to taking any applicable and
+necessary legal action, Company reserves the right to
+permanently confiscate any Virtual Items from any
+User Account that it determines, in its sole discretion,
+were purchased or acquired using fraudulent means;
+this includes confiscation of any Virtual Gifts received
+by you from another User in which such Virtual Gifts
+were purchased fraudulently. In the event Company
+determines that and Virtual Items were fraudulently
+purchased, Company will notify you prior to
+confiscation and allow you an opportunity to make an
+appeal via the App.
+II If Company terminates your account for cause
+(including fraud), any outstanding Virtual Items
+remaining in your account at the time of termination
+may be irrevocably confiscated, as determined by
+Company in its sole and absolute discretion, in
+accordance with our Account Termination Policy
+specified below.
+9. Term and Termination Of These Terms
+I Term. As between you and the Company, the Term of
+these Terms of Service, as it may be amended,
+commences as of the date of your first use of the
+Service and continues until the termination of these
+Terms by either you or the Company.
+II Termination. You may terminate these Terms by
+deleting the App from any mobile devices in which it is
+installed, and terminating all other uses of the
+Service. If you wish to delete any of your User
+Content from the Service, then you may be able to do
+so using the permitted functionalities of the App, but
+the removal or deletion of such User Content will not
+terminate these Terms. The Company reserves the
+right, in its sole discretion, to restrict, suspend, or
+terminate these Terms and your access to all or any
+part of the Service at any time without prior notice or
+liability if you breach any provision of these Terms or
+our Community Policy, or violate the rights of any third
+party copyright owner. The Company may further
+terminate these Terms for any other reason upon ten
+(10) days’ notice to you using the email address
+associated with your account credentials. We will
+make reasonable efforts to notify you of such
+termination via the email address associated with
+your account or the next time you attempt to access
+your account, depending on the circumstances,
+however Company reserves the right to change,
+suspend, or discontinue all or any part of the Service
+at any time without prior notice or liability.
+III If Company terminates your account for cause, as
+determined in its sole discretion, you agree and
+acknowledge that all of or your User Content and
+Virtual Items stored on the Service will be confiscated,
+with or without notice to you. In other words, play by
+the rules and adhere to these Terms of Service, and
+the BLive Community Policy; failure to do so will result
+in the loss of your account and all of its assets.
+IV Appeals. In the event Company terminates your
+account or confiscates any Virtual Items for cause,
+you will have an opportunity to appeal such decision.
+All information regarding the appeals process will be
+provided to you via the App at the time of any
+termination or confiscation of Virtual Items.
+V Survival. Sections 1, 2.I, 3.II-3.VIII, 4, 5.III, 5.VII, 6.II,
+6.III, 7.I-7.IV, 8.V, 9, 11, and12 though 17, will survive
+the termination of these Terms indefinitely.
+11. Consent to Electronic Communications
+I By using the Service, you hereby consent to receiving
+certain electronic communications from us as further
+described in the Privacy Policy. Please read the
+Privacy Policy to learn more about your choices
+regarding our electronic communications
+practices. You agree that any notices, agreements,
+disclosures, or other communications that we send to
+you electronically will satisfy any legal communication
+requirements, including that such communications be
+in writing.
+12. Dispute Resolution
+I Mandatory Arbitration. Please read this carefully. It
+affects your rights. THE COMPANY (AND ITS
+RESPECTIVE CORPORATE PARENTS,
+SUBSIDIARIES, AFFILIATES, PREDECESSORS IN
+INTEREST, SUCCESSORS, PERMITTED
+ASSIGNS), YOU AND ANY OTHER PARTIES ON
+WHOSE BEHALF YOU ARE ACCESSING THE
+SERVICE AGREE TO ARBITRATION (EXCEPT FOR
+MATTERS THAT MAY BE TAKEN TO SMALL
+CLAIMS COURT), AS THE EXCLUSIVE FORM OF
+DISPUTE RESOLUTION EXCEPT AS PROVIDED
+FOR BELOW, FOR ALL DISPUTES AND CLAIMS
+ARISING OUT OF OR RELATING TO THESE
+TERMS OR THE SERVICE. Arbitration is more
+informal than a lawsuit in court. Arbitration uses a
+neutral arbitrator instead of a judge or jury, allows for
+more limited discovery than in court, and is subject to
+very limited review by courts. Arbitrators can award
+the same damages and relief that a court can
+award. Please visit www.adr.org for more
+information.
+II Commencing Arbitration. A party who intends to seek
+arbitration must first send to the other, by a reputable
+courier with a tracking mechanism, a written notice of
+intent to arbitrate (a “Notice”), or, in the absence of a
+mailing address provided by you to the Company, to
+you via any other method available to the Company,
+including via e-mail. The Notice to the Company
+should be addressed to: Legacy Direct LLC, 1221 E.
+Dyer Road, Unit 110, Santa Ana, CA92705 Attn:
+Marshal Young Esq. – (myoung@mmnt.com) (the
+“Arbitration Notice Address”). The Notice must (i)
+describe the nature and basis of the claim or dispute;
+and (ii) set forth the specific relief sought (the
+“Demand”). If you and the Company do not reach an
+agreement to resolve the claim within thirty (30) days
+after the Notice is received, you or the Company may
+commence an arbitration proceeding as set forth
+below or file a claim in small claims court. THE
+ARBITRATION WILL BE ADMINISTERED BY JAMS
+(“JAMS”) IN ACCORDANCE WITH THE
+STREAMLINED ARBITRATION RULES AND
+PROCEDURES OF JAMS OR SUBSEQUENT
+VERSIONS THEREOF, INCLUDING THE OPTIONAL
+APPEAL PROCEDURE (THE “JAMS RULES”). The
+Jams Rules and JAMS forms are available
+at www.jamsadr.com.
+III Arbitration Proceeding. The arbitration will be
+conducted in English. A single independent and
+impartial arbitrator with his or her primary place of
+business in Los Angeles County, California will be
+appointed pursuant to the Jams Rules, as modified
+herein. You and the Company agree the following
+rules, which are intended to streamline the dispute
+resolution process and reduce the costs and burdens
+on the parties: (i) the arbitration will be conducted
+online and/or be solely based on written submissions,
+the specific manner to be chosen by the party
+initiating the arbitration; (ii) the arbitration will not
+require any personal appearance by the parties or
+witnesses unless otherwise mutually agreed in writing
+by the parties; and (iii) any judgment on the award
+rendered by the arbitrator may be entered in any court
+of competent jurisdiction.
+IV Equitable Relief; No Injunctive Relief. The foregoing
+provisions of this Dispute Resolution Section do not
+apply to any claim in which either party seeks
+equitable relief to protect such party’s intellectual
+property, including copyrights, trademarks, or
+patents. You acknowledge that, in the event the
+Company or a third party breaches these Terms, the
+damage or harm, if any, caused to you will not entitle
+you to seek injunctive or other equitable relief against
+the Company, and your only remedy will be for
+monetary damages, subject to the limitations of
+liability set forth in these Terms.
+V Claims. You and the Company agree that,
+notwithstanding any other rights the party may have
+under law or equity, any cause of action arising out of
+or related to these Terms, or the Service, excluding a
+claim for indemnification, must commence within one
+(1) year after the cause of action accrues. Otherwise,
+such cause of action is permanently barred. All claims
+you bring against the Company must be resolved in
+accordance with this Dispute Resolution Section. All
+claims filed or brought contrary to this Dispute
+Resolution Section will be considered improperly
+filed. Should you file a claim contrary to this Dispute
+Resolution Section, the Company may recover
+attorneys’ fees and costs up to five thousand dollars
+($5,000), provided that the Company has notified you
+in writing of the improperly filed claim, and you have
+failed to promptly withdraw the claim.
+VI Terms Modifications. In the event that the Company
+makes any future change to the Mandatory Arbitration
+provision (other than a change to the Company’s
+Arbitration Notice Address), you may reject any such
+change by sending us written notice within 30 days of
+the change to the Company’s Arbitration Notice
+Address, in which case your Account and your license
+to use the Service hereunder will terminate
+immediately. This Dispute Resolution provision, as in
+effect immediately prior to the amendments you
+reject, will survive the termination of these Terms.
+13. Limitation of Liability; Disclaimer of Warranties
+I THE COMPANY, ITS AFFILIATES, AND THEIR
+RESPECTIVE OFFICERS, DIRECTORS,
+EMPLOYEES, AGENTS, SUPPLIERS AND
+LICENSORS (COLLECTIVELY, THE “COMPANY
+PARTIES”) MAKE NO WARRANTIES OR
+REPRESENTATIONS ABOUT THE SERVICE AND
+ANY CONTENT AVAILABLE ON THE SERVICE,
+INCLUDING BUT NOT LIMITED, TO THE
+ACCURACY, RELIABILITY, COMPLETENESS
+APPROPRIATENESS, TIMELINESS OR
+RELIABILITY THEREOF. THE COMPANY PARTIES
+WILL NOT BE SUBJECT TO LIABILITY FOR THE
+TRUTH, ACCURACY OR COMPLETENESS OF ANY
+CONTENT ON THE SERVICE OR ANY OTHER
+INFORMATION CONVEYED TO ANY USER, OR
+FOR ERRORS, MISTAKES OR OMISSIONS
+THEREIN, OR FOR ANY DELAYS OR
+INTERRUPTIONS OF THE DATA, OR
+INFORMATION STREAM FROM WHATEVER
+CAUSE. AS A USER, YOU AGREE THAT YOU USE
+THE SERVICE AND ANY CONTENT THEREON AT
+YOUR OWN RISK. YOU ARE SOLELY
+RESPONSIBLE FOR ALL CONTENT YOU UPLOAD
+TO THE SERVICE.
+II THE COMPANY PARTIES DO NOT WARRANT
+THAT THE SERVICE WILL OPERATE ERROR
+FREE, OR THAT THE SERVICE AND ANY
+CONTENT THEREON ARE FREE OF COMPUTER
+VIRUSES OR SIMILAR CONTAMINATION OR
+DESTRUCTIVE FEATURES. IF YOUR USE OF THE
+SERVICE OR ANY CONTENT THEREON RESULTS
+IN THE NEED FOR SERVICING OR REPLACING
+EQUIPMENT OR DATA, NO COMPANY PARTY
+WILL BE RESPONSIBLE FOR THOSE COSTS.
+III THE SERVICE AND ALL CONTENT THEREON ARE
+PROVIDED ON AN “AS IS” AND “AS AVAILABLE”
+BASIS WITHOUT ANY WARRANTIES OF ANY
+KIND. ACCORDINGLY, THE COMPANY PARTIES
+DISCLAIM ALL WARRANTIES, INCLUDING, BUT
+NOT LIMITED TO, THE WARRANTIES OF TITLE,
+MERCHANTABILITY, NON-INFRINGEMENT OF
+THIRD PARTIES RIGHTS, AND FITNESS FOR
+PARTICULAR PURPOSE.
+IV IN NO EVENT WILL ANY COMPANY PARTY BE
+LIABLE FOR ANY SPECIAL, INDIRECT, PUNITIVE,
+INCIDENTAL OR CONSEQUENTIAL DAMAGES,
+LOST PROFITS, OR DAMAGES RESULTING FROM
+LOST DATA OR BUSINESS INTERRUPTION
+RESULTING FROM, OR IN CONNECTION WITH,
+THE USE OR INABILITY TO USE THE SERVICE
+AND ANY CONTENT THEREON, WHETHER
+BASED ON WARRANTY, CONTRACT, TORT
+(INCLUDING NEGLIGENCE), OR ANY OTHER
+LEGAL THEORY, EVEN IF SUCH COMPANY
+PARTY HAS BEEN ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES. IN NO EVENT SHALL THE
+AGGREGATE LIABILITY OF THE COMPANY
+PARTIES EXCEED THE GREATER OF ONE
+HUNDRED DOLLARS (U.S. $100.00) OR THE
+AMOUNT YOU PAID COMPANY, IF ANY, IN THE
+PAST SIX MONTHS FOR USE OF THE COMPANYRELATED
+SERVICES GIVING RISE TO THE
+CLAIM.
+V The foregoing terms of this Section 14 apply to the
+fullest extent permitted by law.
+14. Indemnification.
+I To the maximum extent permitted by applicable law,
+you agree to indemnify and hold harmless the
+Company Entities, from and against any and all
+claims, damages, obligations, losses, liabilities, costs
+or debt, and expenses (including but not limited to
+attorney's fees) arising from: (i) your use (or misuse)
+of and access to the Service; (ii) your violation of any
+term of these Terms; (iii) your violation of any third
+party right, including without limitation any copyright,
+property, or privacy right; or (iv) any claim that your
+content caused damage to a third party. This defense
+and indemnification obligation will survive these
+Terms and your use of the Service.
+15. Third Party Disputes
+I To the fullest extent permitted by law, any dispute you
+have with any third party arising out of your use of the
+Service, including, by way of example and not
+limitation, any carrier, copyright owner or other user,
+is directly between you and such third party, and you
+irrevocably release the Company Parties from any
+and all claims, demands and damages (actual and
+consequential) of every kind and nature, known and
+unknown, arising out of or in any way connected with
+such disputes.
+16. Miscellaneous; Governing Law
+I Except as expressly agreed by the Company and you,
+these Terms constitutes the entire agreement
+between you and the Company with respect to the
+subject matter hereof, and supersedes all previous or
+contemporaneous agreements, whether written or
+oral, between the parties with respect to the subject
+matter herein. The Section headings are provided
+merely for convenience and will not be given any legal
+import.
+II These Terms will inure to the benefit of our
+successors and assigns. You may not assign these
+Terms or any of the rights or licenses granted
+hereunder, directly or indirectly, without the prior
+express written consent of the Company. Company
+may assign these Terms or any of the rights or
+obligations hereunder, and any causes of action
+arising hereunder, to any third party without necessity
+or obligation of notice to you. The waiver or failure of
+either party to exercise in any respect any right
+provided for herein will not be deemed a waiver of any
+further right hereunder. The invalidity or
+unenforceability of any provision of these Terms will
+not affect the validity or enforceability of any other
+provision, the remaining provisions being deemed to
+continue in full force and effect.
+III You agree that no joint venture, partnership,
+employment, or agency relationship exists between
+you and the Company as a result of these Terms or
+use of the Service.
+IV Failure of the Company to act on or enforce any
+provision of these Terms will not be construed as a
+waiver of that provision or any other provision in these
+Terms. No waiver will be effective against the
+Company unless made in writing, and no such waiver
+will be construed as a waiver in any other or
+subsequent instance. Further, Company will not be
+responsible for any failure to perform its obligations
+under these Terms due to circumstances beyond its
+reasonable control, including without limitation acts of
+God, war, riot, terrorism, embargoes, acts of civil or
+military authorities, fire, flood or other incident of
+“Force Majeure.”
+V You agree that Company will be entitled to all legal
+and equitable remedies otherwise available to it to
+protect the intellectual property, proprietary rights and
+confidential information of itself and its licensors,
+including, without limitation, the right to seek and
+obtain injunctive relief and enforce the same against
+you without the necessity of having to post bond or
+other such guarantee.
+VI These Terms will in all respects, be governed by and
+construed and enforced in accordance with the laws
+of the State of California (without giving effect to any
+choice or conflict of laws). You expressly agree to
+submit to the exclusive personal jurisdiction of the
+state and federal courts sitting in Los Angeles County,
+California.
+VII Contact: If you have any questions or comments
+about these Terms or your use of the Service, please
+contact us at support@legacy.direct
+Last Updated: November 1, 2017</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l0x-5X-Qut" firstAttribute="top" secondItem="vpq-gn-6GY" secondAttribute="top" id="O7f-Ka-KUu"/>
+                            <constraint firstItem="l0x-5X-Qut" firstAttribute="bottom" secondItem="vpq-gn-6GY" secondAttribute="bottom" id="cZ1-yO-4CD"/>
+                            <constraint firstItem="l0x-5X-Qut" firstAttribute="leading" secondItem="vpq-gn-6GY" secondAttribute="leading" id="cdk-EN-qzj"/>
+                            <constraint firstItem="l0x-5X-Qut" firstAttribute="trailing" secondItem="vpq-gn-6GY" secondAttribute="trailing" id="nrw-kF-OHU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vpq-gn-6GY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0x5-rH-4xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434.39999999999998" y="757.87106446776613"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vGn-RL-H6f">
+            <objects>
+                <navigationController storyboardIdentifier="SignInViewController" automaticallyAdjustsScrollViewInsets="NO" id="fTf-R2-3UF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Q2-Sn-h4J">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mE6-Y8-hAU" kind="relationship" relationship="rootViewController" id="ova-vx-PvE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7r-5X-BQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="-9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bvision2" width="200" height="200"/>
+    </resources>
+    <color key="tintColor" red="0.097430117428302765" green="0.1716010570526123" blue="0.24738189578056335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
