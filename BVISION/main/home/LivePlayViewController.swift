@@ -34,7 +34,6 @@ class LivePlayViewController: BasicViewController {
         }
     }
     
-    
     @objc func applicationWillEnterForeground() {
         player.autoPlay()
     }
@@ -56,6 +55,10 @@ class LivePlayViewController: BasicViewController {
         let asset = BMPlayerResource(url: URL(string: liveChannel.playUrl)!, name: liveChannel.title, cover: nil, subtitle: nil)
         player.setVideo(resource: asset)
         player.delegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        player.pause()
     }
     
     deinit {

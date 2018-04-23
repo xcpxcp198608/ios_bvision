@@ -14,8 +14,6 @@
 		CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BEB2088619600AF73B8 /* LocalPushViewController.swift */; };
 		CD432BEF208861F700AF73B8 /* LocalVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD432BED208861F600AF73B8 /* LocalVideoCell.xib */; };
 		CD432BF0208861F700AF73B8 /* LocalVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BEE208861F700AF73B8 /* LocalVideoCell.swift */; };
-		CD432BFA2088827C00AF73B8 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432BF92088827B00AF73B8 /* IJKMediaFramework.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		CD432BFC208883F100AF73B8 /* IJKPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BFB208883F100AF73B8 /* IJKPlayViewController.swift */; };
 		CD432BFE2088868E00AF73B8 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432BFD2088868D00AF73B8 /* libbz2.tbd */; };
 		CD432BFF208886AB00AF73B8 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9E5208738C1004A7FAB /* CoreAudio.framework */; };
 		CD432C00208886AB00AF73B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9E4208738C0004A7FAB /* CoreGraphics.framework */; };
@@ -29,8 +27,8 @@
 		CD432C08208886F400AF73B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CAA0420874096004A7FAB /* QuartzCore.framework */; };
 		CD432C0B208886F500AF73B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C09208886F400AF73B8 /* UIKit.framework */; };
 		CD432C0C208886F500AF73B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */; };
-		CD432C10208895DC00AF73B8 /* PLPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432C0F208895DC00AF73B8 /* PLPlayerViewController.swift */; };
 		CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */; };
+		CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD793F17208C611400DD1C39 /* FollowersViewController.swift */; };
 		CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */; };
 		CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7CA9B82086EC1D004A7FAB /* MyCell.xib */; };
 		CD7CA9BB2086ED1A004A7FAB /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9BA2086ED1A004A7FAB /* MyCell.swift */; };
@@ -54,6 +52,19 @@
 		CD7CA9F320873906004A7FAB /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9EF20873906004A7FAB /* libiconv.2.tbd */; };
 		CD7CA9F62087391D004A7FAB /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9F42087391C004A7FAB /* libstdc++.6.0.9.tbd */; };
 		CD7CA9F72087391D004A7FAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9F52087391C004A7FAB /* libz.tbd */; };
+		CD9F42B5208D7F9A00B71F79 /* FollowerUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42B4208D7F9A00B71F79 /* FollowerUserProvider.swift */; };
+		CD9F42B7208D891300B71F79 /* FollowUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42B6208D891300B71F79 /* FollowUserInfo.swift */; };
+		CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */; };
+		CD9F42BB208D8AC500B71F79 /* UserInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42BA208D8AC500B71F79 /* UserInfoProvider.swift */; };
+		CD9F42BD208D8C5800B71F79 /* UserChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42BC208D8C5800B71F79 /* UserChannelProvider.swift */; };
+		CD9F42BF208DBB9900B71F79 /* UserOperationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42BE208DBB9900B71F79 /* UserOperationInfo.swift */; };
+		CD9F42C1208DBC9100B71F79 /* UserOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42C0208DBC9100B71F79 /* UserOperationProvider.swift */; };
+		CD9F42C3208DBE0100B71F79 /* UserSetBlackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42C2208DBE0100B71F79 /* UserSetBlackProvider.swift */; };
+		CD9F42C6208DC1B100B71F79 /* HistoryOperationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9F42C5208DC1B100B71F79 /* HistoryOperationCell.xib */; };
+		CD9F42C8208DC1C300B71F79 /* HistoryOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42C7208DC1C300B71F79 /* HistoryOperationCell.swift */; };
+		CD9F42CA208DCB5400B71F79 /* BlackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42C9208DCB5400B71F79 /* BlackListViewController.swift */; };
+		CD9F42CC208DE29B00B71F79 /* UserBlacksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42CB208DE29B00B71F79 /* UserBlacksProvider.swift */; };
+		CD9F42CE208DE31B00B71F79 /* BlackListUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42CD208DE31B00B71F79 /* BlackListUserInfo.swift */; };
 		CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D29208446DF0043AA16 /* UFUtils.swift */; };
 		CDAC5D32208446E20043AA16 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2A208446DF0043AA16 /* Color.swift */; };
 		CDAC5D33208446E20043AA16 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2B208446DF0043AA16 /* TimeUtil.swift */; };
@@ -141,12 +152,11 @@
 		CD432BEE208861F700AF73B8 /* LocalVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalVideoCell.swift; sourceTree = "<group>"; };
 		CD432BF22088777B00AF73B8 /* BVISION.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BVISION.entitlements; sourceTree = "<group>"; };
 		CD432BF92088827B00AF73B8 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../framework/IJKMediaFramework.framework; sourceTree = "<group>"; };
-		CD432BFB208883F100AF73B8 /* IJKPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJKPlayViewController.swift; sourceTree = "<group>"; };
 		CD432BFD2088868D00AF73B8 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		CD432C09208886F400AF73B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		CD432C0F208895DC00AF73B8 /* PLPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPlayerViewController.swift; sourceTree = "<group>"; };
 		CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSYPlayerViewController.swift; sourceTree = "<group>"; };
+		CD793F17208C611400DD1C39 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserProvider.swift; sourceTree = "<group>"; };
 		CD7CA9B82086EC1D004A7FAB /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		CD7CA9BA2086ED1A004A7FAB /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
@@ -186,6 +196,19 @@
 		CD7CAA0320874096004A7FAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CD7CAA0420874096004A7FAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD7CAA082087414C004A7FAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CD9F42B4208D7F9A00B71F79 /* FollowerUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerUserProvider.swift; sourceTree = "<group>"; };
+		CD9F42B6208D891300B71F79 /* FollowUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserInfo.swift; sourceTree = "<group>"; };
+		CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		CD9F42BA208D8AC500B71F79 /* UserInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoProvider.swift; sourceTree = "<group>"; };
+		CD9F42BC208D8C5800B71F79 /* UserChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChannelProvider.swift; sourceTree = "<group>"; };
+		CD9F42BE208DBB9900B71F79 /* UserOperationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperationInfo.swift; sourceTree = "<group>"; };
+		CD9F42C0208DBC9100B71F79 /* UserOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperationProvider.swift; sourceTree = "<group>"; };
+		CD9F42C2208DBE0100B71F79 /* UserSetBlackProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetBlackProvider.swift; sourceTree = "<group>"; };
+		CD9F42C5208DC1B100B71F79 /* HistoryOperationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryOperationCell.xib; sourceTree = "<group>"; };
+		CD9F42C7208DC1C300B71F79 /* HistoryOperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOperationCell.swift; sourceTree = "<group>"; };
+		CD9F42C9208DCB5400B71F79 /* BlackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListViewController.swift; sourceTree = "<group>"; };
+		CD9F42CB208DE29B00B71F79 /* UserBlacksProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlacksProvider.swift; sourceTree = "<group>"; };
+		CD9F42CD208DE31B00B71F79 /* BlackListUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListUserInfo.swift; sourceTree = "<group>"; };
 		CDAC5D29208446DF0043AA16 /* UFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFUtils.swift; sourceTree = "<group>"; };
 		CDAC5D2A208446DF0043AA16 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CDAC5D2B208446DF0043AA16 /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
@@ -273,7 +296,6 @@
 				CD7CA9F62087391D004A7FAB /* libstdc++.6.0.9.tbd in Frameworks */,
 				CD7CA9F72087391D004A7FAB /* libz.tbd in Frameworks */,
 				CD7CA9F120873906004A7FAB /* libbz2.1.0.tbd in Frameworks */,
-				CD432BFA2088827C00AF73B8 /* IJKMediaFramework.framework in Frameworks */,
 				CD7CA9F320873906004A7FAB /* libiconv.2.tbd in Frameworks */,
 				00B9AE08B02AB24568230BA2 /* Pods_BVISION.framework in Frameworks */,
 			);
@@ -351,9 +373,11 @@
 		CD7CA9C12086F9A9004A7FAB /* table */ = {
 			isa = PBXGroup;
 			children = (
+				CD9F42CF208DE4C900B71F79 /* blacklist */,
+				CD9F42C4208DC17600B71F79 /* history */,
+				CD793F17208C611400DD1C39 /* FollowersViewController.swift */,
 				CD7CA9C22086F9D2004A7FAB /* MessageViewController.swift */,
 				CD7CA9C42086F9DF004A7FAB /* UpdateViewController.swift */,
-				CD7CA9C62086F9EA004A7FAB /* HistoryViewController.swift */,
 				CD7CA9C82086F9F9004A7FAB /* FeedbackViewController.swift */,
 				CD7CA9CA2086FA03004A7FAB /* HelpViewController.swift */,
 				CD7CA9CC2086FA10004A7FAB /* SettingsViewController.swift */,
@@ -370,11 +394,27 @@
 				CD7CA9DB20872D36004A7FAB /* ChannelToken.swift */,
 				CD7CA9D920872B16004A7FAB /* NetViewController.swift */,
 				CD7CA9DD20872E24004A7FAB /* VLCPlayerViewController.swift */,
-				CD432BFB208883F100AF73B8 /* IJKPlayViewController.swift */,
-				CD432C0F208895DC00AF73B8 /* PLPlayerViewController.swift */,
 				CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */,
 			);
 			path = vip;
+			sourceTree = "<group>";
+		};
+		CD9F42C4208DC17600B71F79 /* history */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CA9C62086F9EA004A7FAB /* HistoryViewController.swift */,
+				CD9F42C5208DC1B100B71F79 /* HistoryOperationCell.xib */,
+				CD9F42C7208DC1C300B71F79 /* HistoryOperationCell.swift */,
+			);
+			path = history;
+			sourceTree = "<group>";
+		};
+		CD9F42CF208DE4C900B71F79 /* blacklist */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F42C9208DCB5400B71F79 /* BlackListViewController.swift */,
+			);
+			path = blacklist;
 			sourceTree = "<group>";
 		};
 		CDAC5D3B20844F9D0043AA16 /* push */ = {
@@ -415,6 +455,12 @@
 				CDAC5D47208457460043AA16 /* LiveChannelProvider.swift */,
 				CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */,
 				CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */,
+				CD9F42B4208D7F9A00B71F79 /* FollowerUserProvider.swift */,
+				CD9F42BA208D8AC500B71F79 /* UserInfoProvider.swift */,
+				CD9F42BC208D8C5800B71F79 /* UserChannelProvider.swift */,
+				CD9F42C0208DBC9100B71F79 /* UserOperationProvider.swift */,
+				CD9F42C2208DBE0100B71F79 /* UserSetBlackProvider.swift */,
+				CD9F42CB208DE29B00B71F79 /* UserBlacksProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -425,6 +471,9 @@
 				CDBC650020858D0500F9A799 /* UserInfo.swift */,
 				CDAC5D4C208457580043AA16 /* LiveChannelInfo.swift */,
 				CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */,
+				CD9F42B6208D891300B71F79 /* FollowUserInfo.swift */,
+				CD9F42BE208DBB9900B71F79 /* UserOperationInfo.swift */,
+				CD9F42CD208DE31B00B71F79 /* BlackListUserInfo.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -564,6 +613,7 @@
 				CDBC650C2085A66900F9A799 /* FollowCell.swift */,
 				CDBC650D2085A66A00F9A799 /* FollowCell.xib */,
 				CDC1DCB920809B5A00534A0D /* FollowViewController.swift */,
+				CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */,
 			);
 			path = follow;
 			sourceTree = "<group>";
@@ -747,6 +797,7 @@
 				CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
 				CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */,
+				CD9F42C6208DC1B100B71F79 /* HistoryOperationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,8 +912,12 @@
 				CDBC6509208598A000F9A799 /* ClipsPageViewController.swift in Sources */,
 				CDC1DCB4208095F000534A0D /* BasicNavigationController.swift in Sources */,
 				CD7CA9BB2086ED1A004A7FAB /* MyCell.swift in Sources */,
+				CD9F42CC208DE29B00B71F79 /* UserBlacksProvider.swift in Sources */,
+				CD9F42BB208D8AC500B71F79 /* UserInfoProvider.swift in Sources */,
 				CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */,
+				CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */,
 				CDAC5D3F20844FDB0043AA16 /* PushViewController.swift in Sources */,
+				CD9F42B5208D7F9A00B71F79 /* FollowerUserProvider.swift in Sources */,
 				CDC1DCB02080932800534A0D /* LiveChannelCell.swift in Sources */,
 				CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */,
 				CD7CA9C32086F9D2004A7FAB /* MessageViewController.swift in Sources */,
@@ -872,6 +927,7 @@
 				CDAC5D49208457460043AA16 /* LiveChannelProvider.swift in Sources */,
 				CDC1DCA72080917200534A0D /* BasicViewController.swift in Sources */,
 				CDAC5D53208492F70043AA16 /* BMPlayerCustomControlView.swift in Sources */,
+				CD9F42CE208DE31B00B71F79 /* BlackListUserInfo.swift in Sources */,
 				CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */,
 				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
 				CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */,
@@ -879,10 +935,13 @@
 				CD7CA9C92086F9F9004A7FAB /* FeedbackViewController.swift in Sources */,
 				CDBC650B20859A4800F9A799 /* YTBChannelsViewController.swift in Sources */,
 				CDC1DCAB208091E500534A0D /* BasicTableViewController.swift in Sources */,
+				CD9F42CA208DCB5400B71F79 /* BlackListViewController.swift in Sources */,
+				CD9F42B7208D891300B71F79 /* FollowUserInfo.swift in Sources */,
 				CDAC5D34208446E20043AA16 /* AESUtil.swift in Sources */,
 				CDBC64F42085885E00F9A799 /* UserSignUpTableViewController.swift in Sources */,
 				CD7CA9DA20872B16004A7FAB /* NetViewController.swift in Sources */,
 				CDBC64F72085885E00F9A799 /* UserSignInTableViewController.swift in Sources */,
+				CD9F42C3208DBE0100B71F79 /* UserSetBlackProvider.swift in Sources */,
 				CDC1DCC320809D6300534A0D /* ScanViewController.swift in Sources */,
 				CDAC5D43208450230043AA16 /* PushVideoViewController.swift in Sources */,
 				CD432BF0208861F700AF73B8 /* LocalVideoCell.swift in Sources */,
@@ -891,27 +950,30 @@
 				CD7CA9D620872AA8004A7FAB /* VIPPageViewController.swift in Sources */,
 				CDAC5D38208446E20043AA16 /* Constant.swift in Sources */,
 				CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */,
+				CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */,
 				CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */,
 				CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */,
-				CD432C10208895DC00AF73B8 /* PLPlayerViewController.swift in Sources */,
 				CDC1DCBD20809BAA00534A0D /* MyViewController.swift in Sources */,
 				CDAC5D36208446E20043AA16 /* FileUtils.swift in Sources */,
 				CDAC5D35208446E20043AA16 /* extentions.swift in Sources */,
+				CD9F42C1208DBC9100B71F79 /* UserOperationProvider.swift in Sources */,
 				CDC1DCA42080915000534A0D /* LiveChannelViewController.swift in Sources */,
 				CD7CA9DE20872E25004A7FAB /* VLCPlayerViewController.swift in Sources */,
 				CDAC5D37208446E20043AA16 /* Functions.swift in Sources */,
 				CDAC5D4D208457580043AA16 /* LiveChannelInfo.swift in Sources */,
 				CDC1DCBA20809B5A00534A0D /* FollowViewController.swift in Sources */,
 				CDBC64F62085885E00F9A799 /* UserSignUpViewController.swift in Sources */,
+				CD9F42C8208DC1C300B71F79 /* HistoryOperationCell.swift in Sources */,
 				CD432BE82088607600AF73B8 /* RecordVideoViewController.swift in Sources */,
 				CDAC5D33208446E20043AA16 /* TimeUtil.swift in Sources */,
+				CD9F42BD208D8C5800B71F79 /* UserChannelProvider.swift in Sources */,
 				CD7CA9BD2086F452004A7FAB /* MyTableViewController.swift in Sources */,
 				CD7CA9CD2086FA10004A7FAB /* SettingsViewController.swift in Sources */,
 				CDBC64FE20858BA500F9A799 /* SplashViewController.swift in Sources */,
 				CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */,
+				CD9F42BF208DBB9900B71F79 /* UserOperationInfo.swift in Sources */,
 				CDBC65032085987800F9A799 /* YTBPlayViewController.swift in Sources */,
 				CD432BEA2088608600AF73B8 /* SystemVideoViewController.swift in Sources */,
-				CD432BFC208883F100AF73B8 /* IJKPlayViewController.swift in Sources */,
 				CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */,
 				CDBC650120858D0500F9A799 /* UserInfo.swift in Sources */,
 				CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */,

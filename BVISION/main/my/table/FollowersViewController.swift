@@ -1,28 +1,26 @@
 //
-//  FollowViewController.swift
+//  FollowersViewController.swift
 //  BVISION
 //
-//  Created by patrick on 2018/4/13.
+//  Created by patrick on 2018/4/22.
 //  Copyright © 2018 wiatec. All rights reserved.
 //
 
 import UIKit
-import MJRefresh
-import Alamofire
-import SwiftyJSON
 import JGProgressHUD
+import MJRefresh
 
-class FollowViewController: BasicViewController {
-    
+class FollowersViewController: BasicViewController {
+
     @IBOutlet weak var contentView: UIView!
     var collectionView: UICollectionView!
     
     var hud: JGProgressHUD?
     var isFirstLoad = true
     
-    var followUserInfos = [FollowUserInfo]()
-    lazy var followUserProvider = {
-        return FollowUserProvide()
+    var followerUserInfos = [FollowUserInfo]()
+    lazy var followerProvider = {
+        return FollowerUserProvide()
     }()
     
     override func viewDidLoad() {
@@ -36,8 +34,8 @@ class FollowViewController: BasicViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if userId > 0{
-            followUserProvider.loadDelegate = self
-            followUserProvider.load(userId)
+            followerProvider.loadDelegate = self
+            followerProvider.load(userId)
             if isFirstLoad{
                 hud = self.hudLoading()
             }
@@ -74,15 +72,15 @@ class FollowViewController: BasicViewController {
     }
     
     @objc func pullDownRefresh(){
-        followUserProvider.load(userId)
+        followerProvider.load(userId)
         self.collectionView!.mj_header.endRefreshing()
     }
-
+    
 }
 
 
 
-extension FollowViewController: UICollectionViewDelegateFlowLayout{
+extension FollowersViewController: UICollectionViewDelegateFlowLayout{
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -91,65 +89,34 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let userInfo = followUserInfos[indexPath.row]
-        getFollowUserChannelInfo(userInfo.id)
-    }
-    
-    func getFollowUserChannelInfo(_ id: Int){
-        let url = "\(Constant.url_channel)\(id)"
-        Alamofire.request(url, method: .get)
-            .validate()
-            .responseData { (response) in
-                switch response.result {
-                case .success:
-                    let result = JSON(data: response.data!)
-                    if result["code"].intValue == 200{
-                        let liveChannelInfo = LiveChannelInfo(result["data"])
-                        if liveChannelInfo.available {
-                            self.playChannel(liveChannelInfo)
-                        }else{
-                            self.hudError(with: "live has no start")
-                        }
-                    }else{
-                        self.hudError(with: result["message"].stringValue)
-                    }
-                case .failure(let error):
-                    print(error)
-                    self.hudError(with: error.localizedDescription)
-                }
-        }
+        let userInfo = followerUserInfos[indexPath.row]
+        
     }
     
     
-    func playChannel(_ liveChannelInfo: LiveChannelInfo){
-        let mainBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = mainBoard.instantiateViewController(withIdentifier: "LivePlayViewController") as! LivePlayViewController
-        controller.liveChannelInfo = liveChannelInfo
-        self.present(controller, animated: false, completion: nil)
-    }
+    
+
     
 }
 
 
 
-extension FollowViewController: UICollectionViewDataSource{
+extension FollowersViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return followUserInfos.count
+        return followerUserInfos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if followUserInfos.count > 0 {
+        if followerUserInfos.count > 0 {
             let cell: FollowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FollowCell", for: indexPath) as! FollowCell
-            let userInfo = followUserInfos[indexPath.row]
+            let userInfo = followerUserInfos[indexPath.row]
             cell.lUsername.text = userInfo.username
             if userInfo.profile.count > 0{
                 cell.lUserProfile.text = userInfo.profile
             }
             cell.ivUserIcon.kf.setImage(with: URL(string: userInfo.icon), placeholder: #imageLiteral(resourceName: "hold_person"))
-            if userInfo.channelActive{
-                cell.ivUserStatus.image = #imageLiteral(resourceName: "record_green_16")
-            }
+            cell.ivUserStatus.isHidden = true
             return cell
         }else{
             return UICollectionViewCell()
@@ -159,18 +126,20 @@ extension FollowViewController: UICollectionViewDataSource{
 }
 
 
-extension FollowViewController: FollowUserProvideDelegate{
+extension FollowersViewController: FollowerUserProvideDelegate{
     
-    func loadSuccess(_ followUsers: [FollowUserInfo]) {
+    func loadSuccess(_ followers: [FollowUserInfo]) {
         hud?.dismiss()
         isFirstLoad = false
-        if followUsers.count > 0{
-            self.followUserInfos = followUsers
+        if followers.count > 0{
+            self.followerUserInfos = followers
             self.collectionView.reloadData()
         }
     }
     
     func loadFailure(_ message: String, _ error: Error?) {
+        hud?.dismiss()
+        self.hudError(with: message)
         print(message)
     }
     

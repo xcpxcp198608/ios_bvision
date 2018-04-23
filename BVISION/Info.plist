@@ -35,6 +35,8 @@
 	<string>access system microphone</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>access system photo</string>
+	<key>NSContactsUsageDescription</key>
+	<string>access system contacts</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

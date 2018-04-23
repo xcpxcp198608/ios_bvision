@@ -48,16 +48,13 @@ class BasicTabBarController: UITabBarController, UITabBarControllerDelegate {
         let popup = PopupDialog(title: title, message: message)
         
         
-        let btCancel = CancelButton(title: "CANCEL") {
-            popup.dismiss()
-        }
         let buttonTwo = DefaultButton(title: "PUSH BY CAMERA", dismissOnTap: true) {
             self.requestAccessForVideo()
         }
-        let buttonThree = DefaultButton(title: "PUSH BY LOCAL(VIP)", height: 60) {
+        let buttonThree = DefaultButton(title: "PUSH BY LOCAL(PRO)", height: 60) {
             self.requestAccessForPhoto()
         }
-        popup.addButtons([buttonTwo, buttonThree, btCancel])
+        popup.addButtons([buttonTwo, buttonThree])
         
         
         let dialogAppearance = PopupDialogDefaultView.appearance()
@@ -74,11 +71,7 @@ class BasicTabBarController: UITabBarController, UITabBarControllerDelegate {
         db.buttonColor    = UIColor(red:0.25, green:0.25, blue:0.29, alpha:1.00)
         db.separatorColor = UIColor(red:0.20, green:0.20, blue:0.25, alpha:1.00)
         
-        let cb = CancelButton.appearance()
-        cb.titleFont      = UIFont(name: "HelveticaNeue-Medium", size: 14)!
-        cb.titleColor     = UIColor(white: 0.6, alpha: 1)
-        cb.buttonColor    = UIColor(red:0.25, green:0.25, blue:0.29, alpha:1.00)
-        cb.separatorColor = UIColor(red:0.20, green:0.20, blue:0.25, alpha:1.00)
+        buttonTwo.titleColor = .red
         
         self.present(popup, animated: true, completion: nil)
     }

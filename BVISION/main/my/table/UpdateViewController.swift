@@ -45,13 +45,13 @@ class UpdateViewController: BasicTableViewController, UITextFieldDelegate {
         }
         if textField == tfNewPassword1 {
             tfNewPassword1.resignFirstResponder()
-            updateChannelInfo()
+            updatePassword()
             return false
         }
         return true
     }
     
-    func updateChannelInfo(){
+    func updatePassword(){
         let userId = UserDefaults.standard.integer(forKey: Constant.key_user_id)
         if userId <= 0 {return}
         if let oldPassword = tfOldPassword.text, let newPassword = tfNewPassword.text, let newPassword1 = tfNewPassword1.text {
@@ -96,7 +96,7 @@ class UpdateViewController: BasicTableViewController, UITextFieldDelegate {
     
     @IBAction func done(){
         tfNewPassword1.resignFirstResponder()
-        updateChannelInfo()
+        updatePassword()
     }
 
 

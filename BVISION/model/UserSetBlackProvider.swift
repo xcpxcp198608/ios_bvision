@@ -1,8 +1,8 @@
 //
-//  FollowUserProvider.swift
+//  UserBlackProvider.swift
 //  BVISION
 //
-//  Created by patrick on 2018/4/18.
+//  Created by patrick on 2018/4/23.
 //  Copyright © 2018 wiatec. All rights reserved.
 //
 
@@ -10,31 +10,27 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol FollowUserProvideDelegate {
-    func loadSuccess(_ followUsers:  [FollowUserInfo])
+protocol UserSetBlackProviderDelegate {
+    func loadSuccess()
     func loadFailure(_ message: String, _ error: Error?)
 }
 
-class FollowUserProvide {
+class UserSetBlackProvider {
     
-    var loadDelegate: FollowUserProvideDelegate?
+    var loadDelegate: UserSetBlackProviderDelegate?
     
-    func load(_ userId: Int){
+    func load(_ action: Int, _ userId: Int, username: String){
         if userId <= 0 {return}
-        let url = "\(Constant.url_user_follows)\(userId)"
-        Alamofire.request(url, method: .get)
+        let url = "\(Constant.url_user_set_black)\(action)/\(userId)"
+        let parameters = ["username": username]
+        Alamofire.request(url, method: .post, parameters: parameters)
             .validate()
             .responseData { (response) in
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
                     if(result["code"].intValue == 200){
-                        let dataList = result["dataList"]
-                        var followUsers = [FollowUserInfo]()
-                        for i in 0..<dataList.count {
-                            followUsers.append(FollowUserInfo(dataList[i]))
-                        }
-                        self.loadDelegate?.loadSuccess(followUsers)
+                        self.loadDelegate?.loadSuccess()
                     }else{
                         self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
                     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 import libksygpulive
 
 class KSYPlayerViewController: BasicViewController {
@@ -22,15 +23,17 @@ class KSYPlayerViewController: BasicViewController {
     }
     
     func initPlayer(){
-        let url = URL(string: "http://ooyalahd2-f.akamaihd.net/i/globalradio02_delivery@156522/index_656_av-p.m3u8?sd=10&rebase=on")
+        let url = URL(string: playUrl)
         player = KSYMoviePlayerController.init(contentURL: url)
-        player?.controlStyle = .none
+        player?.controlStyle = .fullscreen
         player?.view.frame = playView.bounds
         playView.addSubview((player?.view)!)
         playView.autoresizesSubviews = true
-        player?.view.autoresizingMask = .flexibleHeight
+        player?.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        player?.shouldEnableVideoPostProcessing = true
         player?.shouldAutoplay = true
-        player?.scalingMode = .aspectFit
+        player?.scalingMode = .fill
+        player?.videoDecoderMode = .AUTO
         player?.prepareToPlay()
     }
     
@@ -39,7 +42,23 @@ class KSYPlayerViewController: BasicViewController {
     }
     
     @objc func stateChange(){
-        print(player?.playbackState)
+        switch (player?.playbackState)! {
+        case MPMoviePlaybackState.playing:
+            print("playing")
+            break
+        case MPMoviePlaybackState.paused:
+            print("paused")
+            break
+        case MPMoviePlaybackState.stopped:
+            print("stopped")
+            break
+            
+        case MPMoviePlaybackState.interrupted:
+            print("interrupted")
+            break
+        default:
+            break
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

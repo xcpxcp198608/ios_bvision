@@ -12,7 +12,7 @@ import JGProgressHUD
 
 class HelpViewController: BasicViewController {
 
-    let url = "https://blive.bvision.live/Resource/html/help.html"
+    let url = "https://blive.bvision.live/Resource/html/ios_help.html"
     var hud: JGProgressHUD?
     var wkWebView: WKWebView?
     

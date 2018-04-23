@@ -25,16 +25,21 @@ struct Constant {
     static let url_user_signup = "\(base_url)user/signup"
     static let url_user_reset = "\(base_url)user/reset"
     static let url_user_update_pw = "\(base_url)user/update/"
+    static let url_user_details = "\(base_url)user/"
     static let url_user_upload_icon = "\(base_url)user/upload/"
     static let url_user_follows = "\(base_url)user/follows/"
     static let url_user_follow_status = "\(base_url)user/follow/status/"
     static let url_user_follow = "\(base_url)user/follow/"
+    static let url_user_followers = "\(base_url)user/followers/"
     static let url_token_validate = "\(base_url)user/validate/"
     static let url_user_feedback = "\(base_url)user/feedback"
+    static let url_user_set_black = "\(base_url)user/black/"
+    static let url_user_list_blacks = "\(base_url)user/blacks/"
+    static let url_user_operations = "\(base_url)user/operations/"
     
     static let url_wss_live = "wss://blive.bvision.live/live/"
     
-    static let link_app_qrcode = "https://blive.bvision.live/qrcode"
+    static let link_app_qrcode = "https://blive.bvision.live/qrcode/"
     
     static let jsonHeaders: HTTPHeaders = [
     "ContentType": "application/json"

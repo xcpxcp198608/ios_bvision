@@ -138,7 +138,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     @IBAction func generateQRCode(){
-        if let tryImage = EFQRCode.generate(content: Constant.link_app_qrcode, watermark: #imageLiteral(resourceName: "bvision2").toCGImage()) {
+        let inviteCode = AESUtil.encrypt("\(TimeUtil.getUnixTimestamp())\(userId)")!
+        if let tryImage = EFQRCode.generate(content: "\(Constant.link_app_qrcode)\(inviteCode)", watermark: #imageLiteral(resourceName: "bvision2").toCGImage()) {
             let title = "B·VISION in App Store"
             let message = ""
             let popup = PopupDialog(title: title, message: message, image: UIImage(cgImage: tryImage))

@@ -16,6 +16,15 @@ class TimeUtil{
         return Int(now.timeIntervalSince1970)
     }
     
+    static func getCurrentTime() -> String{
+        let timeInterval:TimeInterval = TimeInterval(getUnixTimestamp())
+        let date = NSDate(timeIntervalSince1970: timeInterval) as Date
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let time = dateformatter.string(from: date)
+        return time
+    }
+    
     static func getTime(from timeStamp: Int) -> String{
         let timeInterval:TimeInterval = TimeInterval(timeStamp)
         let date = NSDate(timeIntervalSince1970: timeInterval) as Date

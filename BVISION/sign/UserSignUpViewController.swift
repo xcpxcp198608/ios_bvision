@@ -63,7 +63,7 @@ class UserSignUpViewController: UIViewController{
                 self.alertError(message: "email format error")
                 return
             }
-            if phone.count <= 0 {
+            if phone.count <= 8 {
                 self.alertError(message: "phone input error")
                 return
             }

@@ -14,6 +14,10 @@ import JGProgressHUD
 
 class UserSignInViewController: UIViewController, UITextFieldDelegate{
     
+    lazy var userChannelProvider = {
+        return UserChannelProvider()
+    }()
+    
     var signInTableView: UserSignInTableViewController?
     @IBOutlet weak var btSignIn: UIButton!
     
@@ -24,6 +28,7 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
     }
     
     override func viewDidLoad() {
+        userChannelProvider.loadDelegate = self
         let statusBarWindow : UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
         statusBarWindow.isHidden = false
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -90,7 +95,7 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
                             UFUtils.set(userInfo.icon, key: Constant.key_user_icon)
                             UFUtils.set(userInfo.token, key: Constant.key_token)
                             UFUtils.set(userInfo.level, key: Constant.key_user_level)
-                            self.getUserChannelInfo(userInfo.id)
+                            self.userChannelProvider.load(userInfo.id)
                         }else{
                             self.alertError(message: result["message"].stringValue)
                             self.enableButton()
@@ -105,36 +110,23 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func getUserChannelInfo(_ userId: Int){
-         let hud = hudLoading()
-        let url = "\(Constant.url_channel)\(userId)"
-        print(url)
-        Alamofire.request(url, method: .get)
-            .validate()
-            .responseData { (response) in
-                hud.dismiss()
-                switch response.result {
-                case .success:
-                    let result = JSON(data: response.data!)["data"]
-                    let channelInfo = LiveChannelInfo(result)
-                    UFUtils.set(channelInfo.title, key: Constant.key_channel_title)
-                    UFUtils.set(channelInfo.message, key: Constant.key_channel_message)
-                    UFUtils.set(channelInfo.price, key: Constant.key_channel_price)
-                    UFUtils.set(channelInfo.rating, key: Constant.key_channel_rating)
-                    UFUtils.set(channelInfo.url, key: Constant.key_channel_push_url)
-                    UFUtils.set(channelInfo.playUrl, key: Constant.key_channel_play_url)
-                    UFUtils.set(channelInfo.preview, key: Constant.key_channel_preview)
-                    UFUtils.set(channelInfo.link, key: Constant.key_channel_link)
-                    self.showMainBoard()
-                case .failure(let error):
-                    print(error)
-                    self.showMainBoard()
-                }
-        }
-    }
-    
     override var shouldAutorotate: Bool{
         return false
     }
+    
+}
+
+
+extension UserSignInViewController: UserChannelProviderDelegate{
+    
+    func loadSuccess(_ liveChannelInfo: LiveChannelInfo) {
+        self.showMainBoard()
+    }
+    
+    func loadFailure(_ message: String, _ error: Error?) {
+        print(error)
+        self.showMainBoard()
+    }
+    
     
 }
