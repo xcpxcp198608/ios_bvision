@@ -1,8 +1,8 @@
 //
-//  UserBlackProvider.swift
+//  BvisionCoinProvider.swift
 //  BVISION
 //
-//  Created by patrick on 2018/4/23.
+//  Created by patrick on 2018/4/24.
 //  Copyright © 2018 wiatec. All rights reserved.
 //
 
@@ -10,27 +10,26 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol UserSetBlackProviderDelegate {
-    func loadSuccess(action: Int, indexPath: IndexPath?)
+protocol BvisionCoinProviderDelegate {
+    func loadSuccess(_ number: Int)
     func loadFailure(_ message: String, _ error: Error?)
 }
 
-class UserSetBlackProvider {
+class BvisionCoinProvider {
     
-    var loadDelegate: UserSetBlackProviderDelegate?
+    var loadDelegate: BvisionCoinProviderDelegate?
     
-    func load(indexPath: IndexPath?, action: Int, userId: Int, username: String){
+    func load(_ userId: Int){
         if userId <= 0 {return}
-        let url = "\(Constant.url_user_set_black)\(action)/\(userId)"
-        let parameters = ["username": username]
-        Alamofire.request(url, method: .post, parameters: parameters)
+        let url = "\(Constant.url_user_coin)\(userId)"
+        Alamofire.request(url, method: .get)
             .validate()
             .responseData { (response) in
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
                     if(result["code"].intValue == 200){
-                        self.loadDelegate?.loadSuccess(action: action, indexPath: indexPath)
+                        
                     }else{
                         self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
                     }

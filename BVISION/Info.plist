@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -29,14 +29,14 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>access system camera</string>
+	<key>NSContactsUsageDescription</key>
+	<string>access system contacts</string>
 	<key>NSLocationUsageDescription</key>
 	<string>access current location</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>access system microphone</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>access system photo</string>
-	<key>NSContactsUsageDescription</key>
-	<string>access system contacts</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

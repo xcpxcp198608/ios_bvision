@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import BMPlayer
+import PopupDialog
 
 class LivePlayViewController: BasicViewController {
     
@@ -19,9 +20,16 @@ class LivePlayViewController: BasicViewController {
     @IBOutlet weak var containerView: UIView!
     
     
+    lazy var userCheckBlackProvider = {
+        return UserCheckBlackProvider()
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userCheckBlackProvider.loadDelegate = self
         guard let liveChannel = liveChannelInfo else{ fatalError("channel error")}
+        userCheckBlackProvider.load(userId, playerId: liveChannel.userId)
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         NotificationCenter.default.addObserver(self,selector: #selector(applicationWillEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         initPlayer(liveChannel)
@@ -108,4 +116,44 @@ extension LivePlayViewController: BMPlayerDelegate {
     func bmPlayer(player: BMPlayer, loadedTimeDidChange loadedDuration: TimeInterval, totalDuration: TimeInterval) {
         //        print("| BMPlayerDelegate | loadedTimeDidChange | \(loadedDuration) of \(totalDuration)")
     }
+}
+
+
+
+extension LivePlayViewController: UserCheckBlackProviderDelegate{
+    
+    func loadSuccess() {
+        
+    }
+    
+    func loadFailure(_ message: String, _ error: Error?) {
+        player.pause()
+        showBlackListDialog(message)
+    }
+    
+    func showBlackListDialog(_ message: String){
+        let title = "Notice"
+        let popup = PopupDialog(title: title, message: message, gestureDismissal:false)
+        let buttonTwo = DefaultButton(title: "Got It", dismissOnTap: true) {
+            self.dismiss(animated: false, completion: nil)
+        }
+        popup.addButtons([buttonTwo])
+        
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor = UIColor(rgb: Color.accent)
+        dialogAppearance.titleFont    = UIFont(name: "HelveticaNeue-Light", size: 16)!
+        dialogAppearance.titleColor   = .white
+        dialogAppearance.messageFont  = UIFont(name: "HelveticaNeue", size: 14)!
+        dialogAppearance.messageColor = UIColor(white: 0.8, alpha: 1)
+        
+        
+        let db = DefaultButton.appearance()
+        db.titleFont      = UIFont(name: "HelveticaNeue-Medium", size: 14)!
+        db.titleColor     = .white
+        db.buttonColor    = UIColor(red:0.25, green:0.25, blue:0.29, alpha:1.00)
+        db.separatorColor = UIColor(red:0.20, green:0.20, blue:0.25, alpha:1.00)
+        
+        self.present(popup, animated: true, completion: nil)
+    }
+    
 }

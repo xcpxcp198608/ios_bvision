@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		00B9AE08B02AB24568230BA2 /* Pods_BVISION.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26735945DEB81483A94D9869 /* Pods_BVISION.framework */; };
+		CD168BF0208EC670001C3F08 /* InputDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD168BEF208EC670001C3F08 /* InputDialogViewController.swift */; };
+		CD168BF2208EC690001C3F08 /* InputDialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD168BF1208EC690001C3F08 /* InputDialogViewController.xib */; };
+		CD168BF4208EDA03001C3F08 /* UserCheckBlackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD168BF3208EDA03001C3F08 /* UserCheckBlackProvider.swift */; };
+		CD168BF6208EDFDA001C3F08 /* BvisionCoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD168BF5208EDFDA001C3F08 /* BvisionCoinsViewController.swift */; };
+		CD168BF8208EE1C4001C3F08 /* BvisionCoinProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD168BF7208EE1C4001C3F08 /* BvisionCoinProvider.swift */; };
+		CD168C02208EFCFE001C3F08 /* CoinPurchaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD168C00208EFCFD001C3F08 /* CoinPurchaseCell.xib */; };
+		CD168C03208EFCFE001C3F08 /* CoinPurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD168C01208EFCFD001C3F08 /* CoinPurchaseCell.swift */; };
 		CD432BE620882DF400AF73B8 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BE520882DF400AF73B8 /* RecordViewController.swift */; };
 		CD432BE82088607600AF73B8 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BE72088607600AF73B8 /* RecordVideoViewController.swift */; };
 		CD432BEA2088608600AF73B8 /* SystemVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432BE92088608600AF73B8 /* SystemVideoViewController.swift */; };
@@ -144,6 +151,13 @@
 /* Begin PBXFileReference section */
 		26735945DEB81483A94D9869 /* Pods_BVISION.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVISION.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4C5FF8EB4E1587CADED8D1 /* Pods-BVISION.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVISION.release.xcconfig"; path = "Pods/Target Support Files/Pods-BVISION/Pods-BVISION.release.xcconfig"; sourceTree = "<group>"; };
+		CD168BEF208EC670001C3F08 /* InputDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDialogViewController.swift; sourceTree = "<group>"; };
+		CD168BF1208EC690001C3F08 /* InputDialogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputDialogViewController.xib; sourceTree = "<group>"; };
+		CD168BF3208EDA03001C3F08 /* UserCheckBlackProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckBlackProvider.swift; sourceTree = "<group>"; };
+		CD168BF5208EDFDA001C3F08 /* BvisionCoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BvisionCoinsViewController.swift; sourceTree = "<group>"; };
+		CD168BF7208EE1C4001C3F08 /* BvisionCoinProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BvisionCoinProvider.swift; sourceTree = "<group>"; };
+		CD168C00208EFCFD001C3F08 /* CoinPurchaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoinPurchaseCell.xib; sourceTree = "<group>"; };
+		CD168C01208EFCFD001C3F08 /* CoinPurchaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinPurchaseCell.swift; sourceTree = "<group>"; };
 		CD432BE520882DF400AF73B8 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		CD432BE72088607600AF73B8 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
 		CD432BE92088608600AF73B8 /* SystemVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemVideoViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +372,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD168BF9208EE26A001C3F08 /* bvisioncoin */ = {
+			isa = PBXGroup;
+			children = (
+				CD168BF5208EDFDA001C3F08 /* BvisionCoinsViewController.swift */,
+				CD168C01208EFCFD001C3F08 /* CoinPurchaseCell.swift */,
+				CD168C00208EFCFD001C3F08 /* CoinPurchaseCell.xib */,
+			);
+			path = bvisioncoin;
+			sourceTree = "<group>";
+		};
 		CD7CA9BE2086F991004A7FAB /* collection */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +397,7 @@
 		CD7CA9C12086F9A9004A7FAB /* table */ = {
 			isa = PBXGroup;
 			children = (
+				CD168BF9208EE26A001C3F08 /* bvisioncoin */,
 				CD9F42CF208DE4C900B71F79 /* blacklist */,
 				CD9F42C4208DC17600B71F79 /* history */,
 				CD793F17208C611400DD1C39 /* FollowersViewController.swift */,
@@ -413,6 +438,8 @@
 			isa = PBXGroup;
 			children = (
 				CD9F42C9208DCB5400B71F79 /* BlackListViewController.swift */,
+				CD168BEF208EC670001C3F08 /* InputDialogViewController.swift */,
+				CD168BF1208EC690001C3F08 /* InputDialogViewController.xib */,
 			);
 			path = blacklist;
 			sourceTree = "<group>";
@@ -461,6 +488,8 @@
 				CD9F42C0208DBC9100B71F79 /* UserOperationProvider.swift */,
 				CD9F42C2208DBE0100B71F79 /* UserSetBlackProvider.swift */,
 				CD9F42CB208DE29B00B71F79 /* UserBlacksProvider.swift */,
+				CD168BF3208EDA03001C3F08 /* UserCheckBlackProvider.swift */,
+				CD168BF7208EE1C4001C3F08 /* BvisionCoinProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -793,9 +822,11 @@
 				CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */,
 				CDBC64FF20858BA500F9A799 /* Splash.storyboard in Resources */,
 				CD7CA9C02086F9A5004A7FAB /* MyCollection.storyboard in Resources */,
+				CD168C02208EFCFE001C3F08 /* CoinPurchaseCell.xib in Resources */,
 				CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */,
 				CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
+				CD168BF2208EC690001C3F08 /* InputDialogViewController.xib in Resources */,
 				CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */,
 				CD9F42C6208DC1B100B71F79 /* HistoryOperationCell.xib in Resources */,
 			);
@@ -836,8 +867,9 @@
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MMPopupView/MMPopupView.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -862,8 +894,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPopupView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -930,13 +963,16 @@
 				CD9F42CE208DE31B00B71F79 /* BlackListUserInfo.swift in Sources */,
 				CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */,
 				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
+				CD168BF6208EDFDA001C3F08 /* BvisionCoinsViewController.swift in Sources */,
 				CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */,
 				CD7CA9CF2086FA1E004A7FAB /* VIPViewController.swift in Sources */,
 				CD7CA9C92086F9F9004A7FAB /* FeedbackViewController.swift in Sources */,
 				CDBC650B20859A4800F9A799 /* YTBChannelsViewController.swift in Sources */,
+				CD168BF8208EE1C4001C3F08 /* BvisionCoinProvider.swift in Sources */,
 				CDC1DCAB208091E500534A0D /* BasicTableViewController.swift in Sources */,
 				CD9F42CA208DCB5400B71F79 /* BlackListViewController.swift in Sources */,
 				CD9F42B7208D891300B71F79 /* FollowUserInfo.swift in Sources */,
+				CD168BF4208EDA03001C3F08 /* UserCheckBlackProvider.swift in Sources */,
 				CDAC5D34208446E20043AA16 /* AESUtil.swift in Sources */,
 				CDBC64F42085885E00F9A799 /* UserSignUpTableViewController.swift in Sources */,
 				CD7CA9DA20872B16004A7FAB /* NetViewController.swift in Sources */,
@@ -948,6 +984,7 @@
 				CDC1DCA9208091A400534A0D /* BasicTabBarController.swift in Sources */,
 				CDAC5D5A2084A5300043AA16 /* YTBChannelInfo.swift in Sources */,
 				CD7CA9D620872AA8004A7FAB /* VIPPageViewController.swift in Sources */,
+				CD168BF0208EC670001C3F08 /* InputDialogViewController.swift in Sources */,
 				CDAC5D38208446E20043AA16 /* Constant.swift in Sources */,
 				CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */,
 				CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */,
@@ -974,6 +1011,7 @@
 				CD9F42BF208DBB9900B71F79 /* UserOperationInfo.swift in Sources */,
 				CDBC65032085987800F9A799 /* YTBPlayViewController.swift in Sources */,
 				CD432BEA2088608600AF73B8 /* SystemVideoViewController.swift in Sources */,
+				CD168C03208EFCFE001C3F08 /* CoinPurchaseCell.swift in Sources */,
 				CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */,
 				CDBC650120858D0500F9A799 /* UserInfo.swift in Sources */,
 				CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */,

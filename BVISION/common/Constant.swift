@@ -11,6 +11,8 @@ import Alamofire
 
 struct Constant {
     
+    static let debug = true
+    
     static let base_url = "https://blive.bvision.live/"
     
     
@@ -36,10 +38,13 @@ struct Constant {
     static let url_user_set_black = "\(base_url)user/black/"
     static let url_user_list_blacks = "\(base_url)user/blacks/"
     static let url_user_operations = "\(base_url)user/operations/"
+    static let url_user_coin = "\(base_url)user/coin/"
     
     static let url_wss_live = "wss://blive.bvision.live/live/"
     
     static let link_app_qrcode = "https://blive.bvision.live/qrcode/"
+    static let link_help = "https://blive.bvision.live/Resource/html/ios_help.html"
+    static let link_purchase_consent = "https://blive.bvision.live/Resource/html/purchase_consent.html"
     
     static let jsonHeaders: HTTPHeaders = [
     "ContentType": "application/json"

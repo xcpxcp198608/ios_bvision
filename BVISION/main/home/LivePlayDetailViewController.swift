@@ -11,6 +11,7 @@ import Kingfisher
 import Starscream
 import Alamofire
 import SwiftyJSON
+import PopupDialog
 
 class LivePlayDetailViewController: BasicViewController, UITextFieldDelegate {
     
@@ -29,6 +30,7 @@ class LivePlayDetailViewController: BasicViewController, UITextFieldDelegate {
     var webSocket: WebSocket?
     var comment: String = ""
     var isFriend = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -204,3 +206,6 @@ extension LivePlayDetailViewController: WebSocketDelegate{
         print(data)
     }
 }
+
+
+

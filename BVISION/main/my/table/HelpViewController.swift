@@ -12,13 +12,11 @@ import JGProgressHUD
 
 class HelpViewController: BasicViewController {
 
-    let url = "https://blive.bvision.live/Resource/html/ios_help.html"
     var hud: JGProgressHUD?
     var wkWebView: WKWebView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(url)
         do{
             initWebView()
         }catch{
@@ -36,7 +34,7 @@ class HelpViewController: BasicViewController {
         config.userContentController.add(self, name: "AppModel")
         wkWebView = WKWebView(frame: view.bounds, configuration: config)
         view.addSubview(wkWebView!)
-        wkWebView!.load(URLRequest(url: URL(string: url)!))
+        wkWebView!.load(URLRequest(url: URL(string: Constant.link_help)!))
         wkWebView!.navigationDelegate = self
         wkWebView!.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A356 Safari/604.1";
         hud = hudLoading()
