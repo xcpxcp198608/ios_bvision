@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MMPopupView
 
 class BasicViewController: UIViewController {
+    
+    
     
     override var prefersStatusBarHidden: Bool{
         return false
@@ -20,8 +23,14 @@ class BasicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let config = MMAlertViewConfig.global()
+        config?.defaultTextOK = "Confirm"
+        config?.defaultTextConfirm = "Confirm"
+        config?.defaultTextCancel = "Cancel"
+        
+        let config1 = MMSheetViewConfig.global()
+        config1?.defaultTextCancel = "Cancel"
     }
 
 }

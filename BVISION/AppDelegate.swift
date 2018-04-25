@@ -77,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         // 如果remote不为空，就代表应用在未打开的时候收到了推送消息
         if remote != nil {
             // 收到推送消息实现的方法
-            
+//            receivePush(remote!)
         }
         //自定义消息 需要自己在receiveNotification中自己实现消息的展示
         NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification), name: NSNotification.Name.jpfNetworkDidReceiveMessage, object: nil)
@@ -112,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         completionHandler()
     }
     
-    func receivePush(_ userInfo : Dictionary<String,Any>) {
+    func receivePush(_ userInfo : Dictionary<String, Any>) {
         print(userInfo)
         //根据服务器返回的字段判断
         //        let userInfo = userInfo["key"] as! String

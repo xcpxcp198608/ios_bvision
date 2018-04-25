@@ -11,6 +11,7 @@ import MJRefresh
 import Alamofire
 import SwiftyJSON
 import JGProgressHUD
+import Contacts
 
 class FollowViewController: BasicViewController {
     
@@ -174,5 +175,5 @@ extension FollowViewController: FollowUserProvideDelegate{
         print(message)
     }
     
-    
 }
+

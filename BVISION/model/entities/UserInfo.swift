@@ -16,6 +16,7 @@ struct UserInfo {
     var phone: String = ""
     var icon: String = ""
     var level: Int = 0
+    var gender: Int = 1
     var profile: String = ""
     var status: Bool = false
     var publisher: Bool = false
@@ -26,6 +27,7 @@ struct UserInfo {
     init(_ jsonData: JSON){
         id = jsonData["id"].intValue
         level = jsonData["level"].intValue
+        gender = jsonData["gender"].intValue
         username = jsonData["username"].stringValue
         password = jsonData["password"].stringValue
         email = jsonData["email"].stringValue

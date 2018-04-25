@@ -95,6 +95,8 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
                             UFUtils.set(userInfo.icon, key: Constant.key_user_icon)
                             UFUtils.set(userInfo.token, key: Constant.key_token)
                             UFUtils.set(userInfo.level, key: Constant.key_user_level)
+                            UFUtils.set(userInfo.gender, key: Constant.key_user_gender)
+                            UFUtils.set(userInfo.profile, key: Constant.key_user_profile)
                             self.userChannelProvider.load(userInfo.id)
                         }else{
                             self.alertError(message: result["message"].stringValue)

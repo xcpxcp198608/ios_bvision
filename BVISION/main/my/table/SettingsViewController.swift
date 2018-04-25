@@ -10,18 +10,43 @@ import UIKit
 import JGProgressHUD
 import Alamofire
 import SwiftyJSON
+import MMPopupView
+
 
 class SettingsViewController: BasicTableViewController {
 
     @IBOutlet weak var ivIcon: UIImageView!
+    @IBOutlet weak var laGender: UILabel!
+    @IBOutlet weak var laProfile: UILabel!
+    
+    lazy var userSetGenderProvider = {
+        return UserSetGenderProvider()
+    }()
+    
+    lazy var userSetProfileProvider = {
+        return UserSetProfileProvider()
+    }()
+    
+    var hud: JGProgressHUD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userSetGenderProvider.loadDelegate = self
+        userSetProfileProvider.loadDelegate = self
         self.ivIcon.layer.cornerRadius = ivIcon.frame.width / 2
         self.ivIcon.layer.masksToBounds = true
         if let icon = UFUtils.getString(Constant.key_user_icon) {
             let url = URL(string: icon)
             ivIcon.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "hold_person"))
+        }
+        let gender = UFUtils.getInt(Constant.key_user_gender)
+        if gender == 1{
+            laGender.text = "Male"
+        }else{
+            laGender.text = "Female"
+        }
+        if let profile = UFUtils.getString(Constant.key_user_profile){
+            laProfile.text = profile
         }
     }
     
@@ -30,6 +55,14 @@ class SettingsViewController: BasicTableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
             pickPhoto()
         }
+        if indexPath.section == 1 && indexPath.row == 0 {
+            tableView.deselectRow(at: indexPath, animated: true)
+            self.showSetGenderDialog()
+        }
+        if indexPath.section == 1 && indexPath.row == 1 {
+            tableView.deselectRow(at: indexPath, animated: true)
+            self.showSetProfileDialog()
+        }
     }
     
     @IBAction func signOut(){
@@ -37,6 +70,67 @@ class SettingsViewController: BasicTableViewController {
         self.showSignBoard()
     }
 }
+
+
+
+extension SettingsViewController: UserSetGenderProviderDelegate, UserSetProfileProviderDelegate{
+    
+    func showSetGenderDialog(){
+        var alertItems = [MMPopupItem]()
+        let maleItem = MMItemMake("Male", .normal) { (position) in
+            self.hud = self.hudLoading()
+            self.userSetGenderProvider.load(gender: 1)
+        }
+        let femaleItem = MMItemMake("Female", .normal) { (position) in
+            self.hud = self.hudLoading()
+            self.userSetGenderProvider.load(gender: 0)
+        }
+        alertItems.append(maleItem!)
+        alertItems.append(femaleItem!)
+        let alertSheetView = MMSheetView .init(title: "", items: alertItems)
+        alertSheetView?.backgroundColor = UIColor.darkGray
+        alertSheetView?.show()
+    }
+    
+    func loadSuccess(gender: Int) {
+        self.hud?.dismiss()
+        hudSuccess(with: "successfully")
+        UFUtils.set(gender, key: Constant.key_user_gender)
+        if gender == 1{
+            self.laGender.text = "Male"
+        }else{
+            self.laGender.text = "Female"
+        }
+    }
+    
+    func showSetProfileDialog(){
+        let alertView = MMAlertView.init(inputTitle: "Set profile", detail: "", placeholder: "type in profile") { (alias) in
+            var profile = ""
+            if (alias?.count)! > 0{
+                profile = alias!
+            }else{
+                return
+            }
+            self.hud = self.hudLoading()
+            self.userSetProfileProvider.load(profile: profile)
+        }
+        alertView?.show()
+    }
+    
+    func loadSuccess(profile: String) {
+        self.hud?.dismiss()
+        hudSuccess(with: "successfully")
+        UFUtils.set(profile, key: Constant.key_user_profile)
+        self.laProfile.text = profile
+    }
+    
+    func loadFailure(_ message: String, _ error: Error?) {
+        self.hud?.dismiss()
+        hudError(with: message)
+    }
+    
+}
+
 
 
 extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

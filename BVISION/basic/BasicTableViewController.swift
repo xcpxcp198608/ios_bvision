@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MMPopupView
 
 class BasicTableViewController: UITableViewController {
     
@@ -21,6 +22,14 @@ class BasicTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let config = MMAlertViewConfig.global()
+        config?.defaultTextOK = "Confirm"
+        config?.defaultTextConfirm = "Confirm"
+        config?.defaultTextCancel = "Cancel"
+        
+        
+        let config1 = MMSheetViewConfig.global()
+        config1?.defaultTextCancel = "Cancel"
     }
     
 

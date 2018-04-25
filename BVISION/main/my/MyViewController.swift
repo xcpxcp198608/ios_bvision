@@ -38,6 +38,14 @@ class MyViewController: BasicViewController {
             laVIP.textColor = UIColor.yellow
         }
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if userId <= 0{
+            self.showNoticeThenToSignBoard()
+            return false
+        }
+        return true
+    }
 
 }
 

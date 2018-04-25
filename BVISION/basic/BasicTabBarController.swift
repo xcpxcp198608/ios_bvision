@@ -122,10 +122,10 @@ extension BasicTabBarController{
             }
             break;
         case AVAuthorizationStatus.denied:
-            showOpenAuthDialog("Microphone permission denied, open setting -> B·VISION, turn on the Microphone")
+            self.showOpenAuthDialog("Microphone permission denied, open setting -> B·VISION, turn on the Microphone")
             break
         case AVAuthorizationStatus.restricted:
-            showOpenAuthDialog("Microphone permission denied, open setting -> B·VISION, turn on the Microphone")
+            self.showOpenAuthDialog("Microphone permission denied, open setting -> B·VISION, turn on the Microphone")
             break;
         }
     }
@@ -148,10 +148,10 @@ extension BasicTabBarController{
             }
             break;
         case .denied:
-            showOpenAuthDialog("Photo permission denied, open setting -> B·VISION, turn on the Photo")
+            self.showOpenAuthDialog("Photo permission denied, open setting -> B·VISION, turn on the Photo")
             break
         case .restricted:
-            showOpenAuthDialog("Photo permission denied, open setting -> B·VISION, turn on the Photo")
+            self.showOpenAuthDialog("Photo permission denied, open setting -> B·VISION, turn on the Photo")
             break;
         }
     }
@@ -179,13 +179,4 @@ extension BasicTabBarController{
         }
     }
     
-    func showOpenAuthDialog(_ message: String){
-        let alert = UIAlertController(
-            title: "Permission denied",
-            message: message,
-            preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
 }

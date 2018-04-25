@@ -35,6 +35,11 @@
 		CD432C0B208886F500AF73B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C09208886F400AF73B8 /* UIKit.framework */; };
 		CD432C0C208886F500AF73B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */; };
 		CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */; };
+		CD73E99F209029C200AD5A8F /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E99E209029C200AD5A8F /* ContactInfo.swift */; };
+		CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9A020902AEA00AD5A8F /* ContactCell.xib */; };
+		CD73E9A320902AF800AD5A8F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A220902AF800AD5A8F /* ContactCell.swift */; };
+		CD73E9A52090533A00AD5A8F /* UserSetGenderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A42090533A00AD5A8F /* UserSetGenderProvider.swift */; };
+		CD73E9A72090534D00AD5A8F /* UserSetProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */; };
 		CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD793F17208C611400DD1C39 /* FollowersViewController.swift */; };
 		CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */; };
 		CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7CA9B82086EC1D004A7FAB /* MyCell.xib */; };
@@ -170,6 +175,12 @@
 		CD432C09208886F400AF73B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSYPlayerViewController.swift; sourceTree = "<group>"; };
+		CD73E99E209029C200AD5A8F /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		CD73E9A020902AEA00AD5A8F /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		CD73E9A220902AF800AD5A8F /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		CD73E9A42090533A00AD5A8F /* UserSetGenderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetGenderProvider.swift; sourceTree = "<group>"; };
+		CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetProfileProvider.swift; sourceTree = "<group>"; };
+		CD73E9A920905C5A00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CD793F17208C611400DD1C39 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserProvider.swift; sourceTree = "<group>"; };
 		CD7CA9B82086EC1D004A7FAB /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
@@ -490,6 +501,8 @@
 				CD9F42CB208DE29B00B71F79 /* UserBlacksProvider.swift */,
 				CD168BF3208EDA03001C3F08 /* UserCheckBlackProvider.swift */,
 				CD168BF7208EE1C4001C3F08 /* BvisionCoinProvider.swift */,
+				CD73E9A42090533A00AD5A8F /* UserSetGenderProvider.swift */,
+				CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -503,6 +516,7 @@
 				CD9F42B6208D891300B71F79 /* FollowUserInfo.swift */,
 				CD9F42BE208DBB9900B71F79 /* UserOperationInfo.swift */,
 				CD9F42CD208DE31B00B71F79 /* BlackListUserInfo.swift */,
+				CD73E99E209029C200AD5A8F /* ContactInfo.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -643,6 +657,8 @@
 				CDBC650D2085A66A00F9A799 /* FollowCell.xib */,
 				CDC1DCB920809B5A00534A0D /* FollowViewController.swift */,
 				CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */,
+				CD73E9A020902AEA00AD5A8F /* ContactCell.xib */,
+				CD73E9A220902AF800AD5A8F /* ContactCell.swift */,
 			);
 			path = follow;
 			sourceTree = "<group>";
@@ -824,6 +840,7 @@
 				CD7CA9C02086F9A5004A7FAB /* MyCollection.storyboard in Resources */,
 				CD168C02208EFCFE001C3F08 /* CoinPurchaseCell.xib in Resources */,
 				CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */,
+				CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */,
 				CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
 				CD168BF2208EC690001C3F08 /* InputDialogViewController.xib in Resources */,
@@ -940,6 +957,7 @@
 			files = (
 				CDAC5D4F208481A30043AA16 /* LivePlayViewController.swift in Sources */,
 				CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */,
+				CD73E9A72090534D00AD5A8F /* UserSetProfileProvider.swift in Sources */,
 				CDC1DCCA2080A6F700534A0D /* Extension.swift in Sources */,
 				CD7CA9CB2086FA03004A7FAB /* HelpViewController.swift in Sources */,
 				CDBC6509208598A000F9A799 /* ClipsPageViewController.swift in Sources */,
@@ -952,6 +970,7 @@
 				CDAC5D3F20844FDB0043AA16 /* PushViewController.swift in Sources */,
 				CD9F42B5208D7F9A00B71F79 /* FollowerUserProvider.swift in Sources */,
 				CDC1DCB02080932800534A0D /* LiveChannelCell.swift in Sources */,
+				CD73E99F209029C200AD5A8F /* ContactInfo.swift in Sources */,
 				CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */,
 				CD7CA9C32086F9D2004A7FAB /* MessageViewController.swift in Sources */,
 				CDBC64F52085885E00F9A799 /* UserSignInViewController.swift in Sources */,
@@ -986,6 +1005,7 @@
 				CD7CA9D620872AA8004A7FAB /* VIPPageViewController.swift in Sources */,
 				CD168BF0208EC670001C3F08 /* InputDialogViewController.swift in Sources */,
 				CDAC5D38208446E20043AA16 /* Constant.swift in Sources */,
+				CD73E9A52090533A00AD5A8F /* UserSetGenderProvider.swift in Sources */,
 				CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */,
 				CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */,
 				CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */,
@@ -1006,6 +1026,7 @@
 				CD9F42BD208D8C5800B71F79 /* UserChannelProvider.swift in Sources */,
 				CD7CA9BD2086F452004A7FAB /* MyTableViewController.swift in Sources */,
 				CD7CA9CD2086FA10004A7FAB /* SettingsViewController.swift in Sources */,
+				CD73E9A320902AF800AD5A8F /* ContactCell.swift in Sources */,
 				CDBC64FE20858BA500F9A799 /* SplashViewController.swift in Sources */,
 				CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */,
 				CD9F42BF208DBB9900B71F79 /* UserOperationInfo.swift in Sources */,
@@ -1062,6 +1083,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CDC1DC7620808F9800534A0D /* Base */,
+				CD73E9A920905C5A00AD5A8F /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

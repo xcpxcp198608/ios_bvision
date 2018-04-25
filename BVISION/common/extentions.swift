@@ -133,4 +133,14 @@ extension UIViewController{
         present(alert, animated: true, completion: nil)
     }
     
+    func showOpenAuthDialog(_ message: String){
+        let alert = UIAlertController(
+            title: "Permission denied",
+            message: message,
+            preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
 }

@@ -1,0 +1,141 @@
+
+/* Class = "UINavigationItem"; title = "B·VISION Coin"; ObjectID = "0qF-HP-zUv"; */
+"0qF-HP-zUv.title" = "B·VISION Coin";
+
+/* Class = "UILabel"; text = "Update Password"; ObjectID = "2jv-Gn-es0"; */
+"2jv-Gn-es0.text" = "Update Password";
+
+/* Class = "UILabel"; text = "no sign in"; ObjectID = "2qX-Yi-cXm"; */
+"2qX-Yi-cXm.text" = "no sign in";
+
+/* Class = "UINavigationItem"; title = "BlackList"; ObjectID = "4Qk-zy-0lt"; */
+"4Qk-zy-0lt.title" = "BlackList";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "4Xn-No-SJb"; */
+"4Xn-No-SJb.text" = "Description";
+
+/* Class = "UITextView"; text = "sdf"; ObjectID = "5W5-qu-ebf"; */
+"5W5-qu-ebf.text" = "sdf";
+
+/* Class = "UINavigationItem"; title = "B·VISION"; ObjectID = "5lP-qv-tkj"; */
+"5lP-qv-tkj.title" = "B·VISION";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "66u-zB-6iR"; */
+"66u-zB-6iR.text" = "Gender";
+
+/* Class = "UILabel"; text = "I already read"; ObjectID = "6kz-GH-X88"; */
+"6kz-GH-X88.text" = "I already read";
+
+/* Class = "UINavigationItem"; title = "B·VISION"; ObjectID = "9IN-y0-bLy"; */
+"9IN-y0-bLy.title" = "B·VISION";
+
+/* Class = "UILabel"; text = "press to change icon"; ObjectID = "9Zw-nT-gbw"; */
+"9Zw-nT-gbw.text" = "press to change icon";
+
+/* Class = "UINavigationItem"; title = "B·VISION"; ObjectID = "E8T-xo-7ar"; */
+"E8T-xo-7ar.title" = "B·VISION";
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "EF2-eJ-TUz"; */
+"EF2-eJ-TUz.text" = "Followers";
+
+/* Class = "UILabel"; text = "Fill in your personal introduction"; ObjectID = "HLl-OV-0EU"; */
+"HLl-OV-0EU.text" = "Fill in your personal introduction";
+
+/* Class = "UITextField"; placeholder = "new password"; ObjectID = "Hq7-OS-0cP"; */
+"Hq7-OS-0cP.placeholder" = "new password";
+
+/* Class = "UILabel"; text = "BVISION Coin"; ObjectID = "HxN-rQ-Kb3"; */
+"HxN-rQ-Kb3.text" = "BVISION Coin";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "JuV-X8-vH9"; */
+"JuV-X8-vH9.normalTitle" = "Sign Out";
+
+/* Class = "UINavigationItem"; title = "B·VISION"; ObjectID = "KIW-aZ-IfD"; */
+"KIW-aZ-IfD.title" = "B·VISION";
+
+/* Class = "UINavigationItem"; title = "Followers"; ObjectID = "Lvk-0J-5aN"; */
+"Lvk-0J-5aN.title" = "Followers";
+
+/* Class = "UIButton"; normalTitle = "purchase consent"; ObjectID = "N6u-iP-Xos"; */
+"N6u-iP-Xos.normalTitle" = "purchase consent";
+
+/* Class = "UILabel"; text = "Subject"; ObjectID = "NfS-BH-N1E"; */
+"NfS-BH-N1E.text" = "Subject";
+
+/* Class = "UINavigationItem"; title = "History"; ObjectID = "NfV-bc-OWq"; */
+"NfV-bc-OWq.title" = "History";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "PM6-Lc-LVO"; */
+"PM6-Lc-LVO.text" = "Settings";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "SrC-aK-rBd"; */
+"SrC-aK-rBd.title" = "Settings";
+
+/* Class = "UINavigationItem"; title = "B·VISION"; ObjectID = "UNq-Nz-Kyn"; */
+"UNq-Nz-Kyn.title" = "B·VISION";
+
+/* Class = "UITextView"; text = "NO COMMENT YET"; ObjectID = "XhU-wv-FeG"; */
+"XhU-wv-FeG.text" = "NO COMMENT YET";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "Z35-hJ-Jzg"; */
+"Z35-hJ-Jzg.title" = "Home";
+
+/* Class = "UILabel"; text = "username"; ObjectID = "cXT-bv-aY4"; */
+"cXT-bv-aY4.text" = "username";
+
+/* Class = "UITabBarItem"; title = "Clips"; ObjectID = "cmU-ue-Gci"; */
+"cmU-ue-Gci.title" = "Clips";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "eHz-Ds-cyZ"; */
+"eHz-Ds-cyZ.text" = "Basic";
+
+/* Class = "UINavigationItem"; title = "Update"; ObjectID = "g8z-VV-QGI"; */
+"g8z-VV-QGI.title" = "Update";
+
+/* Class = "UILabel"; text = "History"; ObjectID = "gYe-0T-ioE"; */
+"gYe-0T-ioE.text" = "History";
+
+/* Class = "UILabel"; text = "Message Reminding"; ObjectID = "hfu-PY-SDH"; */
+"hfu-PY-SDH.text" = "Message Reminding";
+
+/* Class = "UILabel"; text = "Help"; ObjectID = "hky-Qk-d9P"; */
+"hky-Qk-d9P.text" = "Help";
+
+/* Class = "UITextField"; placeholder = "new password"; ObjectID = "iP4-jD-sWq"; */
+"iP4-jD-sWq.placeholder" = "new password";
+
+/* Class = "UILabel"; text = "Black List"; ObjectID = "iWI-Hc-xJL"; */
+"iWI-Hc-xJL.text" = "Black List";
+
+/* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "mPk-uJ-zor"; */
+"mPk-uJ-zor.title" = "Contacts";
+
+/* Class = "UINavigationItem"; title = "Feedback"; ObjectID = "nsF-9g-CwZ"; */
+"nsF-9g-CwZ.title" = "Feedback";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "qeN-Mi-ZLZ"; */
+"qeN-Mi-ZLZ.text" = "0";
+
+/* Class = "UITabBarItem"; title = "Follow"; ObjectID = "qws-Rg-wZZ"; */
+"qws-Rg-wZZ.title" = "Follow";
+
+/* Class = "UITabBarItem"; title = "My"; ObjectID = "s0J-1O-x9i"; */
+"s0J-1O-x9i.title" = "My";
+
+/* Class = "UINavigationItem"; title = "Message"; ObjectID = "uDw-5l-etO"; */
+"uDw-5l-etO.title" = "Message";
+
+/* Class = "UINavigationItem"; title = "Help"; ObjectID = "uMG-gJ-qsF"; */
+"uMG-gJ-qsF.title" = "Help";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "v3e-4M-ydf"; */
+"v3e-4M-ydf.text" = "Feedback";
+
+/* Class = "UITextField"; placeholder = "old password"; ObjectID = "vu3-NZ-IBJ"; */
+"vu3-NZ-IBJ.placeholder" = "old password";
+
+/* Class = "UILabel"; text = "no message yet!"; ObjectID = "w15-ay-bt5"; */
+"w15-ay-bt5.text" = "no message yet!";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "xbc-wa-w5b"; */
+"xbc-wa-w5b.normalTitle" = "Send";

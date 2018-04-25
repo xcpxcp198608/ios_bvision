@@ -159,13 +159,14 @@ extension LiveChannelViewController{
     
     
     @IBAction func share(){
-        if let tryImage = EFQRCode.generate(content: Constant.link_app_qrcode, watermark: #imageLiteral(resourceName: "bvision2").toCGImage()) {
+        let inviteCode = AESUtil.encrypt("\(TimeUtil.getUnixTimestamp())\(userId)")!
+        if let tryImage = EFQRCode.generate(content: "\(Constant.link_app_qrcode)\(inviteCode)", watermark: #imageLiteral(resourceName: "bvision2").toCGImage()) {
             let title = NSString.init(string: "B·VISION")
             let image = UIImage.init(cgImage: tryImage)
-            let url = NSURL(string: Constant.link_app_qrcode)
+            let url = NSURL(string: "\(Constant.link_app_qrcode)\(inviteCode)")
             let items = [title, image, url]
             let activityViewController = UIActivityViewController.init(activityItems: items, applicationActivities: nil)
-            activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+            activityViewController.excludedActivityTypes = []
             self.present(activityViewController, animated: true) {
                 // share result
             }
