@@ -29,10 +29,6 @@ class BlackListViewController: BasicViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let config = MMAlertViewConfig.global()
-        config?.defaultTextOK = "Confirm"
-        config?.defaultTextConfirm = "Confirm"
-        config?.defaultTextCancel = "Cancel"
         
         userBlacksProvider.loadDelegate = self
         userSetBlackProvider.loadDelegate = self
@@ -48,9 +44,9 @@ class BlackListViewController: BasicViewController, UITableViewDelegate, UITable
     
     func initPullDownRefresh(){
         let header = MJRefreshNormalHeader()
-        header.setTitle("Pull down to refresh", for: MJRefreshState.idle)
-        header.setTitle("Release to refresh", for: .pulling)
-        header.setTitle("Loading ...", for: .refreshing)
+        header.setTitle(NSLocalizedString("Pull down to refresh", comment: ""), for: MJRefreshState.idle)
+        header.setTitle(NSLocalizedString("Release to refresh", comment: ""), for: .pulling)
+        header.setTitle(NSLocalizedString("Loading...", comment: ""), for: .refreshing)
         header.lastUpdatedTimeLabel.isHidden = true
         header.setRefreshingTarget(self, refreshingAction: #selector(pullDownRefresh))
         self.tableView!.mj_header = header
@@ -104,7 +100,7 @@ extension BlackListViewController: UserSetBlackProviderDelegate{
 //        buttonTwo.buttonColor = UIColor(rgb: Color.primary)
 //        popup.addButtons([buttonOne, buttonTwo])
 //        present(popup, animated: true, completion: nil)
-        let alertView = MMAlertView.init(inputTitle: "Add", detail: "type in username add to the black list", placeholder: "username") { (username) in
+        let alertView = MMAlertView.init(inputTitle: NSLocalizedString("Add", comment: ""), detail: NSLocalizedString("type in username add to the black list", comment: ""), placeholder: NSLocalizedString("username", comment: "")) { (username) in
             if let name = username{
                 self.hud = self.hudLoading()
                 self.userSetBlackProvider.load(indexPath: nil, action: 1, userId: userId, username: name)

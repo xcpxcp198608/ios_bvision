@@ -33,6 +33,15 @@ class ContactCell: UITableViewCell {
     func setContactInfo(_ contactInfo: ContactInfo){
         self.contactInfo = contactInfo
         laName.text = "\(contactInfo.lastName)\(contactInfo.firstName)"
+        if contactInfo.bvision{
+            btAction.setTitle(NSLocalizedString("Follow", comment: ""), for: .normal)
+            btAction.setBackgroundImage(UIColor.red.createImage(), for: .normal)
+        }else if contactInfo.followed{
+            btAction.setTitle(NSLocalizedString("Followed", comment: ""), for: .normal)
+            btAction.setBackgroundImage(UIColor.green.createImage(), for: .normal)
+        }else{
+            btAction.setTitle(NSLocalizedString("Invite", comment: ""), for: .normal)
+        }
     }
     
     @IBAction func clickButton(){

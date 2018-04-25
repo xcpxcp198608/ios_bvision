@@ -1,0 +1,54 @@
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "4JD-g2-6kq"; */
+"4JD-g2-6kq.placeholder" = "密码";
+
+/* Class = "UIBarButtonItem"; title = "skip"; ObjectID = "5rn-dr-d7W"; */
+"5rn-dr-d7W.title" = "跳过";
+
+/* Class = "UIButton"; normalTitle = "SignIn"; ObjectID = "7hW-SG-OV5"; */
+"7hW-SG-OV5.normalTitle" = "登录";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "FQv-5Z-7Nb"; */
+"FQv-5Z-7Nb.placeholder" = "密码";
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "IFn-Hf-SiZ"; */
+"IFn-Hf-SiZ.placeholder" = "用户名";
+
+/* Class = "UILabel"; text = "agree to the term of service "; ObjectID = "TdO-Fv-FCy"; */
+"TdO-Fv-FCy.text" = "同意服务条款";
+
+/* Class = "UINavigationItem"; title = "SignIn"; ObjectID = "Ytj-M5-Hvd"; */
+"Ytj-M5-Hvd.title" = "登录";
+
+/* Class = "UITableViewSection"; headerTitle = "Reset password by email"; ObjectID = "dXq-Dz-cl0"; */
+"dXq-Dz-cl0.headerTitle" = "重置密码";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "g0F-L0-XF6"; */
+"g0F-L0-XF6.placeholder" = "邮箱";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "iZr-YE-DmB"; */
+"iZr-YE-DmB.placeholder" = "邮箱";
+
+/* Class = "UIButton"; normalTitle = "SignUp"; ObjectID = "ioV-mE-4AA"; */
+"ioV-mE-4AA.normalTitle" = "注册";
+
+/* Class = "UIButton"; normalTitle = "SignUp"; ObjectID = "jBX-bD-CZg"; */
+"jBX-bD-CZg.normalTitle" = "注册";
+
+/* Class = "UIButton"; normalTitle = "Send Reset Email"; ObjectID = "pNz-1k-Kb2"; */
+"pNz-1k-Kb2.normalTitle" = "发送邮件";
+
+/* Class = "UIButton"; normalTitle = "Forgot password?"; ObjectID = "rg7-jO-tqw"; */
+"rg7-jO-tqw.normalTitle" = "忘记密码?";
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "x6t-Mi-JQd"; */
+"x6t-Mi-JQd.placeholder" = "用户名";
+
+/* Class = "UIButton"; normalTitle = "consent"; ObjectID = "xrm-Hc-TgT"; */
+"xrm-Hc-TgT.normalTitle" = "协议";
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "y38-sd-fGe"; */
+"y38-sd-fGe.placeholder" = "用户名";
+
+/* Class = "UITextField"; placeholder = "phone"; ObjectID = "yUc-yB-9il"; */
+"yUc-yB-9il.placeholder" = "手机";

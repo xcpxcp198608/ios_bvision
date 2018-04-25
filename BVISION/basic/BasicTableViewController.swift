@@ -23,13 +23,12 @@ class BasicTableViewController: UITableViewController {
         super.viewDidLoad()
 
         let config = MMAlertViewConfig.global()
-        config?.defaultTextOK = "Confirm"
-        config?.defaultTextConfirm = "Confirm"
-        config?.defaultTextCancel = "Cancel"
-        
+        config?.defaultTextOK = NSLocalizedString("OK", comment: "")
+        config?.defaultTextConfirm = NSLocalizedString("Confirm", comment: "")
+        config?.defaultTextCancel = NSLocalizedString("Cancel", comment: "")
         
         let config1 = MMSheetViewConfig.global()
-        config1?.defaultTextCancel = "Cancel"
+        config1?.defaultTextCancel = NSLocalizedString("Cancel", comment: "")
     }
     
 

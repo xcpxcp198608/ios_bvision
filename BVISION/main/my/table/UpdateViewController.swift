@@ -56,15 +56,15 @@ class UpdateViewController: BasicTableViewController, UITextFieldDelegate {
         if userId <= 0 {return}
         if let oldPassword = tfOldPassword.text, let newPassword = tfNewPassword.text, let newPassword1 = tfNewPassword1.text {
             if oldPassword.count < 6 {
-                hudError(with: "old password format error")
+                hudError(with: NSLocalizedString("old password format error", comment: ""))
                 return
             }
             if (newPassword.count < 6 || newPassword1.count < 6) {
-                 hudError(with: "new password format error")
+                 hudError(with: NSLocalizedString("new password format error", comment: ""))
                 return
             }
             if newPassword != newPassword1 {
-                 hudError(with: "two input password must be consistent")
+                 hudError(with: NSLocalizedString("two input password must be consistent", comment: ""))
                 return
             }
             let hud = hudLoading()

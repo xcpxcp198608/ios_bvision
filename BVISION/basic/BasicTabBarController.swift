@@ -43,15 +43,15 @@ class BasicTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     fileprivate func showPushAlertDialog(){
-        let title = "CHOOSE ACTION"
+        let title = NSLocalizedString("CHOOSE ACTION", comment: "")
         let message = ""
         let popup = PopupDialog(title: title, message: message)
         
         
-        let buttonTwo = DefaultButton(title: "PUSH BY CAMERA", dismissOnTap: true) {
+        let buttonTwo = DefaultButton(title: NSLocalizedString("PUSH BY CAMERA", comment: ""), dismissOnTap: true) {
             self.requestAccessForVideo()
         }
-        let buttonThree = DefaultButton(title: "PUSH BY LOCAL(PRO)", height: 60) {
+        let buttonThree = DefaultButton(title: NSLocalizedString("PUSH BY LOCAL(PRO)", comment: ""), height: 60) {
             self.requestAccessForPhoto()
         }
         popup.addButtons([buttonTwo, buttonThree])
@@ -96,10 +96,10 @@ extension BasicTabBarController{
             self.requestAccessForAudio()
             break;
         case AVAuthorizationStatus.denied:
-            showOpenAuthDialog("Camera permission denied, open setting -> B·VISION, turn on the Camera")
+            showOpenAuthDialog(NSLocalizedString("access camera permission", comment: ""))
             break
         case AVAuthorizationStatus.restricted:
-            showOpenAuthDialog("Camera permission denied, open setting -> B·VISION, turn on the Camera")
+            showOpenAuthDialog(NSLocalizedString("access camera permission", comment: ""))
             break;
         }
     }
@@ -122,10 +122,10 @@ extension BasicTabBarController{
             }
             break;
         case AVAuthorizationStatus.denied:
-            self.showOpenAuthDialog("Microphone permission denied, open setting -> B·VISION, turn on the Microphone")
+            self.showOpenAuthDialog(NSLocalizedString("access microphone permission", comment: ""))
             break
         case AVAuthorizationStatus.restricted:
-            self.showOpenAuthDialog("Microphone permission denied, open setting -> B·VISION, turn on the Microphone")
+            self.showOpenAuthDialog(NSLocalizedString("access microphone permission", comment: ""))
             break;
         }
     }
@@ -148,10 +148,10 @@ extension BasicTabBarController{
             }
             break;
         case .denied:
-            self.showOpenAuthDialog("Photo permission denied, open setting -> B·VISION, turn on the Photo")
+            self.showOpenAuthDialog(NSLocalizedString("access photo permission", comment: ""))
             break
         case .restricted:
-            self.showOpenAuthDialog("Photo permission denied, open setting -> B·VISION, turn on the Photo")
+            self.showOpenAuthDialog(NSLocalizedString("access photo permission", comment: ""))
             break;
         }
     }
@@ -175,7 +175,7 @@ extension BasicTabBarController{
         if userLevel >= 6{
             self.showPushWithVideo()
         }else{
-            self.hudError(with: "permission denied")
+            self.hudError(with: NSLocalizedString("Permission denied", comment: ""))
         }
     }
     

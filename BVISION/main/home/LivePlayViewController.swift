@@ -132,9 +132,9 @@ extension LivePlayViewController: UserCheckBlackProviderDelegate{
     }
     
     func showBlackListDialog(_ message: String){
-        let title = "Notice"
+        let title = NSLocalizedString("Notice", comment: "")
         let popup = PopupDialog(title: title, message: message, gestureDismissal:false)
-        let buttonTwo = DefaultButton(title: "Got It", dismissOnTap: true) {
+        let buttonTwo = DefaultButton(title: NSLocalizedString("Got It", comment: ""), dismissOnTap: true) {
             self.dismiss(animated: false, completion: nil)
         }
         popup.addButtons([buttonTwo])

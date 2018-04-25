@@ -70,7 +70,7 @@ extension UIViewController{
         hud.dismiss(afterDelay: 2.0)
     }
     
-    func hudError(with message: String = "Error"){
+    func hudError(with message: String = NSLocalizedString("Error", comment: "")){
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = message
         hud.indicatorView = JGProgressHUDImageIndicatorView.init(image: #imageLiteral(resourceName: "error_red_30"))
@@ -79,7 +79,7 @@ extension UIViewController{
     }
     
     
-    func hudSuccess(with message: String = "Success"){
+    func hudSuccess(with message: String = NSLocalizedString("Success", comment: "")){
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = message
         hud.indicatorView = JGProgressHUDImageIndicatorView.init(image: #imageLiteral(resourceName: "right_green"))
@@ -87,9 +87,9 @@ extension UIViewController{
         hud.dismiss(afterDelay: 2.0)
     }
     
-    func hudLoading(_ message: String = "Loading...") -> JGProgressHUD{
+    func hudLoading(_ message: String = NSLocalizedString("Loading...", comment: "")) -> JGProgressHUD{
         let hud = JGProgressHUD(style: .dark)
-        hud.textLabel.text = "Loading..."
+        hud.textLabel.text = message
         hud.show(in: self.view)
         return hud
     }
@@ -99,21 +99,21 @@ extension UIViewController{
     //MARK:- system alert
     func alertError(message: String) {
         let alert = UIAlertController(
-            title: "Error",
+            title: NSLocalizedString("Error", comment: ""),
             message: message,
             preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
     
     
-    func showNoticeThenToSignBoard(message: String = "has no sign in"){
+    func showNoticeThenToSignBoard(message: String = NSLocalizedString("has no sign in", comment: "")){
         let alert = UIAlertController(
-            title: "Notice",
+            title: NSLocalizedString("Notice", comment: ""),
             message: message,
             preferredStyle: .alert)
-        let action = UIAlertAction.init(title: "OK", style: .default) { (_) in
+        let action = UIAlertAction.init(title: NSLocalizedString("OK", comment: ""), style: .default) { (_) in
             self.dismiss(animated: false, completion: nil)
             self.showSignBoard()
         }
@@ -123,10 +123,10 @@ extension UIViewController{
     
     func alertSuccess(message: String) {
         let alert = UIAlertController(
-            title: "Successfully",
+            title: NSLocalizedString("Successfully", comment: ""),
             message: message,
             preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { (_) in
+        let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { (_) in
             self.dismiss(animated: false, completion: nil)
         }
         alert.addAction(action)
@@ -135,10 +135,10 @@ extension UIViewController{
     
     func showOpenAuthDialog(_ message: String){
         let alert = UIAlertController(
-            title: "Permission denied",
+            title: NSLocalizedString("Permission denied", comment: ""),
             message: message,
             preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }

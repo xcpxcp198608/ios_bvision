@@ -116,7 +116,7 @@ extension BvisionCoinsViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if !checked {
-            self.hudError(with: "you has no agree purchase consent")
+            self.hudError(with: NSLocalizedString("you has no agree purchase consent", comment: ""))
             return
         }
         let productId = itemIds[indexPath.row]
@@ -129,7 +129,7 @@ extension BvisionCoinsViewController: UICollectionViewDelegateFlowLayout{
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
         }else{
-            hudError(with: "do not support IAP")
+            hudError(with: NSLocalizedString("do not support IAP", comment: ""))
         }
     }
     

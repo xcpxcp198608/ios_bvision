@@ -28,7 +28,7 @@ class YTBChannelProvider{
                 case .success:
                     let result = JSON(data: response.data!)
                     if result.count <= 0 {
-                        self.delegate?.loadFailure("no data", nil)
+                        self.delegate?.loadFailure(NSLocalizedString("no data", comment: ""), nil)
                         return
                     }
                 case .failure(let error):

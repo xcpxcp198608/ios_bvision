@@ -112,10 +112,10 @@ extension ContactsViewController{
             }
             break;
         case .denied:
-            self.showOpenAuthDialog("Contacts permission denied, open setting -> B·VISION, turn on the Contacts")
+            self.showOpenAuthDialog(NSLocalizedString("access contacts permission", comment: ""))
             break
         case .restricted:
-            self.showOpenAuthDialog("Contacts permission denied, open setting -> B·VISION, turn on the Contacts")
+            self.showOpenAuthDialog(NSLocalizedString("access contacts permission", comment: ""))
             break;
         }
     }
@@ -153,10 +153,10 @@ extension ContactsViewController: MFMessageComposeViewControllerDelegate{
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         switch result {
         case .sent:
-            hudSuccess(with: "invite successfully")
+            hudSuccess(with: NSLocalizedString("send successfully", comment: ""))
             break
         case .failed:
-            hudError(with: "invite message send failure")
+            hudError(with: NSLocalizedString("send failure", comment: ""))
             break
         case .cancelled:
             break

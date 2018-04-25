@@ -66,9 +66,9 @@ class FollowViewController: BasicViewController {
     
     func initPullDownRefresh(){
         let header = MJRefreshNormalHeader()
-        header.setTitle("Pull down to refresh", for: MJRefreshState.idle)
-        header.setTitle("Release to refresh", for: .pulling)
-        header.setTitle("Loading ...", for: .refreshing)
+        header.setTitle(NSLocalizedString("Pull down to refresh", comment: ""), for: MJRefreshState.idle)
+        header.setTitle(NSLocalizedString("Release to refresh", comment: ""), for: .pulling)
+        header.setTitle(NSLocalizedString("Loading...", comment: ""), for: .refreshing)
         header.lastUpdatedTimeLabel.isHidden = true
         header.setRefreshingTarget(self, refreshingAction: #selector(pullDownRefresh))
         self.collectionView!.mj_header = header
@@ -109,7 +109,7 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
                         if liveChannelInfo.available {
                             self.playChannel(liveChannelInfo)
                         }else{
-                            self.hudError(with: "live has no start")
+                            self.hudError(with: NSLocalizedString("live has no start", comment: ""))
                         }
                     }else{
                         self.hudError(with: result["message"].stringValue)

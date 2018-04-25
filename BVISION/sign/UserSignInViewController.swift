@@ -64,11 +64,11 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
     @IBAction func siginIn(){
         if let username: String = signInTableView?.tfUsername.text, let password: String = signInTableView?.tfPassword.text {
             if(username.count <= 0){
-                self.alertError(message: "username type in error")
+                self.alertError(message: NSLocalizedString("username type in error", comment: ""))
                 return
             }
             if(password.count <= 0){
-                alertError(message: "password type in error")
+                alertError(message: NSLocalizedString("password type in error", comment: ""))
                 return
             }
             let hud = hudLoading()

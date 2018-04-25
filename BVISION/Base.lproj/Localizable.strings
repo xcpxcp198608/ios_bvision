@@ -1,0 +1,72 @@
+/* 
+  Localizable.strings
+  BVISION
+
+  Created by patrick on 2018/4/25.
+  Copyright © 2018 wiatec. All rights reserved.
+*/
+"Confirm" = "Confirm";
+"OK" = "OK";
+"Cancel" = "Cancel";
+
+"Notice" = "Notice";
+"Error" = "Error";
+"Successfully" = "Successfully";
+"Success" = "Success";
+"Fail" = "Fail";
+"Failure" = "Failure";
+"Permission denied" = "Permission denied";
+"Loading..." = "Loading...";
+
+"Male" = "Male";
+"Female" = "Female";
+"Set profile" = "Set profile";
+"type in profile" = "type in profile";
+
+"Take Photo" = "Take Photo";
+"Choose From Library" = "Choose From Library";
+"has no sign in" = "has no sign in";
+
+"CHOOSE ACTION" = "CHOOSE ACTION";
+"PUSH BY CAMERA" = "PUSH BY CAMERA";
+"PUSH BY LOCAL(PRO)" = "PUSH BY LOCAL(PRO)";
+"access camera permission" = "Camera permission denied, open setting -> B·VISION, turn on the Camera";
+"access microphone permission" = "Microphone permission denied, open setting -> B·VISION, turn on the Microphone";
+"access photo permission" = "Photo permission denied, open setting -> B·VISION, turn on the Photo";
+"access contacts permission" = "Contacts permission denied, open setting -> B·VISION, turn on the Contacts";
+"no data" = "no data";
+"username type in error" = "username type in error";
+"password type in error" = "password type in error";
+"email input error" = "email input error";
+"email format error" = "email format error";
+"phone input error" = "phone input error";
+"password count error" = "password count must >= 6";
+"Unrecognized QRCode format" = "Unrecognized QRCode format";
+"Pull down to refresh" = "Pull down to refresh";
+"Release to refresh" = "Release to refresh";
+"Got It" = "Got It";
+"Drag up to refresh" = "Drag up to refresh";
+"Loading more ..." = "Loading more ...";
+"No more data" = "No more data";
+"live has no start" = "live has no start";
+"send successfully" = "send successfully";
+"send failure" = "send failure";
+"PRO" = "PRO";
+"you has no agree purchase consent" = "you has no agree purchase consent";
+"do not support IAP" = "do not support IAP";
+"Add" = "Add";
+"type in username add to the black list" = "type in username add to the black list";
+"username" = "username";
+"old password format error" = "old password format error";
+"new password format error" = "new password format error";
+"two input password must be consistent" = "two input password must be consistent";
+"subject text length error" = "subject text length error";
+"description text length error" = "description text length error";
+"net connection error" = "net connection error";
+"Follow" = "Follow";
+"Invite" = "Invite";
+"Followed" = "Followed";
+
+
+
+

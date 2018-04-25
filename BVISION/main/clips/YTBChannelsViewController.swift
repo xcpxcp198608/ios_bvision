@@ -67,9 +67,9 @@ class YTBChannelsViewController: UIViewController{
     
     func initPullDownRefresh(){
         let header = MJRefreshNormalHeader()
-        header.setTitle("Pull down to refresh", for: MJRefreshState.idle)
-        header.setTitle("Release to refresh", for: .pulling)
-        header.setTitle("Loading ...", for: .refreshing)
+        header.setTitle(NSLocalizedString("Pull down to refresh", comment: ""), for: MJRefreshState.idle)
+        header.setTitle(NSLocalizedString("Release to refresh", comment: ""), for: .pulling)
+        header.setTitle(NSLocalizedString("Loading...", comment: ""), for: .refreshing)
         header.lastUpdatedTimeLabel.isHidden = true
         header.setRefreshingTarget(self, refreshingAction: #selector(pullDownRefresh))
         self.collectionView!.mj_header = header
@@ -86,9 +86,9 @@ class YTBChannelsViewController: UIViewController{
 
     func initPullUpLoadMore(){
         let footer = MJRefreshAutoNormalFooter()
-        footer.setTitle("Drag up to refresh", for: .idle)
-        footer.setTitle("Loading more ...", for: .refreshing)
-        footer.setTitle("No more data", for: .noMoreData)
+        footer.setTitle(NSLocalizedString("Drag up to refresh", comment: ""), for: .idle)
+        footer.setTitle(NSLocalizedString("Loading more ...", comment: ""), for: .refreshing)
+        footer.setTitle(NSLocalizedString("No more data", comment: ""), for: .noMoreData)
         footer.setRefreshingTarget(self, refreshingAction: #selector(pullUpLoadMore))
         self.collectionView!.mj_footer = footer
     }
@@ -185,7 +185,7 @@ extension YTBChannelsViewController {
                 print("error")
                 print(error.localizedDescription)
                 hud.dismiss()
-                self.hudError(with: "net connection error")
+                self.hudError(with: NSLocalizedString("net connection error", comment: ""))
             }
             hud.dismiss()
         }
@@ -229,7 +229,7 @@ extension YTBChannelsViewController {
                 print("error")
                 print(error.localizedDescription)
                 hud.dismiss()
-                self.hudError(with: "net connection error")
+                self.hudError(with: NSLocalizedString("net connection error", comment: ""))
             }
             hud.dismiss()
         }

@@ -62,11 +62,11 @@ class UserResetTableViewController: UITableViewController, UITextFieldDelegate{
         tfEmail.resignFirstResponder()
         if let username = self.tfUsername.text, let email = self.tfEmail.text {
             if username.count <= 0 {
-                self.alertError(message: "username input error")
+                self.alertError(message: NSLocalizedString("username type in error", comment: ""))
                 return
             }
             if email.count <= 0 {
-                self.alertError(message: "email input error")
+                self.alertError(message: NSLocalizedString("email input error", comment: ""))
                 return
             }
             let parameters = ["username": username, "email": email]

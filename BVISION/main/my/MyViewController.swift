@@ -34,7 +34,7 @@ class MyViewController: BasicViewController {
             laUsername.text = username
         }
         if userLevel >= 6 {
-            laVIP.text = "PRO"
+            laVIP.text = NSLocalizedString("PRO", comment: "")
             laVIP.textColor = UIColor.yellow
         }
     }

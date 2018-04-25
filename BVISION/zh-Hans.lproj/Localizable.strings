@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  BVISION
+
+  Created by patrick on 2018/4/25.
+  Copyright © 2018 wiatec. All rights reserved.
+*/
+"Confirm" = "确认";
+"OK" = "好";
+"Cancel" = "取消";
+
+
+"Notice" = "提示";
+"Error" = "错误";
+"Successfully" = "成功";
+"Success" = "成功";
+"Fail" = "失败";
+"Failure" = "失败";
+"Permission denied" = "没有权限";
+"Loading..." = "加载中...";
+
+
+"Male" = "男";
+"Female" = "女";
+"Set profile" = "设置个人介绍";
+"type in profile" = "输入个人介绍";
+
+
+"Take Photo" = "拍照";
+"Choose From Library" = "相册";
+"has no sign in" = "未登录";
+
+"CHOOSE ACTION" = "请选择";
+"PUSH BY CAMERA" = "摄像头直播";
+"PUSH BY LOCAL(PRO)" = "本地视频直播(PRO)";
+"access camera permission" = "需要摄像头权限, 请打开设置 -> B·VISION, 打开摄像头权限";
+"access microphone permission" = "需要麦克风权限, 请打开设置 -> B·VISION, 打开麦克风权限";
+"access photo permission" = "需要相册权限, 请打开设置 -> B·VISION, 打开相册权限";
+"access contacts permission" = "需要联系人权限, 请打开设置 -> B·VISION, 打开联系人权限";
+"no data" = "没有数据";
+"username type in error" = "用户名输入错误";
+"password type in error" = "密码输入错误";
+"email input error" = "邮箱输入错误";
+"email format error" = "邮箱格式错误";
+"phone input error" = "手机号码输入错误";
+"password count error" = "密码长度不能低于6位";
+"Unrecognized QRCode format" = "无法识别的二维码格式";
+"Pull down to refresh" = "下拉刷新";
+"Release to refresh" = "松开刷新";
+"Got It" = "了解";
+"Drag up to refresh" = "上拉加载更多";
+"Loading more ..." = "加载更多 ...";
+"No more data" = "没有更多数据";
+"live has no start" = "直播未开始";
+"send successfully" = "发送成功";
+"send failure" = "发送失败";
+"PRO" = "PRO";
+"you has no agree purchase consent" = "未同意购买条款";
+"do not support IAP" = "你的手机不支持 IAP";
+"Add" = "增加";
+"type in username add to the black list" = "输入用名称加入到黑名单";
+"username" = "用户名";
+"old password format error" = "旧密码输入格式错误";
+"new password format error" = "新密码输入格式错误";
+"two input password must be consistent" = "两次密码输入不一致";
+"subject text length error" = "标题输入错误";
+"description text length error" = "描述输入错误";
+"net connection error" = "网络连接错误";
+"Follow" = "关注";
+"Invite" = "邀请";
+"Followed" = "已关注";

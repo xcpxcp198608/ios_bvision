@@ -60,16 +60,16 @@ extension FeedbackViewController{
         let userId = UserDefaults.standard.integer(forKey: Constant.key_user_id)
         if let subject = tfSubject.text,let description = tvDescription.text {
             if userId <= 0 {
-                self.hudError(with: "no signin")
+                self.hudError(with: NSLocalizedString("has no sign in", comment: ""))
                 return
             }
             if subject.count <= 0 || subject.count > 100 {
-                self.hudError(with: "subject text length error")
+                self.hudError(with: NSLocalizedString("subject text length error", comment: ""))
                 return
             }
             
             if description.count <= 0 {
-                self.hudError(with: "description text length error")
+                self.hudError(with: NSLocalizedString("description text length error", comment: ""))
                 return
             }
             

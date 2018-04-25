@@ -130,7 +130,7 @@ extension LivePlayDetailViewController{
     
     func follow(_ action: Int){
         if(userId <= 0){
-            hudError(with: "no sign in")
+            hudError(with: NSLocalizedString("has no sign in", comment: ""))
             return
         }
         let url = "\(Constant.url_user_follow)\(action)/\(userId)/\(pusherId)"

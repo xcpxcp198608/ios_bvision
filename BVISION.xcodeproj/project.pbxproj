@@ -40,6 +40,9 @@
 		CD73E9A320902AF800AD5A8F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A220902AF800AD5A8F /* ContactCell.swift */; };
 		CD73E9A52090533A00AD5A8F /* UserSetGenderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A42090533A00AD5A8F /* UserSetGenderProvider.swift */; };
 		CD73E9A72090534D00AD5A8F /* UserSetProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */; };
+		CD73E9AE2090637C00AD5A8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9B02090637C00AD5A8F /* Localizable.strings */; };
+		CD73E9B62090661000AD5A8F /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9B82090661000AD5A8F /* Sign.storyboard */; };
+		CD73E9BF2090689200AD5A8F /* LiveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9BE2090689100AD5A8F /* LiveChannelCell.xib */; };
 		CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD793F17208C611400DD1C39 /* FollowersViewController.swift */; };
 		CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */; };
 		CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7CA9B82086EC1D004A7FAB /* MyCell.xib */; };
@@ -97,7 +100,6 @@
 		CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */; };
 		CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */; };
 		CDAC5D5A2084A5300043AA16 /* YTBChannelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */; };
-		CDBC64F22085885E00F9A799 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBC64EC2085885B00F9A799 /* Sign.storyboard */; };
 		CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */; };
 		CDBC64F42085885E00F9A799 /* UserSignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */; };
 		CDBC64F52085885E00F9A799 /* UserSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64EF2085885D00F9A799 /* UserSignInViewController.swift */; };
@@ -116,14 +118,12 @@
 		CDC1DC7220808F9800534A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC7120808F9800534A0D /* AppDelegate.swift */; };
 		CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DC7520808F9800534A0D /* Main.storyboard */; };
 		CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC7820808F9800534A0D /* BVISION.xcdatamodeld */; };
-		CDC1DC7F20808F9A00534A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DC7D20808F9A00534A0D /* LaunchScreen.storyboard */; };
 		CDC1DC8A20808F9A00534A0D /* BVISIONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC8920808F9A00534A0D /* BVISIONTests.swift */; };
 		CDC1DC9520808F9A00534A0D /* BVISIONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DC9420808F9A00534A0D /* BVISIONUITests.swift */; };
 		CDC1DCA42080915000534A0D /* LiveChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCA32080915000534A0D /* LiveChannelViewController.swift */; };
 		CDC1DCA72080917200534A0D /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCA62080917200534A0D /* BasicViewController.swift */; };
 		CDC1DCA9208091A400534A0D /* BasicTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCA8208091A400534A0D /* BasicTabBarController.swift */; };
 		CDC1DCAB208091E500534A0D /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCAA208091E500534A0D /* BasicTableViewController.swift */; };
-		CDC1DCAE2080931600534A0D /* LiveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCAD2080931600534A0D /* LiveChannelCell.xib */; };
 		CDC1DCB02080932800534A0D /* LiveChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCAF2080932800534A0D /* LiveChannelCell.swift */; };
 		CDC1DCB4208095F000534A0D /* BasicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCB3208095F000534A0D /* BasicNavigationController.swift */; };
 		CDC1DCB720809B4600534A0D /* ClipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCB620809B4600534A0D /* ClipsViewController.swift */; };
@@ -132,7 +132,6 @@
 		CDC1DCC320809D6300534A0D /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC220809D6300534A0D /* ScanViewController.swift */; };
 		CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC520809D8400534A0D /* WebViewController.swift */; };
 		CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCC720809DA300534A0D /* Web.storyboard */; };
-		CDC1DCCA2080A6F700534A0D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC92080A6F700534A0D /* Extension.swift */; };
 		CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +180,14 @@
 		CD73E9A42090533A00AD5A8F /* UserSetGenderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetGenderProvider.swift; sourceTree = "<group>"; };
 		CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetProfileProvider.swift; sourceTree = "<group>"; };
 		CD73E9A920905C5A00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CD73E9AB2090614800AD5A8F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		CD73E9AF2090637C00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD73E9B12090638100AD5A8F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CD73E9BA2090661600AD5A8F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Sign.strings"; sourceTree = "<group>"; };
+		CD73E9BB2090663100AD5A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sign.storyboard; sourceTree = "<group>"; };
+		CD73E9BD2090664E00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Sign.strings; sourceTree = "<group>"; };
+		CD73E9BE2090689100AD5A8F /* LiveChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveChannelCell.xib; sourceTree = "<group>"; };
+		CD73E9C020906E8600AD5A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD793F17208C611400DD1C39 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserProvider.swift; sourceTree = "<group>"; };
 		CD7CA9B82086EC1D004A7FAB /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
@@ -254,7 +261,6 @@
 		CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayDetailViewController.swift; sourceTree = "<group>"; };
 		CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBChannelProvider.swift; sourceTree = "<group>"; };
 		CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBChannelInfo.swift; sourceTree = "<group>"; };
-		CDBC64EC2085885B00F9A799 /* Sign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResetTableViewController.swift; sourceTree = "<group>"; };
 		CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignUpTableViewController.swift; sourceTree = "<group>"; };
 		CDBC64EF2085885D00F9A799 /* UserSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInViewController.swift; sourceTree = "<group>"; };
@@ -274,7 +280,6 @@
 		CDC1DC7120808F9800534A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC1DC7620808F9800534A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDC1DC7920808F9800534A0D /* BVISION.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BVISION.xcdatamodel; sourceTree = "<group>"; };
-		CDC1DC7E20808F9A00534A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDC1DC8020808F9A00534A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC1DC8520808F9A00534A0D /* BVISIONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BVISIONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC1DC8920808F9A00534A0D /* BVISIONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVISIONTests.swift; sourceTree = "<group>"; };
@@ -286,7 +291,6 @@
 		CDC1DCA62080917200534A0D /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		CDC1DCA8208091A400534A0D /* BasicTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabBarController.swift; sourceTree = "<group>"; };
 		CDC1DCAA208091E500534A0D /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
-		CDC1DCAD2080931600534A0D /* LiveChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveChannelCell.xib; sourceTree = "<group>"; };
 		CDC1DCAF2080932800534A0D /* LiveChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelCell.swift; sourceTree = "<group>"; };
 		CDC1DCB3208095F000534A0D /* BasicNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationController.swift; sourceTree = "<group>"; };
 		CDC1DCB620809B4600534A0D /* ClipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsViewController.swift; sourceTree = "<group>"; };
@@ -295,7 +299,6 @@
 		CDC1DCC220809D6300534A0D /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		CDC1DCC520809D8400534A0D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CDC1DCC720809DA300534A0D /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
-		CDC1DCC92080A6F700534A0D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D04A521C65FCF2132E01F21D /* Pods-BVISION.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVISION.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BVISION/Pods-BVISION.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -567,8 +570,8 @@
 				CD432BF22088777B00AF73B8 /* BVISION.entitlements */,
 				CDC1DC7120808F9800534A0D /* AppDelegate.swift */,
 				CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */,
-				CDC1DC7D20808F9A00534A0D /* LaunchScreen.storyboard */,
 				CDC1DC8020808F9A00534A0D /* Info.plist */,
+				CD73E9B02090637C00AD5A8F /* Localizable.strings */,
 				CDC1DC7820808F9800534A0D /* BVISION.xcdatamodeld */,
 				CD7CA9E020872F71004A7FAB /* BVISION-Bridging-Header.h */,
 				CDC1DCA52080915900534A0D /* basic */,
@@ -605,7 +608,7 @@
 			children = (
 				CDAC5D54208493010043AA16 /* bm */,
 				CDC1DCAF2080932800534A0D /* LiveChannelCell.swift */,
-				CDC1DCAD2080931600534A0D /* LiveChannelCell.xib */,
+				CD73E9BE2090689100AD5A8F /* LiveChannelCell.xib */,
 				CDC1DCA32080915000534A0D /* LiveChannelViewController.swift */,
 				CDAC5D4E208481A30043AA16 /* LivePlayViewController.swift */,
 				CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */,
@@ -684,7 +687,7 @@
 				CDBC64F02085885D00F9A799 /* UserSignUpViewController.swift */,
 				CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */,
 				CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */,
-				CDBC64EC2085885B00F9A799 /* Sign.storyboard */,
+				CD73E9B82090661000AD5A8F /* Sign.storyboard */,
 			);
 			path = sign;
 			sourceTree = "<group>";
@@ -711,7 +714,6 @@
 				CDAC5D29208446DF0043AA16 /* UFUtils.swift */,
 				CDC1DCC520809D8400534A0D /* WebViewController.swift */,
 				CDC1DCC720809DA300534A0D /* Web.storyboard */,
-				CDC1DCC92080A6F700534A0D /* Extension.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -810,6 +812,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = CDC1DC6520808F9800534A0D;
 			productRefGroup = CDC1DC6F20808F9800534A0D /* Products */;
@@ -828,13 +831,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC1DC7F20808F9A00534A0D /* LaunchScreen.storyboard in Resources */,
 				CD432BEF208861F700AF73B8 /* LocalVideoCell.xib in Resources */,
 				CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */,
-				CDBC64F22085885E00F9A799 /* Sign.storyboard in Resources */,
+				CD73E9B62090661000AD5A8F /* Sign.storyboard in Resources */,
 				CDBC65072085988700F9A799 /* YTBChannelCell.xib in Resources */,
-				CDC1DCAE2080931600534A0D /* LiveChannelCell.xib in Resources */,
 				CDAC5D45208453060043AA16 /* Scan.storyboard in Resources */,
+				CD73E9BF2090689200AD5A8F /* LiveChannelCell.xib in Resources */,
 				CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */,
 				CDBC64FF20858BA500F9A799 /* Splash.storyboard in Resources */,
 				CD7CA9C02086F9A5004A7FAB /* MyCollection.storyboard in Resources */,
@@ -842,6 +844,7 @@
 				CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */,
 				CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */,
 				CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */,
+				CD73E9AE2090637C00AD5A8F /* Localizable.strings in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
 				CD168BF2208EC690001C3F08 /* InputDialogViewController.xib in Resources */,
 				CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */,
@@ -958,7 +961,6 @@
 				CDAC5D4F208481A30043AA16 /* LivePlayViewController.swift in Sources */,
 				CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */,
 				CD73E9A72090534D00AD5A8F /* UserSetProfileProvider.swift in Sources */,
-				CDC1DCCA2080A6F700534A0D /* Extension.swift in Sources */,
 				CD7CA9CB2086FA03004A7FAB /* HelpViewController.swift in Sources */,
 				CDBC6509208598A000F9A799 /* ClipsPageViewController.swift in Sources */,
 				CDC1DCB4208095F000534A0D /* BasicNavigationController.swift in Sources */,
@@ -1079,21 +1081,34 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CD73E9B02090637C00AD5A8F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD73E9AF2090637C00AD5A8F /* en */,
+				CD73E9B12090638100AD5A8F /* zh-Hans */,
+				CD73E9C020906E8600AD5A8F /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CD73E9B82090661000AD5A8F /* Sign.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD73E9BA2090661600AD5A8F /* zh-Hans */,
+				CD73E9BB2090663100AD5A8F /* Base */,
+				CD73E9BD2090664E00AD5A8F /* en */,
+			);
+			name = Sign.storyboard;
+			sourceTree = "<group>";
+		};
 		CDC1DC7520808F9800534A0D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CDC1DC7620808F9800534A0D /* Base */,
 				CD73E9A920905C5A00AD5A8F /* en */,
+				CD73E9AB2090614800AD5A8F /* zh-Hans */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CDC1DC7D20808F9A00534A0D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDC1DC7E20808F9A00534A0D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1103,6 +1118,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1163,6 +1179,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -424,11 +424,8 @@ extension PushViewController{
         let parameters = ["userId": UFUtils.getInt(Constant.key_user_id),
                           "title": title ?? "", "message": message ?? "", "link": link ?? "",
                           "price": currentPrice, "rating": currentRating] as [String : Any]
-        let headers: HTTPHeaders = [
-            "ContentType": "application/json"
-        ]
         print(parameters)
-        Alamofire.request(Constant.url_channel_update_all_info, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+        Alamofire.request(Constant.url_channel_update_all_info, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: Constant.jsonHeaders)
             .validate()
             .responseData { (response) in
                 switch response.result {
@@ -565,12 +562,12 @@ extension PushViewController: UIImagePickerControllerDelegate, UINavigationContr
 
     func showPhotoMenu() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default, handler:  { _ in self.takePhotoWithCamera() })
+        let takePhotoAction = UIAlertAction(title: NSLocalizedString("Take Photo", comment: ""), style: .default, handler:  { _ in self.takePhotoWithCamera() })
         alertController.addAction(takePhotoAction)
         let chooseFromLibraryAction = UIAlertAction(title:
-            "Choose From Library", style: .default, handler:  { _ in self.choosePhotoFromLibrary() })
+            NSLocalizedString("Choose From Library", comment: ""), style: .default, handler:  { _ in self.choosePhotoFromLibrary() })
         alertController.addAction(chooseFromLibraryAction)
         present(alertController, animated: true, completion: nil)
     }
@@ -592,9 +589,8 @@ extension PushViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
 
     func uploadPreview(_ image: UIImage){
-        let userId = UFUtils.getInt(Constant.key_user_id)
         if userId <= 0 {
-            hudError(with: "no sign in")
+            hudError(with: NSLocalizedString("has no sign in", comment: ""))
             return
         }
         let hud = hudLoading()

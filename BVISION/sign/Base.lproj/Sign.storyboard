@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -208,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bvision2" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-hH-skO">
-                                <rect key="frame" x="152" y="84" width="70" height="70"/>
+                                <rect key="frame" x="152.5" y="84" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="2hi-os-t72"/>
                                     <constraint firstAttribute="height" constant="70" id="iKE-wj-xvy"/>
@@ -279,7 +278,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y38-sd-fGe">
-                                                    <rect key="frame" x="16" y="20" width="343" height="50"/>
+                                                    <rect key="frame" x="16" y="20" width="568" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="JVR-m9-rqY"/>
                                                     </constraints>
@@ -303,7 +302,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-YE-DmB">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="50"/>
+                                                    <rect key="frame" x="16" y="0.0" width="568" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="yOv-Vd-5gJ"/>
                                                     </constraints>

@@ -26,6 +26,9 @@
                                 <action selector="hero_dismissViewController" destination="reX-9H-Dkg" id="3Hl-Q2-dDv"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="more_25" id="Qaf-qH-hgb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGy-GQ-EgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,6 +60,7 @@
     </scenes>
     <resources>
         <image name="back_30" width="30" height="30"/>
+        <image name="more_25" width="25" height="25"/>
         <image name="navigation_shadow" width="375" height="3"/>
     </resources>
 </document>

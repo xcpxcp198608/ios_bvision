@@ -51,24 +51,24 @@ class UserSignUpViewController: UIViewController{
     @IBAction func signUp() {
         if let username = signUpTableView?.tfUsername.text, let email = signUpTableView?.tfEmail.text, let phone = signUpTableView?.tfPhone.text, let password = signUpTableView?.tfPassword.text {
             if username.count <= 0 {
-                self.alertError(message: "username input error")
+                self.alertError(message: NSLocalizedString("username type in error", comment: ""))
                 return
             }
             if email.count <= 0 {
-                self.alertError(message: "email input error")
+                self.alertError(message: NSLocalizedString("email input error", comment: ""))
                 return
             }
             let predicate = NSPredicate(format: "SELF MATCHES %@", Constant.regex_email)
             if !predicate.evaluate(with: email) {
-                self.alertError(message: "email format error")
+                self.alertError(message: NSLocalizedString("email format error", comment: ""))
                 return
             }
             if phone.count <= 8 {
-                self.alertError(message: "phone input error")
+                self.alertError(message: NSLocalizedString("phone input error", comment: ""))
                 return
             }
             if password.count < 6 {
-                self.alertError(message: "password count must >= 6")
+                self.alertError(message: NSLocalizedString("password count error", comment: ""))
                 return
             }
             let parameters = ["username": username, "email": email, "phone": phone, "password": password]

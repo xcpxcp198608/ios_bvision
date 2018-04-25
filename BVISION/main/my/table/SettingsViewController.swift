@@ -41,9 +41,9 @@ class SettingsViewController: BasicTableViewController {
         }
         let gender = UFUtils.getInt(Constant.key_user_gender)
         if gender == 1{
-            laGender.text = "Male"
+            laGender.text = NSLocalizedString("Male", comment: "")
         }else{
-            laGender.text = "Female"
+            laGender.text = NSLocalizedString("Female", comment: "")
         }
         if let profile = UFUtils.getString(Constant.key_user_profile){
             laProfile.text = profile
@@ -77,11 +77,11 @@ extension SettingsViewController: UserSetGenderProviderDelegate, UserSetProfileP
     
     func showSetGenderDialog(){
         var alertItems = [MMPopupItem]()
-        let maleItem = MMItemMake("Male", .normal) { (position) in
+        let maleItem = MMItemMake(NSLocalizedString("Male", comment: ""), .normal) { (position) in
             self.hud = self.hudLoading()
             self.userSetGenderProvider.load(gender: 1)
         }
-        let femaleItem = MMItemMake("Female", .normal) { (position) in
+        let femaleItem = MMItemMake(NSLocalizedString("Female", comment: ""), .normal) { (position) in
             self.hud = self.hudLoading()
             self.userSetGenderProvider.load(gender: 0)
         }
@@ -97,14 +97,14 @@ extension SettingsViewController: UserSetGenderProviderDelegate, UserSetProfileP
         hudSuccess(with: "successfully")
         UFUtils.set(gender, key: Constant.key_user_gender)
         if gender == 1{
-            self.laGender.text = "Male"
+            self.laGender.text = NSLocalizedString("Male", comment: "")
         }else{
-            self.laGender.text = "Female"
+            self.laGender.text = NSLocalizedString("Female", comment: "")
         }
     }
     
     func showSetProfileDialog(){
-        let alertView = MMAlertView.init(inputTitle: "Set profile", detail: "", placeholder: "type in profile") { (alias) in
+        let alertView = MMAlertView.init(inputTitle:  NSLocalizedString("Set profile", comment: ""), detail: "", placeholder:  NSLocalizedString("type in profile", comment: "")) { (alias) in
             var profile = ""
             if (alias?.count)! > 0{
                 profile = alias!
@@ -119,7 +119,7 @@ extension SettingsViewController: UserSetGenderProviderDelegate, UserSetProfileP
     
     func loadSuccess(profile: String) {
         self.hud?.dismiss()
-        hudSuccess(with: "successfully")
+        hudSuccess(with: NSLocalizedString("Successfully", comment: ""))
         UFUtils.set(profile, key: Constant.key_user_profile)
         self.laProfile.text = profile
     }
@@ -158,12 +158,12 @@ extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationC
     
     func showPhotoMenu() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default, handler:  { _ in self.takePhotoWithCamera() })
+        let takePhotoAction = UIAlertAction(title: NSLocalizedString("Take Photo", comment: ""), style: .default, handler:  { _ in self.takePhotoWithCamera() })
         alertController.addAction(takePhotoAction)
         let chooseFromLibraryAction = UIAlertAction(title:
-            "Choose From Library", style: .default, handler:  { _ in self.choosePhotoFromLibrary() })
+            NSLocalizedString("Choose From Library", comment: ""), style: .default, handler:  { _ in self.choosePhotoFromLibrary() })
         alertController.addAction(chooseFromLibraryAction)
         present(alertController, animated: true, completion: nil)
     }
@@ -186,7 +186,7 @@ extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationC
     
     func uploadUserIcon(_ image: UIImage){
         if userId <= 0 {
-            hudError(with: "no sign in")
+            hudError(with: NSLocalizedString("has no sign in", comment: ""))
             return
         }
         let hud = hudLoading()

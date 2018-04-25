@@ -196,8 +196,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     
     func showScanErrorDialog(){
         let alert = UIAlertController(
-            title: "Notice",
-            message: "Unrecognized QRCode format",
+            title: NSLocalizedString("Notice", comment: ""),
+            message: NSLocalizedString("Unrecognized QRCode format", comment: ""),
             preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "Contiune", style: .default) { (_) in
             alert.dismiss(animated: true, completion: nil)
