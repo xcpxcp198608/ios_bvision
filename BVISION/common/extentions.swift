@@ -143,4 +143,18 @@ extension UIViewController{
         present(alert, animated: true, completion: nil)
     }
     
+    
+    
+    func getDeviceModel() -> String {
+        return UIDevice.current.model
+    }
+    
+    func getSysVersion() -> String {
+        return UIDevice.current.systemVersion
+    }
+    
+    func getUUID() -> String {
+        return (UIDevice.current.identifierForVendor?.uuidString)!
+    }
+    
 }

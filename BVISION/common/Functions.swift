@@ -47,6 +47,15 @@ var userId: Int{
     }
 }
 
+var userCoins: Int{
+    get{
+        return UFUtils.getInt(Constant.key_user_coins)
+    }
+    set(coins){
+        UFUtils.set(coins, key: Constant.key_user_coins)
+    }
+}
+
 var userLevel: Int{
     get{
         return UFUtils.getInt(Constant.key_user_level)

@@ -16,7 +16,7 @@
 "Success" = "成功";
 "Fail" = "失败";
 "Failure" = "失败";
-"Permission denied" = "没有权限";
+"Permission denied" = "权限不足";
 "Loading..." = "加载中...";
 
 
@@ -35,7 +35,7 @@
 "PUSH BY LOCAL(PRO)" = "本地视频直播(PRO)";
 "access camera permission" = "需要摄像头权限, 请打开设置 -> B·VISION, 打开摄像头权限";
 "access microphone permission" = "需要麦克风权限, 请打开设置 -> B·VISION, 打开麦克风权限";
-"access photo permission" = "需要相册权限, 请打开设置 -> B·VISION, 打开相册权限";
+"access photo permission" = "需要照片权限, 请打开设置 -> B·VISION, 设置照片权限为读取和写入";
 "access contacts permission" = "需要联系人权限, 请打开设置 -> B·VISION, 打开联系人权限";
 "no data" = "没有数据";
 "username type in error" = "用户名输入错误";
@@ -69,3 +69,9 @@
 "Follow" = "关注";
 "Invite" = "邀请";
 "Followed" = "已关注";
+
+"BLOCKED" = "BLOCKED";
+"Please contact the broadcaster for additional information" = "请联系播放者开通权限";
+
+"pay failure" = "支付失败";
+"purchase successfully" = "购买成功";

@@ -18,10 +18,6 @@ class BvisionCoinsViewController: BasicViewController {
     let VERIFY_RECEIPT_URL = "https://buy.itunes.apple.com/verifyReceipt"
     let ITMS_SANDBOX_VERIFY_RECEIPT_URL = "https://sandbox.itunes.apple.com/verifyReceipt"
     
-    let items = ["BVISION COIN 100", "BVISION COIN 200", "BVISION COIN 500", "BVISION COIN 1000"]
-    let itemIds = ["com.legacy.bvision.bc100", "com.legacy.bvision.bc200", "com.legacy.bvision.bc500", "com.legacy.bvision.bc1000"]
-    let prices = [9.99, 18.99, 48.99, 94.99]
-    let coins = [100, 200, 500, 1000]
     var productDict:NSMutableDictionary!
     
     @IBOutlet weak var laCoins: UILabel!
@@ -30,15 +26,26 @@ class BvisionCoinsViewController: BasicViewController {
     @IBOutlet weak var contentView: UIView!
     var collectionView: UICollectionView?
     
-    var checked = true
-    
+    var consentChecked = true
     var hud: JGProgressHUD?
+    
+    var  coinInfos = [CoinInfo]()
+    lazy var userGetCoinsProvider = {
+        return UserGetCoinsProvider()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btCheckBox.isSelected = checked
+        userGetCoinsProvider.loadDelegate = self
+        laCoins.text = "\(userCoins)"
+        coinInfos = CoinInfo.generate()
+        btCheckBox.isSelected = consentChecked
         initCollectionView()
         initIAP()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        userGetCoinsProvider.load(userId)
     }
     
     func initCollectionView(){
@@ -62,8 +69,8 @@ class BvisionCoinsViewController: BasicViewController {
     
     
     @IBAction func checkSelect(){
-        checked = !checked
-        btCheckBox.isSelected = checked
+        consentChecked = !consentChecked
+        btCheckBox.isSelected = consentChecked
     }
     
     @IBAction func showPurchaseConsent(){
@@ -73,7 +80,7 @@ class BvisionCoinsViewController: BasicViewController {
     
     func initIAP(){
         SKPaymentQueue.default().add(self)
-        var set = NSSet(array: itemIds)
+        let set = NSSet(array: CoinInfo.getIdentifiers())
         let request = SKProductsRequest.init(productIdentifiers: set as! Set<String>)
         request.delegate = self;
         request.start()
@@ -87,22 +94,36 @@ class BvisionCoinsViewController: BasicViewController {
 }
 
 
+
+extension BvisionCoinsViewController: UserGetCoinsProviderDelegate{
+    
+    func loadSuccess(_ coins: Int) {
+        laCoins.text = "\(coins)"
+        userCoins = coins
+    }
+    
+    func loadFailure(_ message: String, _ error: Error?) {
+        
+    }
+}
+
+
+
 //MARK:- UICollectionViewDataSource
 extension BvisionCoinsViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return coinInfos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CoinPurchaseCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoinPurchaseCell", for: indexPath) as! CoinPurchaseCell
-        let index = indexPath.row
-        cell.laDescription.text = items[index]
-        cell.btPurchase.setTitle("$\(prices[index])", for: .normal)
+        cell.setCoinInfo(coinInfos[indexPath.row])
         return cell
     }
     
 }
+
 
 
 //MARK:- UICollectionViewDelegateFlowLayout
@@ -115,25 +136,26 @@ extension BvisionCoinsViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if !checked {
+        if !consentChecked {
             self.hudError(with: NSLocalizedString("you has no agree purchase consent", comment: ""))
             return
         }
-        let productId = itemIds[indexPath.row]
-        let product = self.productDict[productId]
+        let coinInfo = self.coinInfos[indexPath.row]
+        let product = self.productDict[coinInfo.identifier]
         buyProduct(product: product as! SKProduct)
     }
     
     func buyProduct(product: SKProduct){
         if(SKPaymentQueue.canMakePayments()){
+            self.hud = hudLoading()
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
         }else{
             hudError(with: NSLocalizedString("do not support IAP", comment: ""))
         }
     }
-    
 }
+
 
 
 //MARK:- SKProductsRequestDelegate
@@ -145,9 +167,9 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
         }
         for product in response.products {
             print("=======Product id=======\(product.productIdentifier)")
-            print("========================\(product.localizedTitle)")
-            print("========================\(product.localizedDescription)")
-            print("========================\(product.price)")
+//            print("========================\(product.localizedTitle)")
+//            print("========================\(product.localizedDescription)")
+//            print("========================\(product.price)")
             productDict.setObject(product, forKey: product.productIdentifier as NSCopying)
         }
         hud?.dismiss()
@@ -158,29 +180,37 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
         for transaction in transactions {
             if (SKPaymentTransactionState.purchased == transaction.transactionState) {
                 print("pay success＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝")
-                self.verifyPruchase(transaction.payment.productIdentifier)
-                SKPaymentQueue.default().finishTransaction(transaction)
+                self.verifyPruchase(transaction)
+//                SKPaymentQueue.default().finishTransaction(transaction)
             }else if(SKPaymentTransactionState.failed == transaction.transactionState){
+                self.hud?.dismiss()
                 print("pay failure＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝")
+                self.hudError(with: NSLocalizedString("pay failure", comment: ""))
                 SKPaymentQueue.default().finishTransaction(transaction)
             }else if (SKPaymentTransactionState.restored == transaction.transactionState) {
-                
+                self.hud?.dismiss()
                 SKPaymentQueue.default().finishTransaction(transaction)
             }
             
         }
     }
     
-    func verifyPruchase(_ productIdentifier: String){
+    func verifyPruchase(_ transaction: SKPaymentTransaction){
+        let productIdentifier: String = transaction.payment.productIdentifier
         // 验证凭据，获取到苹果返回的交易凭据
         // appStoreReceiptURL iOS7.0增加的，购买交易完成后，会将凭据存放在该地址
         let receiptURL = Bundle.main.appStoreReceiptURL
         // 从沙盒中获取到购买凭据
         let receiptData = NSData(contentsOf: receiptURL!)
-        let encodeStr = receiptData?.base64EncodedString(options: .endLineWithLineFeed)
+        if receiptData == nil{
+            self.hudError(with: NSLocalizedString("pay failure", comment: ""))
+        }
         
-        let parameters = ["receipt-data": encodeStr]
-        Alamofire.request(ITMS_SANDBOX_VERIFY_RECEIPT_URL, method: .post, parameters: parameters)
+        let encodeStr = receiptData?.base64EncodedString(options: .endLineWithLineFeed)
+        let parameters = ["receiptData": encodeStr, "platform": "\(getDeviceModel())-\(getSysVersion())", "productIdentifier": "\(productIdentifier)"]
+        
+        let url = "\(Constant.url_coin_purchase_verify)\(userId)"
+        Alamofire.request(url, method: .put, parameters: parameters, headers: Constant.urlencodedHeaders)
             .validate()
             .responseData { (response) in
                 switch response.result {
@@ -188,13 +218,19 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
                     print("verify success＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝")
                     let result = JSON(data: response.data!)
                     print(result)
-                    
-                    let index = self.itemIds.index(of: productIdentifier)
-                    let x = Int(self.laCoins.text!)! + self.coins[index!]
-                    self.laCoins.text = "\(x)"
+                    if(result["code"].intValue == 200){
+                        let coins = result["data"].intValue
+                        userCoins = coins
+                        self.laCoins.text = "\(coins)"
+                        self.hudSuccess(with: NSLocalizedString("purchase successfully", comment: ""))
+                        SKPaymentQueue.default().finishTransaction(transaction)
+                    }else{
+                        self.hudError(with: result["message"].stringValue)
+                    }
                 case .failure(let error):
                     print(error)
                 }
+                self.hud?.dismiss()
         }
     
     }

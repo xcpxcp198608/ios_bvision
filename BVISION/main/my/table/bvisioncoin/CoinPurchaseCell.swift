@@ -8,13 +8,23 @@
 
 import UIKit
 
+
 class CoinPurchaseCell: UICollectionViewCell{
     
     @IBOutlet weak var laDescription: UILabel!
     @IBOutlet weak var btPurchase: UIButton!
     
+    var coinInfo: CoinInfo?
+    
     override func awakeFromNib() {
         btPurchase.layer.cornerRadius = btPurchase.frame.height / 4
         btPurchase.layer.masksToBounds = true
     }
+    
+    func setCoinInfo(_ coinInfo: CoinInfo){
+        self.coinInfo = coinInfo
+        laDescription.text = coinInfo.name
+        btPurchase.setTitle("$\(coinInfo.amount)", for: .normal)
+    }
+    
 }

@@ -35,6 +35,9 @@
 		CD432C0B208886F500AF73B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C09208886F400AF73B8 /* UIKit.framework */; };
 		CD432C0C208886F500AF73B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */; };
 		CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */; };
+		CD506DBA2091C8B0008F7683 /* AccessTokenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD506DB92091C8B0008F7683 /* AccessTokenUtils.swift */; };
+		CD506DBE2091CDF7008F7683 /* UserGetCoinsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD506DBD2091CDF7008F7683 /* UserGetCoinsProvider.swift */; };
+		CD506DC02091D6A4008F7683 /* UserConsumeCoinsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD506DBF2091D6A4008F7683 /* UserConsumeCoinsProvider.swift */; };
 		CD73E99F209029C200AD5A8F /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E99E209029C200AD5A8F /* ContactInfo.swift */; };
 		CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9A020902AEA00AD5A8F /* ContactCell.xib */; };
 		CD73E9A320902AF800AD5A8F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E9A220902AF800AD5A8F /* ContactCell.swift */; };
@@ -43,6 +46,8 @@
 		CD73E9AE2090637C00AD5A8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9B02090637C00AD5A8F /* Localizable.strings */; };
 		CD73E9B62090661000AD5A8F /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9B82090661000AD5A8F /* Sign.storyboard */; };
 		CD73E9BF2090689200AD5A8F /* LiveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9BE2090689100AD5A8F /* LiveChannelCell.xib */; };
+		CD73E9C120907FA800AD5A8F /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9C320907FA800AD5A8F /* Push.storyboard */; };
+		CD7877C220917BE6002B33BA /* CoinInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7877C120917BE6002B33BA /* CoinInfo.swift */; };
 		CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD793F17208C611400DD1C39 /* FollowersViewController.swift */; };
 		CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */; };
 		CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7CA9B82086EC1D004A7FAB /* MyCell.xib */; };
@@ -88,7 +93,6 @@
 		CDAC5D36208446E20043AA16 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2E208446E10043AA16 /* FileUtils.swift */; };
 		CDAC5D37208446E20043AA16 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D2F208446E10043AA16 /* Functions.swift */; };
 		CDAC5D38208446E20043AA16 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D30208446E20043AA16 /* Constant.swift */; };
-		CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC5D3C20844FB40043AA16 /* Push.storyboard */; };
 		CDAC5D3F20844FDB0043AA16 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D3E20844FDB0043AA16 /* PushViewController.swift */; };
 		CDAC5D43208450230043AA16 /* PushVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D42208450230043AA16 /* PushVideoViewController.swift */; };
 		CDAC5D45208453060043AA16 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC5D44208453060043AA16 /* Scan.storyboard */; };
@@ -174,6 +178,9 @@
 		CD432C09208886F400AF73B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD432C0A208886F500AF73B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CD432C1120889A4F00AF73B8 /* KSYPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSYPlayerViewController.swift; sourceTree = "<group>"; };
+		CD506DB92091C8B0008F7683 /* AccessTokenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenUtils.swift; sourceTree = "<group>"; };
+		CD506DBD2091CDF7008F7683 /* UserGetCoinsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGetCoinsProvider.swift; sourceTree = "<group>"; };
+		CD506DBF2091D6A4008F7683 /* UserConsumeCoinsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConsumeCoinsProvider.swift; sourceTree = "<group>"; };
 		CD73E99E209029C200AD5A8F /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		CD73E9A020902AEA00AD5A8F /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		CD73E9A220902AF800AD5A8F /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -188,6 +195,10 @@
 		CD73E9BD2090664E00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Sign.strings; sourceTree = "<group>"; };
 		CD73E9BE2090689100AD5A8F /* LiveChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveChannelCell.xib; sourceTree = "<group>"; };
 		CD73E9C020906E8600AD5A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD73E9C220907FA800AD5A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Push.storyboard; sourceTree = "<group>"; };
+		CD73E9C520907FAC00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Push.strings; sourceTree = "<group>"; };
+		CD73E9C720907FB300AD5A8F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Push.strings"; sourceTree = "<group>"; };
+		CD7877C120917BE6002B33BA /* CoinInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfo.swift; sourceTree = "<group>"; };
 		CD793F17208C611400DD1C39 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserProvider.swift; sourceTree = "<group>"; };
 		CD7CA9B82086EC1D004A7FAB /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
@@ -249,7 +260,6 @@
 		CDAC5D2E208446E10043AA16 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		CDAC5D2F208446E10043AA16 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		CDAC5D30208446E20043AA16 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		CDAC5D3C20844FB40043AA16 /* Push.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Push.storyboard; sourceTree = "<group>"; };
 		CDAC5D3E20844FDB0043AA16 /* PushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		CDAC5D42208450230043AA16 /* PushVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushVideoViewController.swift; sourceTree = "<group>"; };
 		CDAC5D44208453060043AA16 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
@@ -392,6 +402,7 @@
 				CD168BF5208EDFDA001C3F08 /* BvisionCoinsViewController.swift */,
 				CD168C01208EFCFD001C3F08 /* CoinPurchaseCell.swift */,
 				CD168C00208EFCFD001C3F08 /* CoinPurchaseCell.xib */,
+				CD7877C120917BE6002B33BA /* CoinInfo.swift */,
 			);
 			path = bvisioncoin;
 			sourceTree = "<group>";
@@ -463,7 +474,7 @@
 			children = (
 				CDAC5D412084500B0043AA16 /* video */,
 				CDAC5D4020844FE00043AA16 /* camera */,
-				CDAC5D3C20844FB40043AA16 /* Push.storyboard */,
+				CD73E9C320907FA800AD5A8F /* Push.storyboard */,
 			);
 			path = push;
 			sourceTree = "<group>";
@@ -506,6 +517,8 @@
 				CD168BF7208EE1C4001C3F08 /* BvisionCoinProvider.swift */,
 				CD73E9A42090533A00AD5A8F /* UserSetGenderProvider.swift */,
 				CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */,
+				CD506DBD2091CDF7008F7683 /* UserGetCoinsProvider.swift */,
+				CD506DBF2091D6A4008F7683 /* UserConsumeCoinsProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -714,6 +727,7 @@
 				CDAC5D29208446DF0043AA16 /* UFUtils.swift */,
 				CDC1DCC520809D8400534A0D /* WebViewController.swift */,
 				CDC1DCC720809DA300534A0D /* Web.storyboard */,
+				CD506DB92091C8B0008F7683 /* AccessTokenUtils.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -843,7 +857,7 @@
 				CD168C02208EFCFE001C3F08 /* CoinPurchaseCell.xib in Resources */,
 				CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */,
 				CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */,
-				CDAC5D3D20844FB40043AA16 /* Push.storyboard in Resources */,
+				CD73E9C120907FA800AD5A8F /* Push.storyboard in Resources */,
 				CD73E9AE2090637C00AD5A8F /* Localizable.strings in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
 				CD168BF2208EC690001C3F08 /* InputDialogViewController.xib in Resources */,
@@ -984,8 +998,10 @@
 				CD9F42CE208DE31B00B71F79 /* BlackListUserInfo.swift in Sources */,
 				CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */,
 				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
+				CD506DBE2091CDF7008F7683 /* UserGetCoinsProvider.swift in Sources */,
 				CD168BF6208EDFDA001C3F08 /* BvisionCoinsViewController.swift in Sources */,
 				CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */,
+				CD506DC02091D6A4008F7683 /* UserConsumeCoinsProvider.swift in Sources */,
 				CD7CA9CF2086FA1E004A7FAB /* VIPViewController.swift in Sources */,
 				CD7CA9C92086F9F9004A7FAB /* FeedbackViewController.swift in Sources */,
 				CDBC650B20859A4800F9A799 /* YTBChannelsViewController.swift in Sources */,
@@ -1012,6 +1028,7 @@
 				CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */,
 				CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */,
 				CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */,
+				CD7877C220917BE6002B33BA /* CoinInfo.swift in Sources */,
 				CDC1DCBD20809BAA00534A0D /* MyViewController.swift in Sources */,
 				CDAC5D36208446E20043AA16 /* FileUtils.swift in Sources */,
 				CDAC5D35208446E20043AA16 /* extentions.swift in Sources */,
@@ -1028,6 +1045,7 @@
 				CD9F42BD208D8C5800B71F79 /* UserChannelProvider.swift in Sources */,
 				CD7CA9BD2086F452004A7FAB /* MyTableViewController.swift in Sources */,
 				CD7CA9CD2086FA10004A7FAB /* SettingsViewController.swift in Sources */,
+				CD506DBA2091C8B0008F7683 /* AccessTokenUtils.swift in Sources */,
 				CD73E9A320902AF800AD5A8F /* ContactCell.swift in Sources */,
 				CDBC64FE20858BA500F9A799 /* SplashViewController.swift in Sources */,
 				CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */,
@@ -1099,6 +1117,16 @@
 				CD73E9BD2090664E00AD5A8F /* en */,
 			);
 			name = Sign.storyboard;
+			sourceTree = "<group>";
+		};
+		CD73E9C320907FA800AD5A8F /* Push.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD73E9C220907FA800AD5A8F /* Base */,
+				CD73E9C520907FAC00AD5A8F /* en */,
+				CD73E9C720907FB300AD5A8F /* zh-Hans */,
+			);
+			name = Push.storyboard;
 			sourceTree = "<group>";
 		};
 		CDC1DC7520808F9800534A0D /* Main.storyboard */ = {

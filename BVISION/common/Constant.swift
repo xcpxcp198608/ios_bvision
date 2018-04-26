@@ -38,9 +38,13 @@ struct Constant {
     static let url_user_set_black = "\(base_url)user/black/"
     static let url_user_list_blacks = "\(base_url)user/blacks/"
     static let url_user_operations = "\(base_url)user/operations/"
-    static let url_user_coin = "\(base_url)user/coin/"
     static let url_user_gender = "\(base_url)user/gender/"
     static let url_user_profile = "\(base_url)user/profile/"
+    
+    
+    static let url_coin_get = "\(base_url)coin/"
+    static let url_coin_purchase_verify = "\(base_url)coin/iap/verify/"
+    static let url_coin_consume = "\(base_url)coin/consume/"
     
     static let url_wss_live = "wss://blive.bvision.live/live/"
     
@@ -62,6 +66,7 @@ struct Constant {
     static let key_user_level = "user_level"
     static let key_user_gender = "user_gender"
     static let key_user_profile = "user_profile"
+    static let key_user_coins = "user_coins"
     
     static let key_channel_play_url = "play_url"
     static let key_channel_push_url = "push_full_url"

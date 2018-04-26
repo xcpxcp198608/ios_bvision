@@ -32,7 +32,7 @@ class PushViewController: BasicViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var tfLink: UITextField!
     @IBOutlet weak var laPrice: UILabel!
     @IBOutlet weak var laRating: UILabel!
-    @IBOutlet weak var ivPreview: UIImageView!
+    @IBOutlet weak var btPreview: UIButton!
     @IBOutlet weak var tvComment: UITextView!
     @IBOutlet weak var laRecordTime: UILabel!
 
@@ -124,14 +124,15 @@ class PushViewController: BasicViewController, UIPickerViewDataSource, UIPickerV
             tfLink.text = link
         }
         if let preview = UFUtils.getString(Constant.key_channel_preview) {
-            ivPreview.kf.setImage(with: URL(string: preview), placeholder: #imageLiteral(resourceName: "hold_bvision"))
+            btPreview.kf.setBackgroundImage(with: URL(string: preview), for: .normal, placeholder: #imageLiteral(resourceName: "hold_bvision"))
         }
-        ivPreview.isUserInteractionEnabled = true
-        let previewGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPickPhoto))
-        ivPreview.addGestureRecognizer(previewGestureRecognizer)
     }
 
     @objc func showPickPhoto(){
+        self.showPhotoMenu()
+    }
+    
+    @IBAction func clickPreview(){
         self.showPhotoMenu()
     }
 
@@ -149,13 +150,13 @@ class PushViewController: BasicViewController, UIPickerViewDataSource, UIPickerV
         pricePickerView.selectRow(0, inComponent:0, animated:true)
 
         alertController.view.addSubview(pricePickerView)
-        alertController.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default){
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: UIAlertActionStyle.default){
             (alertAction) -> Void in
             print("price confirm")
             self.currentPrice = Float(self.currentPriceRow)
             self.laPrice.text = "$\(self.currentPrice)"
         })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
 
@@ -168,13 +169,13 @@ class PushViewController: BasicViewController, UIPickerViewDataSource, UIPickerV
         ratingPickerView.selectRow(2, inComponent:0, animated:true)
 
         alertController.view.addSubview(ratingPickerView)
-        alertController.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default){
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: UIAlertActionStyle.default){
             (alertAction) -> Void in
             print("rating confirm")
             self.currentRating = self.currentRatingRow
             self.laRating.text = self.ratings[self.currentRating]
         })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
 
@@ -214,7 +215,7 @@ class PushViewController: BasicViewController, UIPickerViewDataSource, UIPickerV
             currentRatingRow = row
         }
     }
-
+    
 
     deinit {
         pusher.streamerBase.stopStream()
@@ -294,9 +295,6 @@ extension PushViewController{
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        close()
-    }
 
 }
 
@@ -458,7 +456,6 @@ extension PushViewController{
                 case .success:
                     let restult = JSON(data: response.data!)
                     if(restult["code"].intValue == 200){
-                        print(restult["message"])
                         if status == 1 {
                             self.startCountRecordTime()
                         }
@@ -541,17 +538,18 @@ extension PushViewController: UITextFieldDelegate{
 extension PushViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let imagePreview = info[UIImagePickerControllerEditedImage] as? UIImage {
-            uploadPreview(imagePreview)
+        let imagePreview = info[UIImagePickerControllerEditedImage] as? UIImage
+        if let newImage = imagePreview {
+            uploadPreview(newImage)
         }
         dismiss(animated: true, completion: nil)
     }
-
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-
-
+    
+    
     func pickPhoto() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             showPhotoMenu()
@@ -559,7 +557,7 @@ extension PushViewController: UIImagePickerControllerDelegate, UINavigationContr
             choosePhotoFromLibrary()
         }
     }
-
+    
     func showPhotoMenu() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
@@ -569,9 +567,9 @@ extension PushViewController: UIImagePickerControllerDelegate, UINavigationContr
         let chooseFromLibraryAction = UIAlertAction(title:
             NSLocalizedString("Choose From Library", comment: ""), style: .default, handler:  { _ in self.choosePhotoFromLibrary() })
         alertController.addAction(chooseFromLibraryAction)
-        present(alertController, animated: true, completion: nil)
+        present(alertController, animated: false, completion: nil)
     }
-
+    
     func takePhotoWithCamera() {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
@@ -579,13 +577,13 @@ extension PushViewController: UIImagePickerControllerDelegate, UINavigationContr
         imagePicker.allowsEditing = true
         present(imagePicker, animated: false, completion: nil)
     }
-
+    
     func choosePhotoFromLibrary() {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: false, completion: nil)
     }
 
     func uploadPreview(_ image: UIImage){
@@ -610,7 +608,7 @@ extension PushViewController: UIImagePickerControllerDelegate, UINavigationContr
                         let result = JSON(data: response.data!)
                         if result["code"].intValue == 200 {
                             UFUtils.set(result["data"]["preview"].stringValue, key: Constant.key_channel_preview)
-                            self.ivPreview.image = image
+                            self.btPreview.setBackgroundImage(image, for: .normal)
                         }else{
                             self.hudError(with: result["message"].stringValue)
                         }

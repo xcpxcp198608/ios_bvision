@@ -1,23 +1,25 @@
 //
-//  BvisionCoinProvider.swift
+//  UserGetCoinsProvider.swift
 //  BVISION
 //
-//  Created by patrick on 2018/4/24.
+//  Created by patrick on 2018/4/26.
 //  Copyright © 2018 wiatec. All rights reserved.
 //
+
+import Foundation
 
 import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol BvisionCoinProviderDelegate {
-    func loadSuccess(_ number: Int)
+protocol UserGetCoinsProviderDelegate {
+    func loadSuccess(_ coins: Int)
     func loadFailure(_ message: String, _ error: Error?)
 }
 
-class BvisionCoinProvider {
+class UserGetCoinsProvider {
     
-    var loadDelegate: BvisionCoinProviderDelegate?
+    var loadDelegate: UserGetCoinsProviderDelegate?
     
     func load(_ userId: Int){
         if userId <= 0 {return}
@@ -29,7 +31,7 @@ class BvisionCoinProvider {
                 case .success:
                     let result = JSON(data: response.data!)
                     if(result["code"].intValue == 200){
-                        
+                        self.loadDelegate?.loadSuccess(result["data"].intValue)
                     }else{
                         self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
                     }

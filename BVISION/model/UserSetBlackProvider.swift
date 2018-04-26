@@ -31,6 +31,8 @@ class UserSetBlackProvider {
                     let result = JSON(data: response.data!)
                     if(result["code"].intValue == 200){
                         self.loadDelegate?.loadSuccess(action: action, indexPath: indexPath)
+                    }else if(result["code"].intValue == 555){
+                        self.loadDelegate?.loadFailure(NSLocalizedString("Please contact the broadcaster for additional information", comment: ""), nil)
                     }else{
                         self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
                     }

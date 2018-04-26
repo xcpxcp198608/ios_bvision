@@ -1,0 +1,33 @@
+
+/* Class = "UISegmentedControl"; 6dK-j7-3Lr.segmentTitles[0] = "System"; ObjectID = "6dK-j7-3Lr"; */
+"6dK-j7-3Lr.segmentTitles[0]" = "System";
+
+/* Class = "UISegmentedControl"; 6dK-j7-3Lr.segmentTitles[1] = "Record"; ObjectID = "6dK-j7-3Lr"; */
+"6dK-j7-3Lr.segmentTitles[1]" = "Record";
+
+/* Class = "UINavigationItem"; title = "Videos"; ObjectID = "B7Z-ZS-DI4"; */
+"B7Z-ZS-DI4.title" = "Videos";
+
+/* Class = "UITextField"; placeholder = "link"; ObjectID = "Ef9-Dq-yNQ"; */
+"Ef9-Dq-yNQ.placeholder" = "link";
+
+/* Class = "UILabel"; text = "PG-13"; ObjectID = "LsA-Dl-g4T"; */
+"LsA-Dl-g4T.text" = "PG-13";
+
+/* Class = "UITextField"; placeholder = "title"; ObjectID = "Q6Z-ic-1xw"; */
+"Q6Z-ic-1xw.placeholder" = "title";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "bEv-mZ-gpa"; */
+"bEv-mZ-gpa.text" = "$0.00";
+
+/* Class = "UITextField"; placeholder = "content"; ObjectID = "hu0-g7-uIY"; */
+"hu0-g7-uIY.placeholder" = "content";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "jQA-1E-RGb"; */
+"jQA-1E-RGb.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "pec-fH-FAr"; */
+"pec-fH-FAr.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "00:00:00.0"; ObjectID = "zdk-Rk-fY4"; */
+"zdk-Rk-fY4.text" = "00:00:00.0";
