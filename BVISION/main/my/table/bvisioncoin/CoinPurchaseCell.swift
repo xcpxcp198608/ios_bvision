@@ -24,7 +24,7 @@ class CoinPurchaseCell: UICollectionViewCell{
     func setCoinInfo(_ coinInfo: CoinInfo){
         self.coinInfo = coinInfo
         laDescription.text = coinInfo.name
-        btPurchase.setTitle("$\(coinInfo.amount)", for: .normal)
+        btPurchase.setTitle("\(NSLocalizedString("currency", comment: ""))\(coinInfo.amount)", for: .normal)
     }
     
 }

@@ -794,8 +794,22 @@
                                 <action selector="hero_dismissViewController" destination="5Hy-r9-8as" id="Ywm-OQ-MAW"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="pXu-WU-9EI">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R4F-Lr-qCI">
+                                <rect key="frame" x="334" y="9.5" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="bill_20"/>
+                                <connections>
+                                    <action selector="clickBtBill" destination="5Hy-r9-8as" eventType="touchUpInside" id="CBg-ue-Gze"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <segue destination="UHY-lS-LLK" kind="show" identifier="ShowBillViewController" id="hdD-La-9KV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btBill" destination="R4F-Lr-qCI" id="CHE-mX-4sO"/>
                         <outlet property="btCheckBox" destination="5GM-6I-ENV" id="0D7-eL-LL9"/>
                         <outlet property="btConsent" destination="N6u-iP-Xos" id="8aE-oA-unM"/>
                         <outlet property="contentView" destination="qdo-y3-leB" id="7P9-v2-lVv"/>
@@ -805,6 +819,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvi-Lc-5uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7924" y="1527.4362818590705"/>
+        </scene>
+        <!--Bill-->
+        <scene sceneID="33b-Ta-SyL">
+            <objects>
+                <viewController storyboardIdentifier="BillViewController" title="Bill" modalTransitionStyle="flipHorizontal" id="UHY-lS-LLK" customClass="BillViewController" customModule="BVISION" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yk1-bG-Wh8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-dw-cRt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aKv-dw-cRt" firstAttribute="trailing" secondItem="Kzg-pT-W6d" secondAttribute="trailing" id="7Ee-9k-YXU"/>
+                            <constraint firstItem="aKv-dw-cRt" firstAttribute="leading" secondItem="Kzg-pT-W6d" secondAttribute="leading" id="9gB-Xu-YTo"/>
+                            <constraint firstItem="aKv-dw-cRt" firstAttribute="bottom" secondItem="Kzg-pT-W6d" secondAttribute="bottom" id="CvO-b4-qOQ"/>
+                            <constraint firstItem="aKv-dw-cRt" firstAttribute="top" secondItem="yk1-bG-Wh8" secondAttribute="top" id="xel-en-M1E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kzg-pT-W6d"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aKv-dw-cRt" id="NGJ-UW-VBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzd-EP-vqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8821.6000000000004" y="1527.4362818590705"/>
         </scene>
         <!--Message-->
         <scene sceneID="PSK-lh-juU">
@@ -1963,6 +2009,7 @@
         <image name="VIP" width="30" height="30"/>
         <image name="add_30" width="30" height="30"/>
         <image name="back_30" width="30" height="30"/>
+        <image name="bill_20" width="20" height="20"/>
         <image name="black_list_30" width="30" height="30"/>
         <image name="bvision_coin30" width="30" height="30"/>
         <image name="clip_28" width="28" height="28"/>

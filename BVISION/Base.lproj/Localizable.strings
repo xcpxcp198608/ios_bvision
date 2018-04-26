@@ -71,7 +71,9 @@
 "Please contact the broadcaster for additional information" = "Please contact the broadcaster for additional information";
 "pay failure" = "pay failure";
 "purchase successfully" = "purchase successfully";
-
+"currency" = "";
+"click more select 'Open in browser' if web page can not load" = "click more select 'Open in browser' if web page can not load";
+"Open in browser" = "Open in browser";
 
 
 

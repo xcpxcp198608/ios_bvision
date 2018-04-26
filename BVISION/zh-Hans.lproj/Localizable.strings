@@ -75,3 +75,6 @@
 
 "pay failure" = "支付失败";
 "purchase successfully" = "购买成功";
+"currency" = "￥";
+"click more select 'Open in browser' if web page can not load" = "如果页面无法加载，请尝试点击右上角更多按钮选择在浏览器中打开";
+"Open in browser" = "浏览器打开";

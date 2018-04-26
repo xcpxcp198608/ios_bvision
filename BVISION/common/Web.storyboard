@@ -26,10 +26,20 @@
                                 <action selector="hero_dismissViewController" destination="reX-9H-Dkg" id="3Hl-Q2-dDv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="more_25" id="Qaf-qH-hgb">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="v1F-2f-HkX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cYt-FF-tJH">
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="more_25"/>
+                                <connections>
+                                    <action selector="showPopupMenu" destination="reX-9H-Dkg" eventType="touchUpInside" id="GRQ-9K-cDX"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btMore" destination="cYt-FF-tJH" id="uKZ-Mg-m2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGy-GQ-EgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

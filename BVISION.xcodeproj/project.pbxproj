@@ -72,6 +72,11 @@
 		CD7CA9F320873906004A7FAB /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9EF20873906004A7FAB /* libiconv.2.tbd */; };
 		CD7CA9F62087391D004A7FAB /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9F42087391C004A7FAB /* libstdc++.6.0.9.tbd */; };
 		CD7CA9F72087391D004A7FAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7CA9F52087391C004A7FAB /* libz.tbd */; };
+		CD963C6B209227F4008692CC /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD963C6A209227F4008692CC /* BillViewController.swift */; };
+		CD963C6D20922F1A008692CC /* CoinBillInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD963C6C20922F1A008692CC /* CoinBillInfo.swift */; };
+		CD963C6F20922FCD008692CC /* UserGetCoinBillProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD963C6E20922FCD008692CC /* UserGetCoinBillProvider.swift */; };
+		CD963C7120923312008692CC /* CoinBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD963C7020923312008692CC /* CoinBillCell.xib */; };
+		CD963C73209233EF008692CC /* CoinBillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD963C72209233EF008692CC /* CoinBillCell.swift */; };
 		CD9F42B5208D7F9A00B71F79 /* FollowerUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42B4208D7F9A00B71F79 /* FollowerUserProvider.swift */; };
 		CD9F42B7208D891300B71F79 /* FollowUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42B6208D891300B71F79 /* FollowUserInfo.swift */; };
 		CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */; };
@@ -239,6 +244,11 @@
 		CD7CAA0320874096004A7FAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CD7CAA0420874096004A7FAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD7CAA082087414C004A7FAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CD963C6A209227F4008692CC /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		CD963C6C20922F1A008692CC /* CoinBillInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinBillInfo.swift; sourceTree = "<group>"; };
+		CD963C6E20922FCD008692CC /* UserGetCoinBillProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGetCoinBillProvider.swift; sourceTree = "<group>"; };
+		CD963C7020923312008692CC /* CoinBillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinBillCell.xib; sourceTree = "<group>"; };
+		CD963C72209233EF008692CC /* CoinBillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinBillCell.swift; sourceTree = "<group>"; };
 		CD9F42B4208D7F9A00B71F79 /* FollowerUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerUserProvider.swift; sourceTree = "<group>"; };
 		CD9F42B6208D891300B71F79 /* FollowUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserInfo.swift; sourceTree = "<group>"; };
 		CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -403,6 +413,9 @@
 				CD168C01208EFCFD001C3F08 /* CoinPurchaseCell.swift */,
 				CD168C00208EFCFD001C3F08 /* CoinPurchaseCell.xib */,
 				CD7877C120917BE6002B33BA /* CoinInfo.swift */,
+				CD963C6A209227F4008692CC /* BillViewController.swift */,
+				CD963C72209233EF008692CC /* CoinBillCell.swift */,
+				CD963C7020923312008692CC /* CoinBillCell.xib */,
 			);
 			path = bvisioncoin;
 			sourceTree = "<group>";
@@ -519,6 +532,7 @@
 				CD73E9A62090534D00AD5A8F /* UserSetProfileProvider.swift */,
 				CD506DBD2091CDF7008F7683 /* UserGetCoinsProvider.swift */,
 				CD506DBF2091D6A4008F7683 /* UserConsumeCoinsProvider.swift */,
+				CD963C6E20922FCD008692CC /* UserGetCoinBillProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -533,6 +547,7 @@
 				CD9F42BE208DBB9900B71F79 /* UserOperationInfo.swift */,
 				CD9F42CD208DE31B00B71F79 /* BlackListUserInfo.swift */,
 				CD73E99E209029C200AD5A8F /* ContactInfo.swift */,
+				CD963C6C20922F1A008692CC /* CoinBillInfo.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -856,6 +871,7 @@
 				CD7CA9C02086F9A5004A7FAB /* MyCollection.storyboard in Resources */,
 				CD168C02208EFCFE001C3F08 /* CoinPurchaseCell.xib in Resources */,
 				CDBC650F2085A66A00F9A799 /* FollowCell.xib in Resources */,
+				CD963C7120923312008692CC /* CoinBillCell.xib in Resources */,
 				CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */,
 				CD73E9C120907FA800AD5A8F /* Push.storyboard in Resources */,
 				CD73E9AE2090637C00AD5A8F /* Localizable.strings in Resources */,
@@ -898,6 +914,7 @@
 				"${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -905,6 +922,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
+				"${BUILT_PRODUCTS_DIR}/Popover.OC/Popover_OC.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -925,6 +943,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -932,6 +951,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Popover_OC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -1019,14 +1039,17 @@
 				CDAC5D43208450230043AA16 /* PushVideoViewController.swift in Sources */,
 				CD432BF0208861F700AF73B8 /* LocalVideoCell.swift in Sources */,
 				CDC1DCA9208091A400534A0D /* BasicTabBarController.swift in Sources */,
+				CD963C6D20922F1A008692CC /* CoinBillInfo.swift in Sources */,
 				CDAC5D5A2084A5300043AA16 /* YTBChannelInfo.swift in Sources */,
 				CD7CA9D620872AA8004A7FAB /* VIPPageViewController.swift in Sources */,
 				CD168BF0208EC670001C3F08 /* InputDialogViewController.swift in Sources */,
 				CDAC5D38208446E20043AA16 /* Constant.swift in Sources */,
 				CD73E9A52090533A00AD5A8F /* UserSetGenderProvider.swift in Sources */,
 				CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */,
+				CD963C6B209227F4008692CC /* BillViewController.swift in Sources */,
 				CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */,
 				CDC1DC7A20808F9800534A0D /* BVISION.xcdatamodeld in Sources */,
+				CD963C73209233EF008692CC /* CoinBillCell.swift in Sources */,
 				CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */,
 				CD7877C220917BE6002B33BA /* CoinInfo.swift in Sources */,
 				CDC1DCBD20809BAA00534A0D /* MyViewController.swift in Sources */,
@@ -1056,6 +1079,7 @@
 				CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */,
 				CDBC650120858D0500F9A799 /* UserInfo.swift in Sources */,
 				CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */,
+				CD963C6F20922FCD008692CC /* UserGetCoinBillProvider.swift in Sources */,
 				CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */,
 				CD7CA9D820872AFE004A7FAB /* LDViewController.swift in Sources */,
 				CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */,

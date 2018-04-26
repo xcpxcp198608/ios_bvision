@@ -45,6 +45,7 @@ struct Constant {
     static let url_coin_get = "\(base_url)coin/"
     static let url_coin_purchase_verify = "\(base_url)coin/iap/verify/"
     static let url_coin_consume = "\(base_url)coin/consume/"
+    static let url_coin_bill = "\(base_url)coin/bill/"
     
     static let url_wss_live = "wss://blive.bvision.live/live/"
     

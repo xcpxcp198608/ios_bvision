@@ -24,23 +24,26 @@ class BvisionCoinsViewController: BasicViewController {
     @IBOutlet weak var btConsent: UIButton!
     @IBOutlet weak var btCheckBox: UIButton!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var btBill: UIButton!
     var collectionView: UICollectionView?
     
     var consentChecked = true
     var hud: JGProgressHUD?
     
-    var  coinInfos = [CoinInfo]()
     lazy var userGetCoinsProvider = {
         return UserGetCoinsProvider()
     }()
     
+    var  coinInfos = [CoinInfo]()
+    var currentPurchaseCoinInfo: CoinInfo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = item
         userGetCoinsProvider.loadDelegate = self
         laCoins.text = "\(userCoins)"
-        coinInfos = CoinInfo.generate()
         btCheckBox.isSelected = consentChecked
-        initCollectionView()
         initIAP()
     }
     
@@ -75,6 +78,10 @@ class BvisionCoinsViewController: BasicViewController {
     
     @IBAction func showPurchaseConsent(){
         self.showWebView(Constant.link_purchase_consent)
+    }
+    
+    @IBAction func clickBtBill(){
+        self.performSegue(withIdentifier: "ShowBillViewController", sender: "")
     }
     
     
@@ -118,6 +125,7 @@ extension BvisionCoinsViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CoinPurchaseCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoinPurchaseCell", for: indexPath) as! CoinPurchaseCell
+        self.currentPurchaseCoinInfo = coinInfos[indexPath.row]
         cell.setCoinInfo(coinInfos[indexPath.row])
         return cell
     }
@@ -141,8 +149,10 @@ extension BvisionCoinsViewController: UICollectionViewDelegateFlowLayout{
             return
         }
         let coinInfo = self.coinInfos[indexPath.row]
-        let product = self.productDict[coinInfo.identifier]
-        buyProduct(product: product as! SKProduct)
+        self.currentPurchaseCoinInfo = coinInfo
+        if let product = self.productDict[coinInfo.identifier]{
+            buyProduct(product: product as! SKProduct)
+        }
     }
     
     func buyProduct(product: SKProduct){
@@ -171,8 +181,19 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
 //            print("========================\(product.localizedDescription)")
 //            print("========================\(product.price)")
             productDict.setObject(product, forKey: product.productIdentifier as NSCopying)
+            var coinInfo = CoinInfo()
+            coinInfo.identifier = product.productIdentifier
+            coinInfo.name = product.localizedTitle
+            coinInfo.amount = Double(product.price)
+            self.coinInfos.append(coinInfo)
+            coinInfos.sort { (c1, c2) -> Bool in
+                return c1.amount < c2.amount
+            }
         }
-        hud?.dismiss()
+        if productDict.count > 0{
+            self.initCollectionView()
+            hud?.dismiss()
+        }
     }
     
     
@@ -196,7 +217,7 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
     }
     
     func verifyPruchase(_ transaction: SKPaymentTransaction){
-        let productIdentifier: String = transaction.payment.productIdentifier
+        let productIdentifier: String = currentPurchaseCoinInfo!.identifier
         // 验证凭据，获取到苹果返回的交易凭据
         // appStoreReceiptURL iOS7.0增加的，购买交易完成后，会将凭据存放在该地址
         let receiptURL = Bundle.main.appStoreReceiptURL
@@ -204,11 +225,12 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
         let receiptData = NSData(contentsOf: receiptURL!)
         if receiptData == nil{
             self.hudError(with: NSLocalizedString("pay failure", comment: ""))
+            SKPaymentQueue.default().finishTransaction(transaction)
+            return
         }
         
         let encodeStr = receiptData?.base64EncodedString(options: .endLineWithLineFeed)
-        let parameters = ["receiptData": encodeStr, "platform": "\(getDeviceModel())-\(getSysVersion())", "productIdentifier": "\(productIdentifier)"]
-        
+        let parameters = ["receiptData": encodeStr!, "platform": "\(getDeviceModel())-\(getSysVersion())", "productIdentifier": productIdentifier]
         let url = "\(Constant.url_coin_purchase_verify)\(userId)"
         Alamofire.request(url, method: .put, parameters: parameters, headers: Constant.urlencodedHeaders)
             .validate()

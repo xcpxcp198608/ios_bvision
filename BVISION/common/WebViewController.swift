@@ -9,19 +9,34 @@
 import UIKit
 import WebKit
 import JGProgressHUD
+import Instructions
+import Popover_OC
 
 class WebViewController: BasicViewController {
+    
+    @IBOutlet weak var btMore: UIButton!
     
     var url = "https://blive.bvision.live"
     var hud: JGProgressHUD?
     var wkWebView: WKWebView?
     
+    let coachMarksController = CoachMarksController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        coachMarksController.dataSource = self
+        coachMarksController.delegate = self
         print(url)
         do{
             initWebView()
         }catch{
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let showWebGuideView: Bool = UFUtils.getBool("showWebGuideView")
+        if(!showWebGuideView){
+            self.coachMarksController.start(on: self)
         }
     }
     
@@ -70,4 +85,49 @@ extension WebViewController: WKScriptMessageHandler{
     }
     
     
+}
+
+
+//MARK:- CoachMarks
+extension WebViewController: CoachMarksControllerDataSource, CoachMarksControllerDelegate{
+
+    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
+        return 1
+    }
+
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkAt index: Int) -> CoachMark {
+        return coachMarksController.helper.makeCoachMark(for: btMore, pointOfInterest: nil, cutoutPathMaker: nil)
+    }
+
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+        let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, arrowOrientation: coachMark.arrowOrientation)
+        coachViews.bodyView.hintLabel.text = NSLocalizedString("click more select 'Open in browser' if web page can not load", comment: "")
+        coachViews.bodyView.nextLabel.text = NSLocalizedString("Got It", comment: "")
+        return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
+    }
+
+    func coachMarksController(_ coachMarksController: CoachMarksController, didEndShowingBySkipping skipped: Bool) {
+        UFUtils.set(true, key: "showWebGuideView")
+    }
+
+}
+
+
+
+extension WebViewController{
+    
+    @IBAction func showPopupMenu(){
+        let popOpen = PopoverAction.init(image: #imageLiteral(resourceName: "safari_30"), title: "Open in browser", handler: {action in
+            self.showInSafari(self.url)
+        })
+        let popView = PopoverView()
+        popView.style = .dark
+        popView.show(to: btMore, with: [popOpen!])
+    }
+    
+    func showInSafari(_ url: String){
+        if let u = URL(string: url)  {
+            UIApplication.shared.open(u)
+        }
+    }
 }
