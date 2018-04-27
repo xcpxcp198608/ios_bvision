@@ -142,6 +142,11 @@
 		CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC520809D8400534A0D /* WebViewController.swift */; };
 		CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCC720809DA300534A0D /* Web.storyboard */; };
 		CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */; };
+		CDE1B7AF2092B18100706FAB /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE1B7AE2092B18100706FAB /* CollectionCell.xib */; };
+		CDE1B7B12092B1B000706FAB /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B02092B1B000706FAB /* CollectionCell.swift */; };
+		CDE1B7B42092C99A00706FAB /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B32092C99A00706FAB /* TrendingViewController.swift */; };
+		CDE1B7B72092C9CA00706FAB /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B62092C9CA00706FAB /* FriendsViewController.swift */; };
+		CDE1B7BA2092C9DE00706FAB /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B92092C9DE00706FAB /* GroupsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,6 +325,11 @@
 		CDC1DCC520809D8400534A0D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CDC1DCC720809DA300534A0D /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDE1B7AE2092B18100706FAB /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		CDE1B7B02092B1B000706FAB /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		CDE1B7B32092C99A00706FAB /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		CDE1B7B62092C9CA00706FAB /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		CDE1B7B92092C9DE00706FAB /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		D04A521C65FCF2132E01F21D /* Pods-BVISION.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVISION.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BVISION/Pods-BVISION.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -684,12 +694,15 @@
 		CDC1DCB820809B4D00534A0D /* follow */ = {
 			isa = PBXGroup;
 			children = (
+				CDE1B7B22092C98500706FAB /* trending */,
+				CDE1B7B52092C9A800706FAB /* friends */,
+				CDE1B7B82092C9CF00706FAB /* groups */,
+				CDE1B7BB2092C9E200706FAB /* contacts */,
+				CDC1DCB920809B5A00534A0D /* FollowViewController.swift */,
 				CDBC650C2085A66900F9A799 /* FollowCell.swift */,
 				CDBC650D2085A66A00F9A799 /* FollowCell.xib */,
-				CDC1DCB920809B5A00534A0D /* FollowViewController.swift */,
-				CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */,
-				CD73E9A020902AEA00AD5A8F /* ContactCell.xib */,
-				CD73E9A220902AF800AD5A8F /* ContactCell.swift */,
+				CDE1B7AE2092B18100706FAB /* CollectionCell.xib */,
+				CDE1B7B02092B1B000706FAB /* CollectionCell.swift */,
 			);
 			path = follow;
 			sourceTree = "<group>";
@@ -745,6 +758,40 @@
 				CD506DB92091C8B0008F7683 /* AccessTokenUtils.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		CDE1B7B22092C98500706FAB /* trending */ = {
+			isa = PBXGroup;
+			children = (
+				CDE1B7B32092C99A00706FAB /* TrendingViewController.swift */,
+			);
+			path = trending;
+			sourceTree = "<group>";
+		};
+		CDE1B7B52092C9A800706FAB /* friends */ = {
+			isa = PBXGroup;
+			children = (
+				CDE1B7B62092C9CA00706FAB /* FriendsViewController.swift */,
+			);
+			path = friends;
+			sourceTree = "<group>";
+		};
+		CDE1B7B82092C9CF00706FAB /* groups */ = {
+			isa = PBXGroup;
+			children = (
+				CDE1B7B92092C9DE00706FAB /* GroupsViewController.swift */,
+			);
+			path = groups;
+			sourceTree = "<group>";
+		};
+		CDE1B7BB2092C9E200706FAB /* contacts */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F42B8208D89D900B71F79 /* ContactsViewController.swift */,
+				CD73E9A020902AEA00AD5A8F /* ContactCell.xib */,
+				CD73E9A220902AF800AD5A8F /* ContactCell.swift */,
+			);
+			path = contacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -874,6 +921,7 @@
 				CD963C7120923312008692CC /* CoinBillCell.xib in Resources */,
 				CD73E9A120902AEA00AD5A8F /* ContactCell.xib in Resources */,
 				CD73E9C120907FA800AD5A8F /* Push.storyboard in Resources */,
+				CDE1B7AF2092B18100706FAB /* CollectionCell.xib in Resources */,
 				CD73E9AE2090637C00AD5A8F /* Localizable.strings in Resources */,
 				CDC1DC7720808F9800534A0D /* Main.storyboard in Resources */,
 				CD168BF2208EC690001C3F08 /* InputDialogViewController.xib in Resources */,
@@ -996,6 +1044,7 @@
 				CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */,
 				CD73E9A72090534D00AD5A8F /* UserSetProfileProvider.swift in Sources */,
 				CD7CA9CB2086FA03004A7FAB /* HelpViewController.swift in Sources */,
+				CDE1B7B42092C99A00706FAB /* TrendingViewController.swift in Sources */,
 				CDBC6509208598A000F9A799 /* ClipsPageViewController.swift in Sources */,
 				CDC1DCB4208095F000534A0D /* BasicNavigationController.swift in Sources */,
 				CD7CA9BB2086ED1A004A7FAB /* MyCell.swift in Sources */,
@@ -1015,10 +1064,12 @@
 				CDAC5D49208457460043AA16 /* LiveChannelProvider.swift in Sources */,
 				CDC1DCA72080917200534A0D /* BasicViewController.swift in Sources */,
 				CDAC5D53208492F70043AA16 /* BMPlayerCustomControlView.swift in Sources */,
+				CDE1B7BA2092C9DE00706FAB /* GroupsViewController.swift in Sources */,
 				CD9F42CE208DE31B00B71F79 /* BlackListUserInfo.swift in Sources */,
 				CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */,
 				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
 				CD506DBE2091CDF7008F7683 /* UserGetCoinsProvider.swift in Sources */,
+				CDE1B7B72092C9CA00706FAB /* FriendsViewController.swift in Sources */,
 				CD168BF6208EDFDA001C3F08 /* BvisionCoinsViewController.swift in Sources */,
 				CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */,
 				CD506DC02091D6A4008F7683 /* UserConsumeCoinsProvider.swift in Sources */,
@@ -1074,6 +1125,7 @@
 				CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */,
 				CD9F42BF208DBB9900B71F79 /* UserOperationInfo.swift in Sources */,
 				CDBC65032085987800F9A799 /* YTBPlayViewController.swift in Sources */,
+				CDE1B7B12092B1B000706FAB /* CollectionCell.swift in Sources */,
 				CD432BEA2088608600AF73B8 /* SystemVideoViewController.swift in Sources */,
 				CD168C03208EFCFE001C3F08 /* CoinPurchaseCell.swift in Sources */,
 				CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */,

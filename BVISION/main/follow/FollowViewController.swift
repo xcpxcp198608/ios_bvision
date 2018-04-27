@@ -16,7 +16,12 @@ import Contacts
 class FollowViewController: BasicViewController {
     
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentView1: UIView!
     var collectionView: UICollectionView!
+    var collectionView1: UICollectionView!
+    
+    let c1Icons = [#imageLiteral(resourceName: "trending"), #imageLiteral(resourceName: "friends_30"), #imageLiteral(resourceName: "groups_30"), #imageLiteral(resourceName: "contacts_30")]
+    let c1Names = [NSLocalizedString("Trending", comment: ""), NSLocalizedString("Friends", comment: ""), NSLocalizedString("Groups", comment: ""), NSLocalizedString("Contacts", comment: "")]
     
     var hud: JGProgressHUD?
     var isFirstLoad = true
@@ -30,6 +35,7 @@ class FollowViewController: BasicViewController {
         super.viewDidLoad()
         if userId > 0{
             initCollectionView()
+            initCollectionView1()
             initPullDownRefresh()
         }
         
@@ -78,6 +84,25 @@ class FollowViewController: BasicViewController {
         followUserProvider.load(userId)
         self.collectionView!.mj_header.endRefreshing()
     }
+    
+    func initCollectionView1(){
+        let collectionLayout = UICollectionViewFlowLayout()
+        collectionLayout.scrollDirection = .vertical
+        collectionLayout.minimumLineSpacing = 1
+        collectionLayout.minimumInteritemSpacing = 1
+        collectionView1 = UICollectionView(frame: self.view.frame, collectionViewLayout: collectionLayout)
+        collectionView1?.backgroundColor = UIColor.black
+        collectionView1?.showsVerticalScrollIndicator = true
+        collectionView1?.indicatorStyle = .white
+        collectionView1?.delegate = self
+        collectionView1?.dataSource = self
+        let cellNib = UINib(nibName: "CollectionCell", bundle: nil)
+        collectionView1?.register(cellNib, forCellWithReuseIdentifier: "CollectionCell")
+        self.contentView1.addSubview(collectionView1!)
+        collectionView1?.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalTo(contentView1)
+        }
+    }
 
 }
 
@@ -87,13 +112,22 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let w = self.view.frame.width
-        return CGSize.init(width: w, height: 70)
+        if collectionView == self.collectionView{
+            let w = self.view.frame.width
+            return CGSize.init(width: w, height: 70)
+        }else{
+            let w = (self.view.frame.width - 3) / 4
+            return CGSize.init(width: w, height: 110)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let userInfo = followUserInfos[indexPath.row]
-        getFollowUserChannelInfo(userInfo.id)
+        if collectionView == self.collectionView{
+            let userInfo = followUserInfos[indexPath.row]
+            getFollowUserChannelInfo(userInfo.id)
+        }else{
+            showRelation(index: indexPath.row)
+        }
     }
     
     func getFollowUserChannelInfo(_ id: Int){
@@ -129,6 +163,26 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
         self.present(controller, animated: false, completion: nil)
     }
     
+    func showRelation(index: Int){
+        var identifier = "ShowContactsViewController"
+        switch index {
+        case 0:
+            identifier = "ShowTrendingViewController"
+            break
+        case 1:
+            identifier = "ShowFriendsViewController"
+            break
+        case 2:
+            identifier = "ShowGroupsViewController"
+            break
+        case 3:
+            identifier = "ShowContactsViewController"
+            break
+        default:
+            break
+        }
+        self.performSegue(withIdentifier: identifier, sender: nil)
+    }
 }
 
 
@@ -136,24 +190,35 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
 extension FollowViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return followUserInfos.count
+         if collectionView == self.collectionView{
+            return followUserInfos.count
+         }else{
+            return c1Icons.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if followUserInfos.count > 0 {
-            let cell: FollowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FollowCell", for: indexPath) as! FollowCell
-            let userInfo = followUserInfos[indexPath.row]
-            cell.lUsername.text = userInfo.username
-            if userInfo.profile.count > 0{
-                cell.lUserProfile.text = userInfo.profile
+        if collectionView == self.collectionView{
+            if followUserInfos.count > 0 {
+                let cell: FollowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FollowCell", for: indexPath) as! FollowCell
+                let userInfo = followUserInfos[indexPath.row]
+                cell.lUsername.text = userInfo.username
+                if userInfo.profile.count > 0{
+                    cell.lUserProfile.text = userInfo.profile
+                }
+                cell.ivUserIcon.kf.setImage(with: URL(string: userInfo.icon), placeholder: #imageLiteral(resourceName: "hold_person"))
+                if userInfo.channelActive{
+                    cell.ivUserStatus.image = #imageLiteral(resourceName: "record_green_16")
+                }
+                return cell
+            }else{
+                return UICollectionViewCell()
             }
-            cell.ivUserIcon.kf.setImage(with: URL(string: userInfo.icon), placeholder: #imageLiteral(resourceName: "hold_person"))
-            if userInfo.channelActive{
-                cell.ivUserStatus.image = #imageLiteral(resourceName: "record_green_16")
-            }
-            return cell
         }else{
-            return UICollectionViewCell()
+            let cell: CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
+            cell.laName.text = c1Names[indexPath.row]
+            cell.btAction.setImage(c1Icons[indexPath.row], for: .normal)
+            return cell
         }
     }
     

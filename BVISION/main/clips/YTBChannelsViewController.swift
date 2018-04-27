@@ -127,12 +127,14 @@ extension YTBChannelsViewController: UICollectionViewDataSource{
     }
 }
 
+
+
 extension YTBChannelsViewController: UICollectionViewDelegateFlowLayout{
     
     //动态设置每个cell的大小
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let w = self.view.frame.width
-        return CGSize.init(width: w, height: (w/418) * 293)
+        return CGSize.init(width: w, height: (w/422) * 364)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

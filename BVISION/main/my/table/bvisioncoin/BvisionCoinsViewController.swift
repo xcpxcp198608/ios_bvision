@@ -20,6 +20,8 @@ class BvisionCoinsViewController: BasicViewController {
     
     var productDict:NSMutableDictionary!
     
+    
+    @IBOutlet weak var ivCoins: UIImageView!
     @IBOutlet weak var laCoins: UILabel!
     @IBOutlet weak var btConsent: UIButton!
     @IBOutlet weak var btCheckBox: UIButton!
@@ -39,6 +41,8 @@ class BvisionCoinsViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ivCoins.layer.cornerRadius = ivCoins.frame.width / 2
+        ivCoins.layer.masksToBounds = true
         let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
         userGetCoinsProvider.loadDelegate = self

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CollectionCell" id="zYQ-OG-kyJ" customClass="CollectionCell" customModule="BVISION" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="118" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvZ-RY-EMg">
+                    <rect key="frame" x="29" y="10" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="bpS-09-ZBn"/>
+                        <constraint firstAttribute="height" constant="60" id="rot-SH-cdD"/>
+                    </constraints>
+                    <state key="normal" image="trending" backgroundImage="circle_transparent35"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W0-aK-V0z">
+                    <rect key="frame" x="31.5" y="80" width="57" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Fqq-6U-BCV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zvZ-RY-EMg" firstAttribute="centerX" secondItem="zYQ-OG-kyJ" secondAttribute="centerX" id="WE2-xA-J7U"/>
+                <constraint firstItem="zvZ-RY-EMg" firstAttribute="top" secondItem="dzn-Ma-h5w" secondAttribute="top" constant="10" id="g6u-EC-sN5"/>
+                <constraint firstItem="0W0-aK-V0z" firstAttribute="centerX" secondItem="zYQ-OG-kyJ" secondAttribute="centerX" id="geQ-bL-F0g"/>
+                <constraint firstItem="0W0-aK-V0z" firstAttribute="top" secondItem="zvZ-RY-EMg" secondAttribute="bottom" constant="10" id="ilO-iJ-X9t"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="dzn-Ma-h5w"/>
+            <connections>
+                <outlet property="btAction" destination="zvZ-RY-EMg" id="puq-cS-ecB"/>
+                <outlet property="laName" destination="0W0-aK-V0z" id="MQC-UC-HZ7"/>
+            </connections>
+            <point key="canvasLocation" x="-163" y="-108"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="circle_transparent35" width="60" height="60"/>
+        <image name="trending" width="30" height="30"/>
+    </resources>
+</document>
