@@ -12,13 +12,18 @@ import Alamofire
 import SwiftyJSON
 import JGProgressHUD
 import Contacts
+import Kingfisher
+import SDCycleScrollView
 
 class FollowViewController: BasicViewController {
     
+    @IBOutlet weak var scrollView: SDCycleScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var contentView1: UIView!
     var collectionView: UICollectionView!
     var collectionView1: UICollectionView!
+    
+    var imageAdInfos = [ImageAdInfo]()
     
     let c1Icons = [#imageLiteral(resourceName: "trending"), #imageLiteral(resourceName: "friends_30"), #imageLiteral(resourceName: "groups_30"), #imageLiteral(resourceName: "contacts_30")]
     let c1Names = [NSLocalizedString("Trending", comment: ""), NSLocalizedString("Friends", comment: ""), NSLocalizedString("Groups", comment: ""), NSLocalizedString("Contacts", comment: "")]
@@ -33,6 +38,14 @@ class FollowViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageAdProvider.delegate = self
+        imageAdProvider.load(position: 1)
+        scrollView.backgroundColor = UIColor(rgb: Color.primary)
+        scrollView.contentMode = .scaleAspectFill
+        scrollView.placeholderImage = #imageLiteral(resourceName: "hold_banner")
+        scrollView.delegate = self
+        scrollView.autoScrollTimeInterval = 6
+        scrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter
         if userId > 0{
             initCollectionView()
             initCollectionView1()
@@ -88,10 +101,10 @@ class FollowViewController: BasicViewController {
     func initCollectionView1(){
         let collectionLayout = UICollectionViewFlowLayout()
         collectionLayout.scrollDirection = .vertical
-        collectionLayout.minimumLineSpacing = 1
+        collectionLayout.minimumLineSpacing = 0
         collectionLayout.minimumInteritemSpacing = 1
         collectionView1 = UICollectionView(frame: self.view.frame, collectionViewLayout: collectionLayout)
-        collectionView1?.backgroundColor = UIColor.black
+        collectionView1?.backgroundColor = UIColor.clear
         collectionView1?.showsVerticalScrollIndicator = true
         collectionView1?.indicatorStyle = .white
         collectionView1?.delegate = self
@@ -117,7 +130,7 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
             return CGSize.init(width: w, height: 70)
         }else{
             let w = (self.view.frame.width - 3) / 4
-            return CGSize.init(width: w, height: 110)
+            return CGSize.init(width: w, height: 105)
         }
     }
     
@@ -237,7 +250,37 @@ extension FollowViewController: FollowUserProvideDelegate{
     }
     
     func loadFailure(_ message: String, _ error: Error?) {
+        hud?.dismiss()
         print(message)
+    }
+    
+}
+
+
+
+extension FollowViewController: ImageAdProviderDelegate, SDCycleScrollViewDelegate{
+    
+    func loadSuccess(_ imageAdInfos: [ImageAdInfo]) {
+        self.imageAdInfos = imageAdInfos
+        var images = [String]()
+        var titles = [String]()
+        for imageAdInfo in imageAdInfos{
+            images.append(imageAdInfo.url)
+            titles.append(imageAdInfo.title)
+        }
+        scrollView.imageURLStringsGroup = images
+//        scrollView.titlesGroup = titles
+    }
+    
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didScrollTo index: Int) {
+        
+    }
+    
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
+        let imageAdInfo = self.imageAdInfos[index]
+        if imageAdInfo.action == 0 {
+            self.showWebView(imageAdInfo.link)
+        }
     }
     
 }

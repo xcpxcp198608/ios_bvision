@@ -12,21 +12,22 @@ import StoreKit
 import Alamofire
 import SwiftyJSON
 import JGProgressHUD
+import SDCycleScrollView
 
 class BvisionCoinsViewController: BasicViewController {
     
-    let VERIFY_RECEIPT_URL = "https://buy.itunes.apple.com/verifyReceipt"
-    let ITMS_SANDBOX_VERIFY_RECEIPT_URL = "https://sandbox.itunes.apple.com/verifyReceipt"
-    
-    var productDict:NSMutableDictionary!
-    
-    
+    @IBOutlet weak var scrollView: SDCycleScrollView!
     @IBOutlet weak var ivCoins: UIImageView!
     @IBOutlet weak var laCoins: UILabel!
     @IBOutlet weak var btConsent: UIButton!
     @IBOutlet weak var btCheckBox: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var btBill: UIButton!
+    
+    var productDict:NSMutableDictionary!
+    
+    var imageAdInfos = [ImageAdInfo]()
+    
     var collectionView: UICollectionView?
     
     var consentChecked = true
@@ -41,6 +42,13 @@ class BvisionCoinsViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageAdProvider.delegate = self
+        imageAdProvider.load(position: 1)
+        scrollView.backgroundColor = UIColor(rgb: Color.primary)
+        scrollView.placeholderImage = #imageLiteral(resourceName: "hold_banner")
+        scrollView.delegate = self
+        scrollView.autoScrollTimeInterval = 6
+        scrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter
         ivCoins.layer.cornerRadius = ivCoins.frame.width / 2
         ivCoins.layer.masksToBounds = true
         let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
@@ -263,6 +271,35 @@ extension BvisionCoinsViewController: SKProductsRequestDelegate, SKPaymentTransa
     
     func restorePurchase(){
         SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+}
+
+
+
+extension BvisionCoinsViewController: ImageAdProviderDelegate, SDCycleScrollViewDelegate{
+    
+    func loadSuccess(_ imageAdInfos: [ImageAdInfo]) {
+        self.imageAdInfos = imageAdInfos
+        var images = [String]()
+        var titles = [String]()
+        for imageAdInfo in imageAdInfos{
+            images.append(imageAdInfo.url)
+            titles.append(imageAdInfo.title)
+        }
+        scrollView.imageURLStringsGroup = images
+//        scrollView.titlesGroup = titles
+    }
+    
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didScrollTo index: Int) {
+        
+    }
+    
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
+        let imageAdInfo = self.imageAdInfos[index]
+        if imageAdInfo.action == 0 {
+            self.showWebView(imageAdInfo.link)
+        }
     }
     
 }

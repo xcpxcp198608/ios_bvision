@@ -20,15 +20,23 @@ class YTBChannelsViewController: UIViewController{
     var collectionView: UICollectionView?
     
     var ytbChannels = [YTBChannelInfo]()
-    var category = "Funny"
+    
+    var clipInfo: ClipInfo!
+    var category = ""
     var pageToken = ""
     var totalResult = 0
     var isLd = false
+    
+    var footer: MJRefreshAutoNormalFooter?
     
     override func viewDidLoad() {
         initCollectionView()
         initPullDownRefresh()
         initPullUpLoadMore()
+        if clipInfo.action == 1{
+            isLd = true
+        }
+        category = clipInfo.category
         if(isLd){
             loadLdChannels(category, loadMore: false)
         }else{
@@ -41,7 +49,7 @@ class YTBChannelsViewController: UIViewController{
             if(isLd){
                 self.loadLdChannels(category, loadMore: false)
             }else{
-                self.loadChannels(self.category, loadMore: false)
+                self.loadChannels(category, loadMore: false)
             }
         }
     }
@@ -85,12 +93,13 @@ class YTBChannelsViewController: UIViewController{
     }
 
     func initPullUpLoadMore(){
-        let footer = MJRefreshAutoNormalFooter()
-        footer.setTitle(NSLocalizedString("Drag up to refresh", comment: ""), for: .idle)
-        footer.setTitle(NSLocalizedString("Loading more ...", comment: ""), for: .refreshing)
-        footer.setTitle(NSLocalizedString("No more data", comment: ""), for: .noMoreData)
-        footer.setRefreshingTarget(self, refreshingAction: #selector(pullUpLoadMore))
+        footer = MJRefreshAutoNormalFooter()
+        footer?.setTitle(NSLocalizedString("Drag up to refresh", comment: ""), for: .idle)
+        footer?.setTitle(NSLocalizedString("Loading more ...", comment: ""), for: .refreshing)
+        footer?.setTitle(NSLocalizedString("No more data", comment: ""), for: .noMoreData)
+        footer?.setRefreshingTarget(self, refreshingAction: #selector(pullUpLoadMore))
         self.collectionView!.mj_footer = footer
+        footer?.isHidden = true
     }
     
     @objc func pullUpLoadMore(){
@@ -119,7 +128,7 @@ extension YTBChannelsViewController: UICollectionViewDataSource{
             let date = channel.publishedAt
             cell.lDate.text = date.substring(to: date.index(date.startIndex, offsetBy: 10))
             let url = URL(string: channel.thumbnails)
-            cell.ivPreview.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "hold_bvision"))
+            cell.ivPreview.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "hold_bvision_4_3"))
             return cell
         }else{
             return UICollectionViewCell()
@@ -182,6 +191,9 @@ extension YTBChannelsViewController {
                     channel.thumbnails = item["snippet"]["thumbnails"]["high"]["url"].stringValue
                     self.ytbChannels.append(channel)
                 }
+                if self.ytbChannels.count > 0 {
+                    self.footer?.isHidden = false
+                }
                 self.collectionView?.reloadData()
             case .failure(let error):
                 print("error")
@@ -225,6 +237,9 @@ extension YTBChannelsViewController {
                     channel.channelTitle = item["snippet"]["channelTitle"].stringValue
                     channel.thumbnails = item["snippet"]["thumbnails"]["high"]["url"].stringValue
                     self.ytbChannels.append(channel)
+                }
+                if self.ytbChannels.count > 0 {
+                    self.footer?.isHidden = false
                 }
                 self.collectionView?.reloadData()
             case .failure(let error):

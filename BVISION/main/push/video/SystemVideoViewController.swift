@@ -78,7 +78,9 @@ class SystemVideoViewController: BasicViewController, UITableViewDelegate, UITab
         var thumbnail = UIImage()
         option.isSynchronous = true
         manager.requestImage(for: fetchResult, targetSize: CGSize(width: 320, height: 240), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
-            thumbnail = result!
+            if let image = result{
+                thumbnail = image
+            }
         })
         cell.ivThumbnail.image = thumbnail
         return cell

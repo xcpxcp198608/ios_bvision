@@ -11,7 +11,17 @@ import MMPopupView
 
 class BasicViewController: UIViewController {
     
+    lazy var imageAdProvider = {
+        return ImageAdProvider()
+    }()
     
+    lazy var trendingProvider = {
+        return TrendingProvider()
+    }()
+    
+    lazy var myGroupsProvider = {
+        return MyGroupsProvider()
+    }()
     
     override var prefersStatusBarHidden: Bool{
         return false

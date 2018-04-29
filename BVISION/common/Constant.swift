@@ -13,8 +13,9 @@ struct Constant {
     
     static let debug = true
     
-    static let base_url = "https://blive.bvision.live/"
     
+    //MARK:- URL-BASE
+    static let base_url = "https://blive.bvision.live/"
     
     static let url_channel = "\(base_url)channel/"
     static let url_channel_living = "\(base_url)channel/living"
@@ -22,6 +23,13 @@ struct Constant {
     static let url_channel_update_all_info = "\(base_url)channel/update/0"
     static let url_channel_update_status = "\(base_url)channel/status/"
     static let url_channel_upload_preview = "\(base_url)channel/upload/"
+    
+    
+    static let url_clips = "\(base_url)clips/"
+    
+    
+    static let url_images_ad = "\(base_url)images/"
+    
     
     static let url_user_signin = "\(base_url)user/signin"
     static let url_user_signup = "\(base_url)user/signup"
@@ -47,12 +55,25 @@ struct Constant {
     static let url_coin_consume = "\(base_url)coin/consume/"
     static let url_coin_bill = "\(base_url)coin/bill/"
     
+    //MARK:- URL-PANEL
+    static let panel_url = "http://panel.ldlegacy.com/panel/"
+    
+    static let url_trending = "\(panel_url)trending/"
+    static let url_groups = "\(panel_url)groups/"
+    static let url_groups_icon = "\(panel_url)groups/icon/"
+    
+    
+    //MARK:- URL-WS
     static let url_wss_live = "wss://blive.bvision.live/live/"
     
+    
+    //MARK:- LINK
     static let link_app_qrcode = "https://blive.bvision.live/qrcode/"
     static let link_help = "https://blive.bvision.live/Resource/html/ios_help.html"
     static let link_purchase_consent = "https://blive.bvision.live/Resource/html/purchase_consent.html"
     
+    
+    //MARK:- HEAD
     static let urlencodedHeaders: HTTPHeaders = [
     "ContentType": "application/x-www-form-urlencoded"
     ]
@@ -60,6 +81,8 @@ struct Constant {
         "ContentType": "application/json"
     ]
     
+    
+    //MARK:- UF-KEY
     static let key_user_id = "userId"
     static let key_username = "username"
     static let key_token = "token"
@@ -80,14 +103,20 @@ struct Constant {
     
     static let key_live_play_channel_token = "channel_play_token"
     
+    
+    //MARK:- REGEX
     static let regex_email = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
     
+    
+    //MARK:- API-KEY
     static let youtube_api_key = "AIzaSyAIA8B1C5fBhuZ6duquFzeiWaSBlUoJveQ"
     
-    static func makeURL(_ url: String) -> URL{
-        let url = URL(string: url)
-        return url!
-    }
+    
+    //MARk:- RESULT-KEY
+    static let code = "code"
+    static let msg = "message"
+    static let data = "data"
+    static let data_list = "dataList"
     
     static let ratingIcons = [#imageLiteral(resourceName: "g_icon"), #imageLiteral(resourceName: "pg_icon"), #imageLiteral(resourceName: "pg13_icon"), #imageLiteral(resourceName: "r_icon"), #imageLiteral(resourceName: "nc17_icon")]
 }

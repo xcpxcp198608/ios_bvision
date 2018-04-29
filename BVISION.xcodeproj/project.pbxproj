@@ -107,7 +107,7 @@
 		CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D50208492EA0043AA16 /* BMCustomPlayer.swift */; };
 		CDAC5D53208492F70043AA16 /* BMPlayerCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D52208492F70043AA16 /* BMPlayerCustomControlView.swift */; };
 		CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */; };
-		CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */; };
+		CDAC5D582084A5200043AA16 /* ClipsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D572084A5200043AA16 /* ClipsProvider.swift */; };
 		CDAC5D5A2084A5300043AA16 /* YTBChannelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */; };
 		CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */; };
 		CDBC64F42085885E00F9A799 /* UserSignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */; };
@@ -142,11 +142,23 @@
 		CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1DCC520809D8400534A0D /* WebViewController.swift */; };
 		CDC1DCC820809DA300534A0D /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCC720809DA300534A0D /* Web.storyboard */; };
 		CDC1DCCC2080B0EF00534A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */; };
+		CDDC19E22094CA4300C690B9 /* GroupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDC19E12094CA4300C690B9 /* GroupInfo.swift */; };
+		CDDC19E42094CA4D00C690B9 /* TrendingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDC19E32094CA4D00C690B9 /* TrendingInfo.swift */; };
+		CDDC19E62094CBAD00C690B9 /* MyGroupsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDC19E52094CBAD00C690B9 /* MyGroupsProvider.swift */; };
+		CDDC19E82094CBBD00C690B9 /* TrendingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDC19E72094CBBD00C690B9 /* TrendingProvider.swift */; };
+		CDDC19EC2094D4DD00C690B9 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDC19EB2094D4DC00C690B9 /* TrendingCell.swift */; };
 		CDE1B7AF2092B18100706FAB /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE1B7AE2092B18100706FAB /* CollectionCell.xib */; };
 		CDE1B7B12092B1B000706FAB /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B02092B1B000706FAB /* CollectionCell.swift */; };
 		CDE1B7B42092C99A00706FAB /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B32092C99A00706FAB /* TrendingViewController.swift */; };
 		CDE1B7B72092C9CA00706FAB /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B62092C9CA00706FAB /* FriendsViewController.swift */; };
 		CDE1B7BA2092C9DE00706FAB /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7B92092C9DE00706FAB /* GroupsViewController.swift */; };
+		CDE1B7BD2093031700706FAB /* ClipInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7BC2093031700706FAB /* ClipInfo.swift */; };
+		CDE1B7BF209305B900706FAB /* ImageAdInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7BE209305B900706FAB /* ImageAdInfo.swift */; };
+		CDE1B7C12093065100706FAB /* ImageAdProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7C02093065000706FAB /* ImageAdProvider.swift */; };
+		CDE1B7C32093149E00706FAB /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7C22093149E00706FAB /* MyGroupsViewController.swift */; };
+		CDE1B7C5209314B500706FAB /* JoinedGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1B7C4209314B500706FAB /* JoinedGroupsViewController.swift */; };
+		CDF1149D209601840066A877 /* TrendingPublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1149C209601840066A877 /* TrendingPublishController.swift */; };
+		CDF1149F20960CEC0066A877 /* TrendingImagePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1149E20960CEC0066A877 /* TrendingImagePreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,7 +296,7 @@
 		CDAC5D50208492EA0043AA16 /* BMCustomPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMCustomPlayer.swift; sourceTree = "<group>"; };
 		CDAC5D52208492F70043AA16 /* BMPlayerCustomControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPlayerCustomControlView.swift; sourceTree = "<group>"; };
 		CDAC5D55208494050043AA16 /* LivePlayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayDetailViewController.swift; sourceTree = "<group>"; };
-		CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBChannelProvider.swift; sourceTree = "<group>"; };
+		CDAC5D572084A5200043AA16 /* ClipsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsProvider.swift; sourceTree = "<group>"; };
 		CDAC5D592084A5300043AA16 /* YTBChannelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBChannelInfo.swift; sourceTree = "<group>"; };
 		CDBC64ED2085885B00F9A799 /* UserResetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResetTableViewController.swift; sourceTree = "<group>"; };
 		CDBC64EE2085885C00F9A799 /* UserSignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignUpTableViewController.swift; sourceTree = "<group>"; };
@@ -325,11 +337,23 @@
 		CDC1DCC520809D8400534A0D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CDC1DCC720809DA300534A0D /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		CDC1DCCB2080B0EE00534A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDDC19E12094CA4300C690B9 /* GroupInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfo.swift; sourceTree = "<group>"; };
+		CDDC19E32094CA4D00C690B9 /* TrendingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingInfo.swift; sourceTree = "<group>"; };
+		CDDC19E52094CBAD00C690B9 /* MyGroupsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsProvider.swift; sourceTree = "<group>"; };
+		CDDC19E72094CBBD00C690B9 /* TrendingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingProvider.swift; sourceTree = "<group>"; };
+		CDDC19EB2094D4DC00C690B9 /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		CDE1B7AE2092B18100706FAB /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		CDE1B7B02092B1B000706FAB /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		CDE1B7B32092C99A00706FAB /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		CDE1B7B62092C9CA00706FAB /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CDE1B7B92092C9DE00706FAB /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		CDE1B7BC2093031700706FAB /* ClipInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipInfo.swift; sourceTree = "<group>"; };
+		CDE1B7BE209305B900706FAB /* ImageAdInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdInfo.swift; sourceTree = "<group>"; };
+		CDE1B7C02093065000706FAB /* ImageAdProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdProvider.swift; sourceTree = "<group>"; };
+		CDE1B7C22093149E00706FAB /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
+		CDE1B7C4209314B500706FAB /* JoinedGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinedGroupsViewController.swift; sourceTree = "<group>"; };
+		CDF1149C209601840066A877 /* TrendingPublishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPublishController.swift; sourceTree = "<group>"; };
+		CDF1149E20960CEC0066A877 /* TrendingImagePreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingImagePreViewController.swift; sourceTree = "<group>"; };
 		D04A521C65FCF2132E01F21D /* Pods-BVISION.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVISION.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BVISION/Pods-BVISION.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -528,7 +552,8 @@
 			children = (
 				CDAC5D4B2084574A0043AA16 /* entities */,
 				CDAC5D47208457460043AA16 /* LiveChannelProvider.swift */,
-				CDAC5D572084A5200043AA16 /* YTBChannelProvider.swift */,
+				CDAC5D572084A5200043AA16 /* ClipsProvider.swift */,
+				CDE1B7C02093065000706FAB /* ImageAdProvider.swift */,
 				CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */,
 				CD9F42B4208D7F9A00B71F79 /* FollowerUserProvider.swift */,
 				CD9F42BA208D8AC500B71F79 /* UserInfoProvider.swift */,
@@ -543,6 +568,8 @@
 				CD506DBD2091CDF7008F7683 /* UserGetCoinsProvider.swift */,
 				CD506DBF2091D6A4008F7683 /* UserConsumeCoinsProvider.swift */,
 				CD963C6E20922FCD008692CC /* UserGetCoinBillProvider.swift */,
+				CDDC19E52094CBAD00C690B9 /* MyGroupsProvider.swift */,
+				CDDC19E72094CBBD00C690B9 /* TrendingProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -558,6 +585,10 @@
 				CD9F42CD208DE31B00B71F79 /* BlackListUserInfo.swift */,
 				CD73E99E209029C200AD5A8F /* ContactInfo.swift */,
 				CD963C6C20922F1A008692CC /* CoinBillInfo.swift */,
+				CDE1B7BC2093031700706FAB /* ClipInfo.swift */,
+				CDE1B7BE209305B900706FAB /* ImageAdInfo.swift */,
+				CDDC19E12094CA4300C690B9 /* GroupInfo.swift */,
+				CDDC19E32094CA4D00C690B9 /* TrendingInfo.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -763,7 +794,10 @@
 		CDE1B7B22092C98500706FAB /* trending */ = {
 			isa = PBXGroup;
 			children = (
+				CDDC19EB2094D4DC00C690B9 /* TrendingCell.swift */,
 				CDE1B7B32092C99A00706FAB /* TrendingViewController.swift */,
+				CDF1149E20960CEC0066A877 /* TrendingImagePreViewController.swift */,
+				CDF1149C209601840066A877 /* TrendingPublishController.swift */,
 			);
 			path = trending;
 			sourceTree = "<group>";
@@ -780,6 +814,8 @@
 			isa = PBXGroup;
 			children = (
 				CDE1B7B92092C9DE00706FAB /* GroupsViewController.swift */,
+				CDE1B7C22093149E00706FAB /* MyGroupsViewController.swift */,
+				CDE1B7C4209314B500706FAB /* JoinedGroupsViewController.swift */,
 			);
 			path = groups;
 			sourceTree = "<group>";
@@ -964,6 +1000,7 @@
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MMPopupView/MMPopupView.framework",
@@ -974,6 +1011,9 @@
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -993,6 +1033,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPopupView.framework",
@@ -1003,6 +1044,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Segmentio.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -1042,6 +1086,8 @@
 			files = (
 				CDAC5D4F208481A30043AA16 /* LivePlayViewController.swift in Sources */,
 				CDAC5D56208494050043AA16 /* LivePlayDetailViewController.swift in Sources */,
+				CDDC19EC2094D4DD00C690B9 /* TrendingCell.swift in Sources */,
+				CDF1149F20960CEC0066A877 /* TrendingImagePreViewController.swift in Sources */,
 				CD73E9A72090534D00AD5A8F /* UserSetProfileProvider.swift in Sources */,
 				CD7CA9CB2086FA03004A7FAB /* HelpViewController.swift in Sources */,
 				CDE1B7B42092C99A00706FAB /* TrendingViewController.swift in Sources */,
@@ -1054,9 +1100,10 @@
 				CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */,
 				CDAC5D3F20844FDB0043AA16 /* PushViewController.swift in Sources */,
 				CD9F42B5208D7F9A00B71F79 /* FollowerUserProvider.swift in Sources */,
+				CDDC19E62094CBAD00C690B9 /* MyGroupsProvider.swift in Sources */,
 				CDC1DCB02080932800534A0D /* LiveChannelCell.swift in Sources */,
 				CD73E99F209029C200AD5A8F /* ContactInfo.swift in Sources */,
-				CDAC5D582084A5200043AA16 /* YTBChannelProvider.swift in Sources */,
+				CDAC5D582084A5200043AA16 /* ClipsProvider.swift in Sources */,
 				CD7CA9C32086F9D2004A7FAB /* MessageViewController.swift in Sources */,
 				CDBC64F52085885E00F9A799 /* UserSignInViewController.swift in Sources */,
 				CDBC65062085988700F9A799 /* YTBChannelCell.swift in Sources */,
@@ -1070,6 +1117,7 @@
 				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
 				CD506DBE2091CDF7008F7683 /* UserGetCoinsProvider.swift in Sources */,
 				CDE1B7B72092C9CA00706FAB /* FriendsViewController.swift in Sources */,
+				CDE1B7BF209305B900706FAB /* ImageAdInfo.swift in Sources */,
 				CD168BF6208EDFDA001C3F08 /* BvisionCoinsViewController.swift in Sources */,
 				CDAC5D31208446E20043AA16 /* UFUtils.swift in Sources */,
 				CD506DC02091D6A4008F7683 /* UserConsumeCoinsProvider.swift in Sources */,
@@ -1096,6 +1144,9 @@
 				CD168BF0208EC670001C3F08 /* InputDialogViewController.swift in Sources */,
 				CDAC5D38208446E20043AA16 /* Constant.swift in Sources */,
 				CD73E9A52090533A00AD5A8F /* UserSetGenderProvider.swift in Sources */,
+				CDE1B7C5209314B500706FAB /* JoinedGroupsViewController.swift in Sources */,
+				CDDC19E82094CBBD00C690B9 /* TrendingProvider.swift in Sources */,
+				CDDC19E22094CA4300C690B9 /* GroupInfo.swift in Sources */,
 				CD7CA9D32086FA39004A7FAB /* MallViewController.swift in Sources */,
 				CD963C6B209227F4008692CC /* BillViewController.swift in Sources */,
 				CD9F42B9208D89D900B71F79 /* ContactsViewController.swift in Sources */,
@@ -1115,6 +1166,7 @@
 				CDBC64F62085885E00F9A799 /* UserSignUpViewController.swift in Sources */,
 				CD9F42C8208DC1C300B71F79 /* HistoryOperationCell.swift in Sources */,
 				CD432BE82088607600AF73B8 /* RecordVideoViewController.swift in Sources */,
+				CDE1B7C32093149E00706FAB /* MyGroupsViewController.swift in Sources */,
 				CDAC5D33208446E20043AA16 /* TimeUtil.swift in Sources */,
 				CD9F42BD208D8C5800B71F79 /* UserChannelProvider.swift in Sources */,
 				CD7CA9BD2086F452004A7FAB /* MyTableViewController.swift in Sources */,
@@ -1122,6 +1174,7 @@
 				CD506DBA2091C8B0008F7683 /* AccessTokenUtils.swift in Sources */,
 				CD73E9A320902AF800AD5A8F /* ContactCell.swift in Sources */,
 				CDBC64FE20858BA500F9A799 /* SplashViewController.swift in Sources */,
+				CDE1B7BD2093031700706FAB /* ClipInfo.swift in Sources */,
 				CD7CA9D12086FA2C004A7FAB /* BvisionCoinViewController.swift in Sources */,
 				CD9F42BF208DBB9900B71F79 /* UserOperationInfo.swift in Sources */,
 				CDBC65032085987800F9A799 /* YTBPlayViewController.swift in Sources */,
@@ -1131,12 +1184,15 @@
 				CDBC650E2085A66A00F9A799 /* FollowCell.swift in Sources */,
 				CDBC650120858D0500F9A799 /* UserInfo.swift in Sources */,
 				CDAC5D51208492EB0043AA16 /* BMCustomPlayer.swift in Sources */,
+				CDE1B7C12093065100706FAB /* ImageAdProvider.swift in Sources */,
 				CD963C6F20922FCD008692CC /* UserGetCoinBillProvider.swift in Sources */,
 				CDC1DCC620809D8400534A0D /* WebViewController.swift in Sources */,
 				CD7CA9D820872AFE004A7FAB /* LDViewController.swift in Sources */,
+				CDF1149D209601840066A877 /* TrendingPublishController.swift in Sources */,
 				CD432C1220889A4F00AF73B8 /* KSYPlayerViewController.swift in Sources */,
 				CDC1DCB720809B4600534A0D /* ClipsViewController.swift in Sources */,
 				CD7CA9C52086F9DF004A7FAB /* UpdateViewController.swift in Sources */,
+				CDDC19E42094CA4D00C690B9 /* TrendingInfo.swift in Sources */,
 				CD432BE620882DF400AF73B8 /* RecordViewController.swift in Sources */,
 				CDC1DC7220808F9800534A0D /* AppDelegate.swift in Sources */,
 				CD7CA9DC20872D36004A7FAB /* ChannelToken.swift in Sources */,
@@ -1353,10 +1409,7 @@
 				);
 				INFOPLIST_FILE = BVISION/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.bvision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1387,10 +1440,7 @@
 				);
 				INFOPLIST_FILE = BVISION/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.bvision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1409,11 +1459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1430,11 +1476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1450,11 +1492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1470,11 +1508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

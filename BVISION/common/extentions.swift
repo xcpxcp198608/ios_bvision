@@ -157,4 +157,9 @@ extension UIViewController{
         return (UIDevice.current.identifierForVendor?.uuidString)!
     }
     
+    
+    func makeURL(_ url: String) -> URL{
+        return URL(string: url)!
+    }
+    
 }

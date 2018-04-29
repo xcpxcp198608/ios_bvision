@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="422" height="364"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hold_bvision" translatesAutoresizingMaskIntoConstraints="NO" id="B7f-Jt-khe">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hold_bvision_4_3" translatesAutoresizingMaskIntoConstraints="NO" id="B7f-Jt-khe">
                         <rect key="frame" x="16" y="12" width="390" height="292.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="B7f-Jt-khe" secondAttribute="height" multiplier="4:3" id="mUw-Nr-SEc"/>
@@ -69,6 +69,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="hold_bvision" width="320" height="180"/>
+        <image name="hold_bvision_4_3" width="320" height="240"/>
     </resources>
 </document>

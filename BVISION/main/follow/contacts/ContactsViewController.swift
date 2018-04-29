@@ -10,12 +10,14 @@ import UIKit
 import Contacts
 import Messages
 import MessageUI
+import JGProgressHUD
 
 class ContactsViewController: BasicViewController {
     
     var contactInfos = [ContactInfo]()
     
     @IBOutlet weak var tableView: UITableView!
+    var hud: JGProgressHUD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,10 @@ class ContactsViewController: BasicViewController {
         tableView.register(cell, forCellReuseIdentifier: "ContactCell")
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        hud = hudLoading()
         let status = CNContactStore.authorizationStatus(for: .contacts)
         if status != .authorized {
             requestAccessForContact()
@@ -32,6 +38,7 @@ class ContactsViewController: BasicViewController {
     }
     
     func getContacts(){
+        self.contactInfos.removeAll()
         let store = CNContactStore()
         let keys = [CNContactFamilyNameKey, CNContactGivenNameKey, CNContactPhoneNumbersKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
@@ -56,11 +63,12 @@ class ContactsViewController: BasicViewController {
                     return "\(c1.lastName)\(c1.firstName)".compare("\(c2.lastName)\(c2.firstName)").rawValue == -1
                 })
                 self.tableView.reloadData()
+                self.tableView.isHidden = false
             })
         } catch {
             print(error)
         }
-        
+        self.hud?.dismiss()
     }
 
 }

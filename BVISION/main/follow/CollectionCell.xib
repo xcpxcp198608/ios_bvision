@@ -24,7 +24,7 @@
                     <state key="normal" image="trending" backgroundImage="circle_transparent35"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W0-aK-V0z">
-                    <rect key="frame" x="31.5" y="80" width="57" height="20"/>
+                    <rect key="frame" x="30.5" y="75" width="57" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Fqq-6U-BCV"/>
                     </constraints>
@@ -38,7 +38,7 @@
                 <constraint firstItem="zvZ-RY-EMg" firstAttribute="centerX" secondItem="zYQ-OG-kyJ" secondAttribute="centerX" id="WE2-xA-J7U"/>
                 <constraint firstItem="zvZ-RY-EMg" firstAttribute="top" secondItem="dzn-Ma-h5w" secondAttribute="top" constant="10" id="g6u-EC-sN5"/>
                 <constraint firstItem="0W0-aK-V0z" firstAttribute="centerX" secondItem="zYQ-OG-kyJ" secondAttribute="centerX" id="geQ-bL-F0g"/>
-                <constraint firstItem="0W0-aK-V0z" firstAttribute="top" secondItem="zvZ-RY-EMg" secondAttribute="bottom" constant="10" id="ilO-iJ-X9t"/>
+                <constraint firstItem="0W0-aK-V0z" firstAttribute="top" secondItem="zvZ-RY-EMg" secondAttribute="bottom" constant="5" id="ilO-iJ-X9t"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="dzn-Ma-h5w"/>
