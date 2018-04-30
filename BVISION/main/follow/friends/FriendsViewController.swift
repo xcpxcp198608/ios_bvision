@@ -9,9 +9,34 @@
 import UIKit
 
 class FriendsViewController: BasicViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if userId <= 0 {
+            return
+        }
+        userFriendProvider.loadDelegate = self
+        userFriendProvider.load(userId)
     }
 
+}
+
+
+
+
+
+
+
+
+extension FriendsViewController: UserFriendProviderDelegate{
+    
+    func loadSuccess(userInfos: [UserInfo]) {
+        print(userInfos)
+    }
+    
+    func loadFailure(_ message: String, _ error: Error?) {
+        
+    }
 }

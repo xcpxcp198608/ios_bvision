@@ -1,29 +1,30 @@
 //
-//  UserGetCoinsProvider.swift
+//  File.swift
 //  BVISION
 //
-//  Created by patrick on 2018/4/26.
+//  Created by patrick on 2018/4/30.
 //  Copyright © 2018 wiatec. All rights reserved.
 //
 
-import Foundation
+
 
 import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol UserGetCoinsProviderDelegate {
-    func loadSuccess(_ coins: Int)
+
+protocol UserFriendProviderDelegate {
+    func loadSuccess(userInfos: [UserInfo])
     func loadFailure(_ message: String, _ error: Error?)
 }
 
-class UserGetCoinsProvider {
+class UserFriendProvider {
     
-    var loadDelegate: UserGetCoinsProviderDelegate?
+    var loadDelegate: UserFriendProviderDelegate?
     
     func load(_ userId: Int){
         if userId <= 0 {return}
-        let url = "\(Constant.url_coin_get)\(userId)"
+        let url = "\(Constant.url_friends)\(userId)"
         Alamofire.request(url, method: .get)
             .validate()
             .responseData { (response) in
@@ -31,7 +32,12 @@ class UserGetCoinsProvider {
                 case .success:
                     let result = JSON(data: response.data!)
                     if(result[Constant.code].intValue == 200){
-                        self.loadDelegate?.loadSuccess(result[Constant.data].intValue)
+                        var userInfos = [UserInfo]()
+                        let dataList = result[Constant.data_list]
+                        for i in 0..<dataList.count {
+                            userInfos.append(UserInfo(dataList[i]))
+                        }
+                        self.loadDelegate?.loadSuccess(userInfos: userInfos)
                     }else{
                         self.loadDelegate?.loadFailure(result[Constant.msg].stringValue, nil)
                     }

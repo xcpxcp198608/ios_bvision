@@ -12,6 +12,7 @@ import Kingfisher
 
 protocol TrendingCellDelegate {
     func imagePress(trendingInfo: TrendingInfo)
+    func showUserDetails(trendingInfo: TrendingInfo)
 }
 
 
@@ -56,6 +57,11 @@ class TrendingCell: UITableViewCell {
     func createIconUI(){
         ivIcon = UIImageView.init()
         ivIcon.kf.setImage(with: URL(string: trendingInfo.icon), placeholder: #imageLiteral(resourceName: "hold_person"))
+        if trendingInfo.userId > 0{
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showUserDetail))
+            ivIcon.addGestureRecognizer(tapGesture)
+            ivIcon.isUserInteractionEnabled = true
+        }
         contentView.addSubview(ivIcon)
         ivIcon.snp.makeConstraints {
             $0.top.equalTo(contentView).offset(10)
@@ -63,6 +69,10 @@ class TrendingCell: UITableViewCell {
             $0.width.equalTo(40)
             $0.height.equalTo(40)
         }
+    }
+    
+    @objc func showUserDetail(){
+        self.delegate?.showUserDetails(trendingInfo: trendingInfo)
     }
     
     
@@ -75,8 +85,25 @@ class TrendingCell: UITableViewCell {
         contentView.addSubview(laName)
         laName.snp.makeConstraints {
             $0.left.equalTo(contentView).offset(64)
-            $0.right.equalTo(contentView).offset(-8)
             $0.top.equalTo(contentView).offset(10)
+            $0.height.equalTo(20)
+        }
+        if trendingInfo.userId == 0{
+            let btBadge = UIButton.init()
+            btBadge.setTitle(NSLocalizedString("Ad", comment: ""), for: .normal)
+            btBadge.setBackgroundImage(UIColor.blue.createImage(), for: .normal)
+            btBadge.isUserInteractionEnabled = false
+            btBadge.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+//            btBadge.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 3, bottom: 0, right: 3)
+            contentView.addSubview(btBadge)
+            btBadge.snp.makeConstraints {
+                $0.left.equalTo(laName.snp.right).offset(5)
+                $0.top.equalTo(contentView).offset(10)
+                $0.height.equalTo(20)
+                $0.width.equalTo(32)
+            }
+            btBadge.layer.cornerRadius = 10
+            btBadge.layer.masksToBounds = true
         }
     }
     
@@ -85,7 +112,11 @@ class TrendingCell: UITableViewCell {
         laContent.numberOfLines = 0
         laContent.textAlignment = .left
         laContent.adjustsFontSizeToFitWidth = true
-        laContent.text = trendingInfo.content
+        if trendingInfo.content.count <= 0{
+            laContent.text = " "
+        }else{
+            laContent.text = trendingInfo.content
+        }
         laContent.font = UIFont.systemFont(ofSize: 15)
         laContent.textColor = UIColor.black
         contentView.addSubview(laContent)
@@ -100,6 +131,7 @@ class TrendingCell: UITableViewCell {
         if trendingInfo.imgCount <= 0{
             createTimeUI(dependentView: laContent)
         }else if trendingInfo.imgCount == 1{
+            let w = Int(contentView.frame.width - 50)
             let ivImg = UIImageView.init()
             ivImg.kf.setImage(with: URL(string: trendingInfo.imgUrl))
             ivImg.contentMode = .scaleAspectFit
@@ -111,8 +143,8 @@ class TrendingCell: UITableViewCell {
             ivImg.snp.makeConstraints {
                 $0.left.equalTo(contentView).offset(64)
                 $0.top.equalTo(laContent.snp.bottom).offset(8)
-                $0.width.equalTo(150)
-                $0.height.equalTo(150)
+                $0.width.equalTo(w)
+                $0.height.equalTo(w)
             }
             createTimeUI(dependentView: ivImg)
         }else{
@@ -179,7 +211,6 @@ class TrendingCell: UITableViewCell {
     }
     
     @objc func clickImage(_ gesture: UIGestureRecognizer, imgIndex: Int){
-        print(imgIndex)
         self.trendingInfo.imgIndex = imgIndex
         self.delegate?.imagePress(trendingInfo: trendingInfo)
     }

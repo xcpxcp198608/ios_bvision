@@ -42,7 +42,8 @@ class FollowViewController: BasicViewController {
         imageAdProvider.load(position: 1)
         scrollView.backgroundColor = UIColor(rgb: Color.primary)
         scrollView.contentMode = .scaleAspectFill
-        scrollView.placeholderImage = #imageLiteral(resourceName: "hold_banner")
+        scrollView.placeholderImage = #imageLiteral(resourceName: "hold_banner_4_1")
+        scrollView.bannerImageViewContentMode = .scaleAspectFill
         scrollView.delegate = self
         scrollView.autoScrollTimeInterval = 6
         scrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter
@@ -135,6 +136,10 @@ extension FollowViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if userId <= 0{
+            self.hudError(with: NSLocalizedString("has no sign in", comment: ""))
+            return
+        }
         if collectionView == self.collectionView{
             let userInfo = followUserInfos[indexPath.row]
             getFollowUserChannelInfo(userInfo.id)
@@ -218,10 +223,14 @@ extension FollowViewController: UICollectionViewDataSource{
                 cell.lUsername.text = userInfo.username
                 if userInfo.profile.count > 0{
                     cell.lUserProfile.text = userInfo.profile
+                }else{
+                    cell.lUserProfile.text = NSLocalizedString("The guy is so lazy that he left nothing...", comment: "")
                 }
                 cell.ivUserIcon.kf.setImage(with: URL(string: userInfo.icon), placeholder: #imageLiteral(resourceName: "hold_person"))
                 if userInfo.channelActive{
                     cell.ivUserStatus.image = #imageLiteral(resourceName: "record_green_16")
+                }else{
+                    cell.ivUserStatus.image = #imageLiteral(resourceName: "record_grey_16")
                 }
                 return cell
             }else{

@@ -59,6 +59,7 @@ struct Constant {
     static let panel_url = "http://panel.ldlegacy.com/panel/"
     
     static let url_trending = "\(panel_url)trending/"
+    static let url_friends = "\(panel_url)friends/"
     static let url_groups = "\(panel_url)groups/"
     static let url_groups_icon = "\(panel_url)groups/icon/"
     

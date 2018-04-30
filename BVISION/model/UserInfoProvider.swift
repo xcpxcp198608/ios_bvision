@@ -22,17 +22,22 @@ class UserInfoProvider {
     func load(_ userId: Int){
         if userId <= 0 {return}
         let url = "\(Constant.url_user_details)\(userId)"
-        Alamofire.request(url, method: .get)
+        Alamofire.request(url, method: .post)
             .validate()
             .responseData { (response) in
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
-                        let userInfo = UserInfo(result["data"])
+                    if(result[Constant.code].intValue == 200){
+                        let userInfo = UserInfo(result[Constant.data])
+                        UFUtils.set(userInfo.icon, key: Constant.key_user_icon)
+                        UFUtils.set(userInfo.token, key: Constant.key_token)
+                        UFUtils.set(userInfo.level, key: Constant.key_user_level)
+                        UFUtils.set(userInfo.gender, key: Constant.key_user_gender)
+                        UFUtils.set(userInfo.profile, key: Constant.key_user_profile)
                         self.loadDelegate?.loadSuccess(userInfo)
                     }else{
-                        self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
+                        self.loadDelegate?.loadFailure(result[Constant.msg].stringValue, nil)
                     }
                 case .failure(let error):
                     self.loadDelegate?.loadFailure(error.localizedDescription, error)

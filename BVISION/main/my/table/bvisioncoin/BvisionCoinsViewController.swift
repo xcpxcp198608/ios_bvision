@@ -45,7 +45,7 @@ class BvisionCoinsViewController: BasicViewController {
         imageAdProvider.delegate = self
         imageAdProvider.load(position: 1)
         scrollView.backgroundColor = UIColor(rgb: Color.primary)
-        scrollView.placeholderImage = #imageLiteral(resourceName: "hold_banner")
+        scrollView.placeholderImage = #imageLiteral(resourceName: "hold_banner_4_1")
         scrollView.delegate = self
         scrollView.autoScrollTimeInterval = 6
         scrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter

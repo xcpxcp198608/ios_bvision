@@ -28,6 +28,10 @@ extension UIViewController{
         showViewControllerWithNavigation("Push", controller: "PushVideoViewController")
     }
     
+    func showScanViewController(){
+        showViewController("Scan", controller: "ScanViewController")
+    }
+    
     func showLocalPushViewController(_ url: URL?){
         let authBoard: UIStoryboard = UIStoryboard(name: "Push", bundle: nil)
         let controller = authBoard.instantiateViewController(withIdentifier: "LocalPushViewController") as! LocalPushViewController
@@ -35,8 +39,12 @@ extension UIViewController{
         self.present(controller, animated: false, completion: nil)
     }
     
-    func showScanViewController(){
-        showViewController("Scan", controller: "ScanViewController")
+    func showUserDetailController(_ targetUserId: Int){
+        let board: UIStoryboard = UIStoryboard(name: "Details", bundle: nil)
+        let na = board.instantiateViewController(withIdentifier: "NAUserDetailsViewController") as! BasicNavigationController
+        let controller = na.topViewController as! UserDetailsViewController
+        controller.targetUserId = targetUserId
+        self.present(na, animated: false, completion: nil)
     }
     
     func showWebView(_ url: String){

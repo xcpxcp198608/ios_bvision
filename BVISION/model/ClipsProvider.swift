@@ -27,11 +27,11 @@ class ClipsProvider{
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if result["code"].intValue != 200 {
-                        self.delegate?.loadFailure(result["message"].stringValue, nil)
+                    if result[Constant.code].intValue != 200 {
+                        self.delegate?.loadFailure(result[Constant.msg].stringValue, nil)
                         return
                     }
-                    let dataList = result["dataList"]
+                    let dataList = result[Constant.data_list]
                     var clipInfos = [ClipInfo]()
                     for i in 0..<dataList.count {
                         clipInfos.append(ClipInfo(dataList[i]))

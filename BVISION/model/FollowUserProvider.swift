@@ -28,15 +28,15 @@ class FollowUserProvide {
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
-                        let dataList = result["dataList"]
+                    if(result[Constant.code].intValue == 200){
+                        let dataList = result[Constant.data_list]
                         var followUsers = [FollowUserInfo]()
                         for i in 0..<dataList.count {
                             followUsers.append(FollowUserInfo(dataList[i]))
                         }
                         self.loadDelegate?.loadSuccess(followUsers)
                     }else{
-                        self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
+                        self.loadDelegate?.loadFailure(result[Constant.msg].stringValue, nil)
                     }
                 case .failure(let error):
                     self.loadDelegate?.loadFailure(error.localizedDescription, error)

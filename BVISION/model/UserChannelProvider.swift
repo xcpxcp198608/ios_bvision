@@ -28,8 +28,8 @@ class UserChannelProvider {
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
-                        let liveChannelInfo = LiveChannelInfo(result["data"])
+                    if(result[Constant.code].intValue == 200){
+                        let liveChannelInfo = LiveChannelInfo(result[Constant.data])
                         UFUtils.set(liveChannelInfo.title, key: Constant.key_channel_title)
                         UFUtils.set(liveChannelInfo.message, key: Constant.key_channel_message)
                         UFUtils.set(liveChannelInfo.price, key: Constant.key_channel_price)
@@ -40,7 +40,7 @@ class UserChannelProvider {
                         UFUtils.set(liveChannelInfo.link, key: Constant.key_channel_link)
                         self.loadDelegate?.loadSuccess(liveChannelInfo)
                     }else{
-                        self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
+                        self.loadDelegate?.loadFailure(result[Constant.msg].stringValue, nil)
                     }
                 case .failure(let error):
                     self.loadDelegate?.loadFailure(error.localizedDescription, error)

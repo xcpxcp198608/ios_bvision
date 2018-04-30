@@ -112,8 +112,8 @@ extension LivePlayDetailViewController{
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
-                        let status: String = result["message"].stringValue
+                    if(result[Constant.code].intValue == 200){
+                        let status: String = result[Constant.msg].stringValue
                         if status == "true"{
                             self.btFollow.setBackgroundImage(#imageLiteral(resourceName: "follow_red_30"), for: .normal)
                             self.isFriend = true
@@ -140,7 +140,7 @@ extension LivePlayDetailViewController{
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
+                    if(result[Constant.code].intValue == 200){
                         if(action == 1){
                             self.btFollow.setBackgroundImage(#imageLiteral(resourceName: "follow_red_30"), for: .normal)
                             self.isFriend = true
@@ -149,7 +149,7 @@ extension LivePlayDetailViewController{
                             self.isFriend = false
                         }
                     }else{
-                        self.hudError(with: result["message"].stringValue)
+                        self.hudError(with: result[Constant.msg].stringValue)
                     }
                 case .failure(let error):
                     print(error)

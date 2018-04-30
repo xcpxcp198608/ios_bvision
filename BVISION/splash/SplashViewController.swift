@@ -42,7 +42,7 @@ class SplashViewController: UIViewController{
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
+                    if(result[Constant.code].intValue == 200){
                         self.userChannelProvider.load(userId)
                     }else{
                         self.cleanUserData()

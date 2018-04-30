@@ -47,6 +47,11 @@
 		CD73E9B62090661000AD5A8F /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9B82090661000AD5A8F /* Sign.storyboard */; };
 		CD73E9BF2090689200AD5A8F /* LiveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9BE2090689100AD5A8F /* LiveChannelCell.xib */; };
 		CD73E9C120907FA800AD5A8F /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73E9C320907FA800AD5A8F /* Push.storyboard */; };
+		CD73EB7B2096FC7D008A127B /* FriendAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73EB7A2096FC7D008A127B /* FriendAddViewController.swift */; };
+		CD73EB7E2096FE3A008A127B /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73EB7D2096FE3A008A127B /* Details.storyboard */; };
+		CD73EB802096FE4D008A127B /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73EB7F2096FE4D008A127B /* UserDetailsViewController.swift */; };
+		CD73EB8220970E0D008A127B /* UserFriendProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73EB8120970E0D008A127B /* UserFriendProvider.swift */; };
+		CD73EB8420970E3C008A127B /* UserFriendActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73EB8320970E3C008A127B /* UserFriendActionProvider.swift */; };
 		CD7877C220917BE6002B33BA /* CoinInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7877C120917BE6002B33BA /* CoinInfo.swift */; };
 		CD793F18208C611400DD1C39 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD793F17208C611400DD1C39 /* FollowersViewController.swift */; };
 		CD7CA9B52086DA5D004A7FAB /* FollowUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */; };
@@ -220,6 +225,11 @@
 		CD73E9C220907FA800AD5A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Push.storyboard; sourceTree = "<group>"; };
 		CD73E9C520907FAC00AD5A8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Push.strings; sourceTree = "<group>"; };
 		CD73E9C720907FB300AD5A8F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Push.strings"; sourceTree = "<group>"; };
+		CD73EB7A2096FC7D008A127B /* FriendAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddViewController.swift; sourceTree = "<group>"; };
+		CD73EB7D2096FE3A008A127B /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
+		CD73EB7F2096FE4D008A127B /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		CD73EB8120970E0D008A127B /* UserFriendProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendProvider.swift; sourceTree = "<group>"; };
+		CD73EB8320970E3C008A127B /* UserFriendActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendActionProvider.swift; sourceTree = "<group>"; };
 		CD7877C120917BE6002B33BA /* CoinInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfo.swift; sourceTree = "<group>"; };
 		CD793F17208C611400DD1C39 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		CD7CA9B42086DA5D004A7FAB /* FollowUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserProvider.swift; sourceTree = "<group>"; };
@@ -454,6 +464,15 @@
 			path = bvisioncoin;
 			sourceTree = "<group>";
 		};
+		CD73EB7C2096FE25008A127B /* user_details */ = {
+			isa = PBXGroup;
+			children = (
+				CD73EB7D2096FE3A008A127B /* Details.storyboard */,
+				CD73EB7F2096FE4D008A127B /* UserDetailsViewController.swift */,
+			);
+			path = user_details;
+			sourceTree = "<group>";
+		};
 		CD7CA9BE2086F991004A7FAB /* collection */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +589,8 @@
 				CD963C6E20922FCD008692CC /* UserGetCoinBillProvider.swift */,
 				CDDC19E52094CBAD00C690B9 /* MyGroupsProvider.swift */,
 				CDDC19E72094CBBD00C690B9 /* TrendingProvider.swift */,
+				CD73EB8120970E0D008A127B /* UserFriendProvider.swift */,
+				CD73EB8320970E3C008A127B /* UserFriendActionProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -725,6 +746,7 @@
 		CDC1DCB820809B4D00534A0D /* follow */ = {
 			isa = PBXGroup;
 			children = (
+				CD73EB7C2096FE25008A127B /* user_details */,
 				CDE1B7B22092C98500706FAB /* trending */,
 				CDE1B7B52092C9A800706FAB /* friends */,
 				CDE1B7B82092C9CF00706FAB /* groups */,
@@ -806,6 +828,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE1B7B62092C9CA00706FAB /* FriendsViewController.swift */,
+				CD73EB7A2096FC7D008A127B /* FriendAddViewController.swift */,
 			);
 			path = friends;
 			sourceTree = "<group>";
@@ -944,6 +967,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD432BEF208861F700AF73B8 /* LocalVideoCell.xib in Resources */,
+				CD73EB7E2096FE3A008A127B /* Details.storyboard in Resources */,
 				CD7CA9B92086EC1D004A7FAB /* MyCell.xib in Resources */,
 				CD73E9B62090661000AD5A8F /* Sign.storyboard in Resources */,
 				CDBC65072085988700F9A799 /* YTBChannelCell.xib in Resources */,
@@ -1116,6 +1140,7 @@
 				CD432BEC2088619600AF73B8 /* LocalPushViewController.swift in Sources */,
 				CDAC5D32208446E20043AA16 /* Color.swift in Sources */,
 				CD506DBE2091CDF7008F7683 /* UserGetCoinsProvider.swift in Sources */,
+				CD73EB802096FE4D008A127B /* UserDetailsViewController.swift in Sources */,
 				CDE1B7B72092C9CA00706FAB /* FriendsViewController.swift in Sources */,
 				CDE1B7BF209305B900706FAB /* ImageAdInfo.swift in Sources */,
 				CD168BF6208EDFDA001C3F08 /* BvisionCoinsViewController.swift in Sources */,
@@ -1136,6 +1161,7 @@
 				CD9F42C3208DBE0100B71F79 /* UserSetBlackProvider.swift in Sources */,
 				CDC1DCC320809D6300534A0D /* ScanViewController.swift in Sources */,
 				CDAC5D43208450230043AA16 /* PushVideoViewController.swift in Sources */,
+				CD73EB8420970E3C008A127B /* UserFriendActionProvider.swift in Sources */,
 				CD432BF0208861F700AF73B8 /* LocalVideoCell.swift in Sources */,
 				CDC1DCA9208091A400534A0D /* BasicTabBarController.swift in Sources */,
 				CD963C6D20922F1A008692CC /* CoinBillInfo.swift in Sources */,
@@ -1154,9 +1180,11 @@
 				CD963C73209233EF008692CC /* CoinBillCell.swift in Sources */,
 				CDBC64F32085885E00F9A799 /* UserResetTableViewController.swift in Sources */,
 				CD7877C220917BE6002B33BA /* CoinInfo.swift in Sources */,
+				CD73EB7B2096FC7D008A127B /* FriendAddViewController.swift in Sources */,
 				CDC1DCBD20809BAA00534A0D /* MyViewController.swift in Sources */,
 				CDAC5D36208446E20043AA16 /* FileUtils.swift in Sources */,
 				CDAC5D35208446E20043AA16 /* extentions.swift in Sources */,
+				CD73EB8220970E0D008A127B /* UserFriendProvider.swift in Sources */,
 				CD9F42C1208DBC9100B71F79 /* UserOperationProvider.swift in Sources */,
 				CDC1DCA42080915000534A0D /* LiveChannelViewController.swift in Sources */,
 				CD7CA9DE20872E25004A7FAB /* VLCPlayerViewController.swift in Sources */,
@@ -1409,7 +1437,10 @@
 				);
 				INFOPLIST_FILE = BVISION/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.bvision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1440,7 +1471,10 @@
 				);
 				INFOPLIST_FILE = BVISION/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.bvision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1459,7 +1493,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1476,7 +1514,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1492,7 +1534,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1508,7 +1554,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC525ZTYGQ;
 				INFOPLIST_FILE = BVISIONUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.legacy.BVISIONUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

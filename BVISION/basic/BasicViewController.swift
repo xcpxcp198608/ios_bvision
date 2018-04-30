@@ -23,6 +23,18 @@ class BasicViewController: UIViewController {
         return MyGroupsProvider()
     }()
     
+    lazy var userInfoProvider = {
+        return UserInfoProvider()
+    }()
+    
+    lazy var userFriendProvider = {
+        return UserFriendProvider()
+    }()
+    
+    lazy var userFriendActionProvider = {
+        return UserFriendActionProvider()
+    }()
+    
     override var prefersStatusBarHidden: Bool{
         return false
     }

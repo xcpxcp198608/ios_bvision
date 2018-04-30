@@ -88,8 +88,8 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
                     switch response.result {
                     case .success:
                         let result = JSON(data: response.data!)
-                        if(result["code"].intValue == 200){
-                            let userInfo = UserInfo(result["data"])
+                        if(result[Constant.code].intValue == 200){
+                            let userInfo = UserInfo(result[Constant.data])
                             UFUtils.set(userInfo.id, key: Constant.key_user_id)
                             UFUtils.set(userInfo.username, key: Constant.key_username)
                             UFUtils.set(userInfo.icon, key: Constant.key_user_icon)
@@ -99,7 +99,7 @@ class UserSignInViewController: UIViewController, UITextFieldDelegate{
                             UFUtils.set(userInfo.profile, key: Constant.key_user_profile)
                             self.userChannelProvider.load(userInfo.id)
                         }else{
-                            self.alertError(message: result["message"].stringValue)
+                            self.alertError(message: result[Constant.msg].stringValue)
                             self.enableButton()
                         }
                     case .failure(let error):

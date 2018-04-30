@@ -29,10 +29,10 @@ class UserSetProfileProvider {
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
+                    if(result[Constant.code].intValue == 200){
                         self.loadDelegate?.loadSuccess(profile: profile)
                     }else{
-                        self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
+                        self.loadDelegate?.loadFailure(result[Constant.msg].stringValue, nil)
                     }
                 case .failure(let error):
                     self.loadDelegate?.loadFailure(error.localizedDescription, error)

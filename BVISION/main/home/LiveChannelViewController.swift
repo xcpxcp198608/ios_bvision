@@ -36,6 +36,10 @@ class LiveChannelViewController: BasicViewController {
         initPullDownRefresh()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        userInfoProvider.load(userId)
+    }
+    
     func initCollectionView(){
         let collectionLayout = UICollectionViewFlowLayout()
         collectionLayout.scrollDirection = .vertical

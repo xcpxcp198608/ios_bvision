@@ -65,6 +65,7 @@ class YTBChannelsViewController: UIViewController{
         collectionView?.indicatorStyle = .white
         collectionView?.delegate = self
         collectionView?.dataSource = self
+        collectionView?.backgroundColor = UIColor(rgb: Color.primary)
         let cellNib = UINib(nibName: "YTBChannelCell", bundle: nil)
         collectionView?.register(cellNib, forCellWithReuseIdentifier: "YTBChannelCell")
         self.contentView.addSubview(collectionView!)

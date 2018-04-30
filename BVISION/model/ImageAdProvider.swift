@@ -28,11 +28,11 @@ class ImageAdProvider{
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if result["code"].intValue != 200 {
-                        self.delegate?.loadFailure(result["message"].stringValue, nil)
+                    if result[Constant.code].intValue != 200 {
+                        self.delegate?.loadFailure(result[Constant.msg].stringValue, nil)
                         return
                     }
-                    let dataList = result["dataList"]
+                    let dataList = result[Constant.data_list]
                     var imageAdInfos = [ImageAdInfo]()
                     for i in 0..<dataList.count {
                         imageAdInfos.append(ImageAdInfo(dataList[i]))

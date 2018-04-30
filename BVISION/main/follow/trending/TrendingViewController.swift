@@ -52,8 +52,8 @@ class TrendingViewController: BasicViewController {
         }
         
         initPullDownRefresh()
-        trendingProvider.load(userId, start: start)
     }
+    
     
     func initPullDownRefresh(){
         let header = MJRefreshNormalHeader()
@@ -68,6 +68,10 @@ class TrendingViewController: BasicViewController {
     @objc func pullDownRefresh(){
         trendingProvider.load(userId, start: start)
         self.tableView!.mj_header.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        trendingProvider.load(userId, start: start)
     }
     
 }
@@ -115,6 +119,10 @@ extension TrendingViewController: TrendingCellDelegate{
             let controller = segue.destination as! TrendingImagePreViewController
             controller.trendingInfo = trendingInfo
         }
+    }
+    
+    func showUserDetails(trendingInfo: TrendingInfo) {
+        self.showUserDetailController(trendingInfo.userId)
     }
     
 }

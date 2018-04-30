@@ -82,10 +82,10 @@ class UserSignUpViewController: UIViewController{
                     switch response.result {
                     case .success:
                         let result = JSON(data: response.data!)
-                        if(result["code"].intValue == 200){
-                            self.alertSuccess(message: result["message"].stringValue)
+                        if(result[Constant.code].intValue == 200){
+                            self.alertSuccess(message: result[Constant.msg].stringValue)
                         }else{
-                            self.hudError(with: result["message"].stringValue)
+                            self.hudError(with: result[Constant.msg].stringValue)
                         }
                     case .failure(let error):
                         self.alertError(message: error.localizedDescription)

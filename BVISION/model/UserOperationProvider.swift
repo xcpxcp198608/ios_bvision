@@ -28,15 +28,15 @@ class UserOperationProvider {
                 switch response.result {
                 case .success:
                     let result = JSON(data: response.data!)
-                    if(result["code"].intValue == 200){
-                        let dataList = result["dataList"]
+                    if(result[Constant.code].intValue == 200){
+                        let dataList = result[Constant.data_list]
                         var userOperationInfos = [UserOperationInfo]()
                         for i in 0..<dataList.count {
                             userOperationInfos.append(UserOperationInfo(dataList[i]))
                         }
                         self.loadDelegate?.loadSuccess(userOperationInfos)
                     }else{
-                        self.loadDelegate?.loadFailure(result["message"].stringValue, nil)
+                        self.loadDelegate?.loadFailure(result[Constant.msg].stringValue, nil)
                     }
                 case .failure(let error):
                     self.loadDelegate?.loadFailure(error.localizedDescription, error)
